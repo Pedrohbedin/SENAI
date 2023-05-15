@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\bin\Debug\net7.0\Nome de carros.exe
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\bin\Debug\net7.0\Nome de carros.deps.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\bin\Debug\net7.0\Nome de carros.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\bin\Debug\net7.0\Nome de carros.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\bin\Debug\net7.0\Nome de carros.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\Nome de carros.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\Nome de carros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\Nome de carros.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\Nome de carros.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\Nome de carros.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\Nome de carros.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\refint\Nome de carros.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\Nome de carros.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\Nome de carros.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Nome de carros\obj\Debug\net7.0\ref\Nome de carros.dll

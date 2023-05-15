@@ -1,0 +1,739 @@
+/* Imports de fonts */
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: TitilliumWeb-Black;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+    font-family: TitilliumWeb-Bold;
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+/* RESET CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Classes Genéricas */
+
+.layout-grid {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.mostrar-menu {
+    left: 0 !important;
+}
+
+.mostrar-usuarios {
+    right: 0 !important;
+}
+
+.alinhamento-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+body {
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    z-index: 100;
+    background-color: #1B1426;
+}
+
+header .header-top {
+    display: none;
+}
+
+header .header-bottom {
+    height: 60px;
+}
+
+header .logo {
+    width: 86px;
+}
+
+
+header .header-bottom nav {
+    position: fixed;
+    top: 60px;
+    left: -80vw;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: calc(100vh - 60px);
+    padding-bottom: 20px;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+
+    transition: left 0.4s;
+}
+
+
+header .header-bottom nav>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+    color: white;
+    font-size: 15px;
+    font-family: Inter;
+    text-decoration: none;
+    border-bottom: 2px solid #F9AA01;
+}
+
+header .header-bottom nav a:last-of-type {
+    border-bottom: none;
+}
+
+header .header-bottom nav .midias-sociais {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+header .menu-usuarios {
+    position: fixed;
+    top: 60px;
+    right: -20vw;
+    width: 20vw;
+    height: 170px;
+
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(45px);
+
+    transition: right 0.4s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* MAIN */
+
+main {
+    margin-top: 60px;
+    width: 100%;
+    height: 1231px;
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-image: url(../assets/images/background-cadastro-de-quipes.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form {
+    width: 100%;
+    height: 492px;
+    background: linear-gradient(112.07deg, rgba(27, 20, 38, 0.6) 0%, rgba(60, 3, 65, 0.38) 98.83%);
+    border-radius: 8px;
+    padding: 0px 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main form h1 {
+    font-size: 24px;
+    font-family: TitilliumWeb-Black;
+    border-bottom: 3px #F9AA01 solid;
+}
+
+main form input[type=text] {
+    background: linear-gradient(91.13deg, rgba(239, 239, 239, 0.6) 0%, rgba(239, 239, 239, 0.1) 100%);
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    font-family: TitilliumWeb-Bold;
+    color: white;
+    padding: 0px 14px;
+    font-size: 16px;
+}
+
+main form input[type=text]::placeholder {
+    font-family: TitilliumWeb-Bold;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+main form .imagem-de-equipes {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    font-family: TitilliumWeb-Bold;
+}
+
+main .imagem-de-equipes p {
+    font-size: 10px;
+    line-height: 15px;
+}
+
+main form button {
+    width: 124px;
+    height: 40px;
+    font-size: 13px;
+
+    border: none;
+    background: #D9D9D9;
+    border-radius: 8px;
+    font-family: TitilliumWeb-Bold;
+
+}
+
+main form input[type=submit] {
+    background-color: #F9AA01;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-family: TitilliumWeb-Black;
+    font-size: 24px;
+}
+
+/* Table */
+main .cadastro-equipes table {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    /* border: 1px solid white; */
+}
+
+/* tbody */
+main .cadastro-equipes thead,
+main .cadastro-equipes tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* linha do cabeçalho da tabela */
+main .cadastro-equipes thead tr {
+    margin-bottom: 30px;
+    border-bottom: 3px solid #F9AA01;
+}
+
+/* linha do cabeçalho */
+main .cadastro-equipes table thead th {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 50px;
+    color: #F9AA01;
+    font-family: TitilliumWeb-Black;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+
+/* linhas da tabela, independentemente do cabeçalho ou corpo */
+main .cadastro-equipes table tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .cadastro-equipes table tbody tr {
+    height: 70px;
+    margin-bottom: 20px;     
+    /* efeito da borda e do fundo glass */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background:
+        /* fundo */
+        linear-gradient(to right bottom, rgba(27, 20, 38, .6), rgba(60, 3, 65, .38)) padding-box,
+        /* fundo borda */
+        linear-gradient(90deg, rgba(255, 255, 255, .6), rgba(255, 255, 255, .1)) border-box;
+    backdrop-filter: blur(4px);
+
+
+}
+
+main .cadastro-equipes table td {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #F9AA01;
+}
+
+main .cadastro-equipes table td:last-of-type {
+    border: none;
+}
+
+.come-back-button img {
+    width: 50px;
+    padding: 10px;
+}
+
+.come-back-button {
+    z-index: 150;
+    width: auto;
+    height: auto;
+    position: fixed;
+    background-color: #F9AA01;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 8px;
+    transition: 0.5;
+}
+
+.come-back-button:hover {
+    background-color: #cb8b00;
+}
+
+main .cadastro-equipes table td img#LOUD-LOGO {
+    width: 25px;
+}
+
+main .cadastro-equipes table td img#trash{
+    width: 15px;
+}
+
+table {
+    font-family: Titilliumweb-bold;
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+
+color: #FFFFFF;
+}
+
+/* FOOTER */
+
+footer .linear-gradient{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+}
+
+footer {
+    width: 100%;
+    background-color: #1B1426;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+footer .coluna1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer #logo {
+    text-align: center;
+    display: flex;
+    width: 110px;
+    margin: 40px 0px;
+}
+
+footer .text {
+    margin-bottom: 78px;
+    font-family: quicksand;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .midias-sociais {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin-bottom: 100px;
+}
+
+footer .links-flex {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+footer h1 {
+    width: 100px;
+}
+
+.links-flex h1 {
+    width: 160px;
+}
+
+.newsletter h1 {
+    width: 170px;
+}
+
+footer .links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+footer .links .links-top,
+.links-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    text-align: center;
+}
+
+footer .links p {
+    width: 15px;
+    height: 2px;
+    background-color: #F9AA01;
+}
+
+footer li {
+    list-style: url(assets/images/linha.png);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer a {
+    font-family: Titilliumweb-bold;
+    font-style: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+footer .contatos {
+    width: 333px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 190px;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    font-family: quicksand;
+    font-size: 16px;
+}
+
+.newsletter {
+    display: flex;
+    width: 100%;
+    height: 212px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.newsletter .linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    background: linear-gradient(91.13deg, rgba(239, 239, 239, 0.6) 0%, rgba(239, 239, 239, 0.1) 100%);
+    width: 333px;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+}
+
+.newsletter .linha input {
+    width: 333px;
+    height: 41px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-family: TitilliumWeb-Bold;
+    font-size: 16px;
+}
+
+
+footer input[type="submit"] {
+    width: 333px;
+    height: 41px;
+
+    background: #F9AA01;
+    border-radius: 8px;
+    text-align: center;
+
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-family: TitilliumWeb-Bold;
+    text-transform: capitalize;
+    font-size: 24px;
+}
+
+footer input[type="email"]::placeholder {
+    color: white;
+}
+
+.copyright p {
+    font-family: TitilliumWeb-Bold;
+    margin-bottom: 5px;
+}
+
+.title {
+    text-transform: uppercase;
+    color: white;
+    font-family: TitilliumWeb-black;
+    width: 100px;
+    margin: 30px 0px;
+    border-bottom: 3px solid #F9AA01;
+}
+
+
+/* Tablets >= 768px */
+@media screen and (min-width: 768px) {}
+
+/* Desktop >= 1200px*/
+@media screen and (min-width: 1200px) {
+
+    .layout-grid {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    /* esconde os elementos desnecessários */
+    header .header-bottom .menu-hamburger,
+    header .header-bottom .menu-pontinhos,
+    header .header-bottom nav .phone,
+    header .header-bottom nav .mail,
+    header .header-bottom nav .midias-sociais {
+        display: none;
+    }
+
+    header {
+        height: auto;
+        position: absolute;
+        width: 100%;
+    }
+
+    main {
+        margin-top: 106px;
+        background-image: url(../assets/images/banner_cadastro_de_equipe.png);
+    }
+
+    header .header-bottom nav {
+        position: static;
+        width: 440px;
+        height: 50px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0;
+    }
+
+    header .header-bottom nav a {
+        border-bottom: none;
+    }
+
+    header .header-bottom nav a:hover {
+        color: #F9AA01;
+    }
+
+    header .header-bottom .menu-usuarios {
+        position: static;
+        width: auto;
+        flex-direction: row;
+        height: auto;
+        gap: 27px;
+        background-color: transparent;
+        background-image: none;
+    }
+
+    header .header-top {
+        padding-top: 15px;
+        display: block;
+        border-bottom: 2px solid #F9AA01;
+        align-items: center;
+    }
+
+    .header-top .layout-grid {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contatos {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+
+    }
+
+    .contatos>.mail,
+    .phone {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        font-family: Inter;
+        font-size: 14px;
+    }
+
+    .midias-sociais {
+        display: flex;
+        gap: 27px;
+    }
+
+    .midias-sociais a {
+        text-decoration: none;
+    }
+
+    header .logo {
+        width: 196px;
+    }
+
+    /* MAIN */
+
+    main {
+        margin-top: 106px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        width: 800px;
+        height: 530px;
+        padding: 0px 117px;
+    }
+
+    main form input[type=submit] {
+        width: 243px;
+    }
+
+    main .cadastro-equipes {
+        width: 802px;
+        height: 487px;
+    }
+
+    main .cadastro-equipes table td img#trash{
+        width: 25px;
+    }
+
+    main form .imagem-de-equipes button {
+        width: 334px;
+    }
+
+    main form .imagem-de-equipes p {
+        font-size: 16px;
+    }
+
+    /* Footer */
+
+    footer {
+        background-image: url(/assets/images/backgroung_footer_desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .footer-flex {
+        width: 100%;
+        margin-top: 130px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer #logo {
+        display: flex;
+        width: 200px;
+    }
+
+    footer .links .links-top,
+    .links-bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        text-align: start;
+    }
+
+    footer .links-flex {
+        width: auto;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 0px;
+    }
+
+    footer .contatos {
+        width: auto;
+        height: 100%;
+        justify-content: space-around;
+        margin-bottom: 0px;
+    }
+
+    footer .newsletter {
+        width: auto;
+        margin-bottom: 0px;
+    }
+
+    footer .coluna1 {
+        width: 286px;
+    }
+}

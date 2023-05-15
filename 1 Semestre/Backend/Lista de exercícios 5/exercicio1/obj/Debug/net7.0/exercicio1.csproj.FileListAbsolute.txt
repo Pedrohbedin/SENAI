@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\bin\Debug\net7.0\exercicio1.exe
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\bin\Debug\net7.0\exercicio1.deps.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\bin\Debug\net7.0\exercicio1.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\bin\Debug\net7.0\exercicio1.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\bin\Debug\net7.0\exercicio1.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\exercicio1.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\exercicio1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\exercicio1.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\exercicio1.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\exercicio1.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\exercicio1.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\refint\exercicio1.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\exercicio1.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\exercicio1.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Lista de exercícios 5\exercicio1\obj\Debug\net7.0\ref\exercicio1.dll

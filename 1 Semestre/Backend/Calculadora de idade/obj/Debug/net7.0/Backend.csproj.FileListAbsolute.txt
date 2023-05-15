@@ -1,0 +1,45 @@
+C:\Users\42470848873\Desktop\Backend\bin\Debug\net7.0\Backend.exe
+C:\Users\42470848873\Desktop\Backend\bin\Debug\net7.0\Backend.deps.json
+C:\Users\42470848873\Desktop\Backend\bin\Debug\net7.0\Backend.runtimeconfig.json
+C:\Users\42470848873\Desktop\Backend\bin\Debug\net7.0\Backend.dll
+C:\Users\42470848873\Desktop\Backend\bin\Debug\net7.0\Backend.pdb
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\Backend.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\Backend.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\Backend.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\Backend.dll
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\refint\Backend.dll
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\Backend.pdb
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\Backend.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\Backend\obj\Debug\net7.0\ref\Backend.dll
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\Backend.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\Backend.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\Backend.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\Backend.dll
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\refint\Backend.dll
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\Backend.pdb
+C:\Users\42470848873\Desktop\PROJETO IMC\bin\Debug\net7.0\Backend.exe
+C:\Users\42470848873\Desktop\PROJETO IMC\bin\Debug\net7.0\Backend.deps.json
+C:\Users\42470848873\Desktop\PROJETO IMC\bin\Debug\net7.0\Backend.runtimeconfig.json
+C:\Users\42470848873\Desktop\PROJETO IMC\bin\Debug\net7.0\Backend.dll
+C:\Users\42470848873\Desktop\PROJETO IMC\bin\Debug\net7.0\Backend.pdb
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\Backend.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\PROJETO IMC\obj\Debug\net7.0\ref\Backend.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\bin\Debug\net7.0\Backend.exe
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\bin\Debug\net7.0\Backend.deps.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\bin\Debug\net7.0\Backend.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\bin\Debug\net7.0\Backend.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\bin\Debug\net7.0\Backend.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\Backend.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\Backend.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\Backend.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\Backend.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\refint\Backend.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\Backend.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\Backend.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de idade\obj\Debug\net7.0\ref\Backend.dll

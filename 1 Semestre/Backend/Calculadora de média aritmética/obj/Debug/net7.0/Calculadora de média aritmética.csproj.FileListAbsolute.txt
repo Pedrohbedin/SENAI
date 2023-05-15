@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\bin\Debug\net7.0\Calculadora de média aritmética.exe
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\bin\Debug\net7.0\Calculadora de média aritmética.deps.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\bin\Debug\net7.0\Calculadora de média aritmética.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\bin\Debug\net7.0\Calculadora de média aritmética.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\bin\Debug\net7.0\Calculadora de média aritmética.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\Calculadora de média aritmética.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\Calculadora de média aritmética.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\Calculadora de média aritmética.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\Calculadora de média aritmética.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\Calculadora de média aritmética.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\Calculadora de média aritmética.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\refint\Calculadora de média aritmética.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\Calculadora de média aritmética.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\Calculadora de média aritmética.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Calculadora de média aritmética\obj\Debug\net7.0\ref\Calculadora de média aritmética.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Conversor de peso para preço/1.0.0": {
+        "runtime": {
+          "Conversor de peso para preço.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Conversor de peso para preço/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

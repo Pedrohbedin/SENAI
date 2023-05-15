@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\Cadastro de alunos.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\Cadastro de alunos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\Cadastro de alunos.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\Cadastro de alunos.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\Cadastro de alunos.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\bin\Debug\net7.0\Cadastro de alunos.exe
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\bin\Debug\net7.0\Cadastro de alunos.deps.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\bin\Debug\net7.0\Cadastro de alunos.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\bin\Debug\net7.0\Cadastro de alunos.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\bin\Debug\net7.0\Cadastro de alunos.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\Cadastro de alunos.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\refint\Cadastro de alunos.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\Cadastro de alunos.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\Cadastro de alunos.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Cadastro de alunos\obj\Debug\net7.0\ref\Cadastro de alunos.dll

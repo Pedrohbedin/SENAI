@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\bin\Debug\net7.0\Aplicação agência turismo.exe
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\bin\Debug\net7.0\Aplicação agência turismo.deps.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\bin\Debug\net7.0\Aplicação agência turismo.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\bin\Debug\net7.0\Aplicação agência turismo.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\bin\Debug\net7.0\Aplicação agência turismo.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\Aplicação agência turismo.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\Aplicação agência turismo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\Aplicação agência turismo.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\Aplicação agência turismo.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\Aplicação agência turismo.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\Aplicação agência turismo.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\refint\Aplicação agência turismo.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\Aplicação agência turismo.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\Aplicação agência turismo.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Aplicação agência turismo\obj\Debug\net7.0\ref\Aplicação agência turismo.dll

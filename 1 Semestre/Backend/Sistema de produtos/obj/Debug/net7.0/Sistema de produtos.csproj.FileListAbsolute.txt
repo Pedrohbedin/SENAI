@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\Sistema de produtos.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\Sistema de produtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\Sistema de produtos.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\Sistema de produtos.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\Sistema de produtos.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\bin\Debug\net7.0\Sistema de produtos.exe
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\bin\Debug\net7.0\Sistema de produtos.deps.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\bin\Debug\net7.0\Sistema de produtos.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\bin\Debug\net7.0\Sistema de produtos.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\bin\Debug\net7.0\Sistema de produtos.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\Sistema de produtos.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\refint\Sistema de produtos.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\Sistema de produtos.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\Sistema de produtos.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Sistema de produtos\obj\Debug\net7.0\ref\Sistema de produtos.dll

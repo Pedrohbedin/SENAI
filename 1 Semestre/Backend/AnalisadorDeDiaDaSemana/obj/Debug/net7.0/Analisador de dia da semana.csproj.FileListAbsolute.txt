@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\bin\Debug\net7.0\Analisador de dia da semana.exe
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\bin\Debug\net7.0\Analisador de dia da semana.deps.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\bin\Debug\net7.0\Analisador de dia da semana.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\bin\Debug\net7.0\Analisador de dia da semana.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\bin\Debug\net7.0\Analisador de dia da semana.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\Analisador de dia da semana.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\Analisador de dia da semana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\Analisador de dia da semana.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\Analisador de dia da semana.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\Analisador de dia da semana.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\Analisador de dia da semana.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\refint\Analisador de dia da semana.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\Analisador de dia da semana.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\Analisador de dia da semana.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Analisador de dia da semana\obj\Debug\net7.0\ref\Analisador de dia da semana.dll

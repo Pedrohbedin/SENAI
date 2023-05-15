@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&family=Open+Sans&display=swap');
+
+/* FONTES */
+
+
+/* 
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Open Sans', sans-serif; 
+    */
+
+
+/* Cores para edição */
+
+
+/* 
+    249,0,61 vermelho
+    255, 175, 0 amarelo 
+    8, 3, 36 fundo
+    162, 89, 247 roxo
+    */
+
+
+/* RESET CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    background-color: rgb( 8, 3, 36);
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(249, 0, 61);
+    color: white;
+    width: 100%;
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+a {
+    font-size: large;
+    text-decoration: none;
+    margin: 121px;
+    color: white;
+    transition: 0.3s;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+
+/* MAIN  */
+
+main {
+    width: auto;
+    height: 100%;
+}
+
+.banner {
+    width: auto;
+    height: 740px;
+    background-image: url(../assets/imagem-fundo-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.layout-grid {
+    width: 545px;
+    height: 530px;
+    position: relative;
+    top: 226px;
+    left: 121px;
+}
+
+#bannerinfo h1 {
+    font-size: 96px;
+    color: white;
+    border-bottom: 3px solid rgb(255, 175, 0);
+}
+
+#bannerinfo h2 {
+    color: rgb(249, 0, 61);
+    font-size: 53px;
+    margin-top: 29px;
+    font-family: 'Courier Prime', monospace;
+}
+
+#bannerinfo img {
+    margin-top: 10%;
+}
+
+
+/* SEcTION 2 */
+
+#section02 {
+    flex-direction: column;
+    display: flex;
+    padding-left: 120px;
+    padding-right: 120px;
+    color: rgb(249, 0, 61);
+    font-size: 64px;
+    margin-top: 64px;
+}
+
+.about-page article h1 {
+    color: white;
+    font-size: 24px;
+    font-family: 'Courier Prime', monospace;
+    font-weight: bold;
+}
+
+.about-page article h2 {
+    color: rgb(255, 175, 0);
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.about-page article p {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.about-page article {
+    width: 1200px;
+    height: 476px;
+    display: flex;
+    align-items: center;
+}
+
+#coluna {
+    margin-left: 120px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 3px solid rgb(162, 89, 247);
+}
+
+.about-page {
+    margin-bottom: 119px;
+}
+
+#section03 {
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../assets/imagem-fundo-info.png);
+    height: 200px;
+}
+
+#def {
+    color: white;
+    font-family: 'Courier Prime', monospace;
+    font-weight: bold;
+}
+
+#bloco {
+    display: flex;
+    justify-content: center;
+    width: 289px;
+    height: 100px;
+    font-family: 'Courier Prime', monospace;
+    font-weight: lighter;
+    padding: 33px;
+    color: rgb(162, 89, 247);
+    border: 3px solid rgb(162, 89, 247);
+    border-radius: 1rem;
+}
+
+#section04 {
+    background-image: url(../assets/imagem-fundo-endereco.png);
+    width: 100%;
+    height: 516px;
+}
+
+#section04 #title {
+    padding-top: 81px;
+    padding-left: 264px;
+    margin-bottom: 20px;
+    color: rgb(255, 175, 0);
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#endereço {
+    display: flex;
+    align-items: center;
+    margin-left: 264px;
+    width: 899px;
+    height: 203px;
+    background-color: rgb(1, 0, 16);
+    border: 3px solid rgb(162, 89, 247);
+    border-radius: 1rem;
+}
+
+#endereço p {
+    margin-left: 20px;
+    align-items: center;
+    color: rgb(162, 89, 247);
+    font-family: 'Courier Prime', monospace;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 83px;
+    background-color: rgb(249, 0, 61);
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    padding-bottom: 5px;
+    transition: 0.07s;
+}
+
+footer h1:hover {
+    border-bottom: 3px solid rgb(255, 175, 0);
+}

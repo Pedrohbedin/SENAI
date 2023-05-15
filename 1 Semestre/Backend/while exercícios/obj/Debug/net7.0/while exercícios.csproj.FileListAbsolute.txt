@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\bin\Debug\net7.0\while exercícios.exe
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\bin\Debug\net7.0\while exercícios.deps.json
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\bin\Debug\net7.0\while exercícios.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\bin\Debug\net7.0\while exercícios.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\bin\Debug\net7.0\while exercícios.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\while exercícios.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\while exercícios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\while exercícios.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\while exercícios.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\while exercícios.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\while exercícios.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\refint\while exercícios.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\while exercícios.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\while exercícios.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\while exercícios\obj\Debug\net7.0\ref\while exercícios.dll

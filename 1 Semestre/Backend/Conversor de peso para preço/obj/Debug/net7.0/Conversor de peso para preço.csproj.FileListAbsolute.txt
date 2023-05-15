@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\bin\Debug\net7.0\Conversor de peso para preço.exe
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\bin\Debug\net7.0\Conversor de peso para preço.deps.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\bin\Debug\net7.0\Conversor de peso para preço.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\bin\Debug\net7.0\Conversor de peso para preço.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\bin\Debug\net7.0\Conversor de peso para preço.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\Conversor de peso para preço.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\Conversor de peso para preço.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\Conversor de peso para preço.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\Conversor de peso para preço.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\Conversor de peso para preço.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\Conversor de peso para preço.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\refint\Conversor de peso para preço.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\Conversor de peso para preço.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\Conversor de peso para preço.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Conversor de peso para preço\obj\Debug\net7.0\ref\Conversor de peso para preço.dll

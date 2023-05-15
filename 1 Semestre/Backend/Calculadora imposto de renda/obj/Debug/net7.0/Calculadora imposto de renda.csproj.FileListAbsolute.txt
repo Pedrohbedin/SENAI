@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\Calculadora imposto de renda.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\Calculadora imposto de renda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\Calculadora imposto de renda.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\Calculadora imposto de renda.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\Calculadora imposto de renda.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\bin\Debug\net7.0\Calculadora imposto de renda.exe
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\bin\Debug\net7.0\Calculadora imposto de renda.deps.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\bin\Debug\net7.0\Calculadora imposto de renda.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\bin\Debug\net7.0\Calculadora imposto de renda.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\bin\Debug\net7.0\Calculadora imposto de renda.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\Calculadora imposto de renda.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\refint\Calculadora imposto de renda.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\Calculadora imposto de renda.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\Calculadora imposto de renda.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend\Calculadora imposto de renda\obj\Debug\net7.0\ref\Calculadora imposto de renda.dll

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro de Equipes</title>
+    <link rel="stylesheet" href="css/cadastro-de-equipes.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="layout-grid">
+
+                <div class="contatos">
+                    <div class="phone">
+                        <img src="assets/icons/icone_telefone.svg" alt="Ícone do telefone de contato">
+                        <p>(11) 0900-1010</p>
+                    </div>
+                    <div class="mail">
+                        <img src="assets/icons/icone_email.svg" alt="Ícone de email de contato">
+                        <p>contato@gamer.com.br</p>
+                    </div>
+                </div>
+
+                <div class="midias-sociais">
+                    <a href="">
+                        <img src="assets/icons/facebook.svg" alt="Imagem link do Facebook da empresa">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/linkedin.svg" alt="Imagem link do Linkedin da empresa">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/intagram.svg" alt="Imagem link do Instagram da empresa">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="layout-grid alinhamento-between-center">
+                <!-- Menu Hamburger. Visível apenas no smartphone -->
+                <img class="menu-hamburger" onclick="mostrarMenu()" src="assets/icons/bars.svg"
+                    alt="Ícone de Telefone. Abre e fecha o menu principal, no celular">
+
+                <img class="logo" src="assets/images/logotipo-gamer.svg"
+                    alt="Imagem logotipo gamer com um controle de vídeo game ao centro">
+
+                <nav class="menu" id="menu">
+                    <a href="index.html">Início</a>
+                    <a href="cadastro-jogadores.html">Jogadores</a>
+                    <a href="cadastro-de-equipes.html">Equipes</a>
+                    <a href="index.html#noticias">Notícias</a>
+
+                    <!-- vísível apenas no mobile -->
+                    <a class="phone">
+                        <img src="assets/icons/icone_telefone.svg" alt="Ícone do telefone de contato">
+                        <p>(11) 0900-1010</p>
+                    </a>
+                    <a class="mail">
+                        <img src="assets/icons/icone_email.svg" alt="Ícone de email de contato">
+                        <p>contato@gamer.com.br</p>
+                    </a>
+
+
+                    <div class="midias-sociais">
+                        <a href="">
+                            <img src="assets/icons/facebook.svg" alt="Imagem link do facebook da empresa">
+                        </a>
+                        <a href="">
+                            <img src="assets/icons/linkedin.svg" alt="Imagem link do Linkedin da empresa">
+                        </a>
+                        <a href="">
+                            <img src="assets/icons/intagram.svg" alt="Imagem link do instagram da empresa">
+                        </a>
+                    </div>
+                </nav>
+
+                <!-- menu 3 pontinhos -->
+
+                <img class="menu-pontinhos" onclick="mostrarUsuarios()" src="assets/icons/pointers.svg"
+                    alt="Ícone 3 pontinhos, abre e fecha o menu de usuários">
+
+                <div id="menu-usuarios" class="menu-usuarios">
+                    <a href="login.html">
+                        <img src="assets/icons/user.svg" alt="Ícone de perfil">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/bag.svg" alt="Ícone de sacola">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/search.svg" alt="Ícone lupa de pesquisa">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+        <form id="voltar">
+            <h1>CADASTRO DE EQUIPES</h1>
+            <input type="text" placeholder="Digite o Id da sua equipe:" required>
+            <input type="text" placeholder="Digite o nome da sua equipe:" required>
+            <div class="imagem-de-equipes">
+                <button>Imagem de Equipes</button>
+                <p>Nenhuma imagem selecionada...</p>
+            </div>
+            <input type="submit" value="Cadastro">
+        </form>
+        <a class="come-back-button" href="#voltar"><img src="assets/icons/seta.png" alt=""></a>
+        <div class="cadastro-equipes">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th colspan="2">FOTO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>LOUD</td>
+                        <td><img id="LOUD-LOGO" src="assets/images/LOUD_LOGO.png" alt=""></td>
+                        <td><img id="trash" src="assets/icons/trash.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>LOUD</td>
+                        <td><img id="LOUD-LOGO" src="assets/images/LOUD_LOGO.png" alt=""></td>
+                        <td><img id="trash" src="assets/icons/trash.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>LOUD</td>
+                        <td><img id="LOUD-LOGO" src="assets/images/LOUD_LOGO.png" alt=""></td>
+                        <td><img id="trash" src="assets/icons/trash.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>LOUD</td>
+                        <td><img id="LOUD-LOGO" src="assets/images/LOUD_LOGO.png" alt=""></td>
+                        <td><img id="trash" src="assets/icons/trash.png" alt=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="linear-gradient"></div>
+        <div class="footer-flex">
+            <div class="coluna1">
+                <img src="assets/images/logotipo-gamer.svg" alt="logotipo gamer" id="logo">
+                <p class="text">Nosso sucesso na criação de soluções de negócios se deve em grande parte à nossa equipe
+                    talentosa e altamente
+                    comprometida.</p>
+                <div class="midias-sociais">
+    
+                    <a href="">
+    
+                        <img src="assets/icons/icone_facebook_footer.png" alt="Facebook icone para ancoragem">
+    
+                    </a>
+    
+                    <a href="">
+    
+                        <img src="assets/icons/icone_linkedin_footer.png" alt="Linkedin icone para ancoragem">
+    
+                    </a>
+    
+                    <a href="">
+    
+                        <img src="assets/icons/icone_intagram_footer.png" alt="Instagram icone para ancoragem">
+    
+                    </a>
+                </div>
+            </div>
+    
+            <div class="links-flex">
+                <h1 class="title" style="text-transform: capitalize;">Links Úteis</h1>
+                <div class="links">
+                    <div class="links-top">
+                        <li><p class="tracinho"></p><a href="index.html">Início</a></li>
+                        <li><p class="tracinho"></p><a href="">Jogadores</a></li>
+                        <li><p class="tracinho"></p><a href="index.html#noticias">Notícias</a></li>
+                    </div>
+                    <div class="links-bottom">
+                        <li><p class="tracinho"></p><a href="login.html">Login</a></li>
+                        <li><p class="tracinho"></p><a href="cadastro-de-equipes.html">Equipes</a></li>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="contatos">
+                <h1 class="title" style="text-transform: capitalize;">Contatos</h1>
+                <div class="informacoes">
+                    <p style="color: #F9AA01;">Localização:</p>
+                    <p>Rua Niterói, 180 - São Caetano do Sul- SP</p>
+                    <p style="color: #F9AA01;">Junte-se a nós:</p>
+                    <p>contato@gamer.com.br </p>
+                    <p style="color: #F9AA01;">Telefone:</p>
+                    <p>(11) 0900-1010</p>
+                </div>
+            </div>
+    
+            <div class="newsletter">
+                <h1 class="title" style="text-transform: capitalize;">Newsletter</h1>
+                <div class="linha">
+                    <img src="assets/icons/email-icon.png" alt="">
+                    <input type="email" placeholder="Digite sua e-mail:">
+                </div>
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©Copyright2022-GamerJogosDigitais</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+        function mostrarMenu() {
+            // pega a navbar pelo id
+            document.getElementById("menu").classList.toggle("mostrar-menu");
+        }
+
+        function mostrarUsuarios() {
+            document.getElementById("menu-usuarios").classList.toggle("mostrar-usuarios");
+        }
+
+    </script>
+
+</body>
+
+</html>

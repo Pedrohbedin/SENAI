@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Gamer Tarde</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<!-- header -->
+<header>
+    <div class="header-top">
+        <div class="layout-grid">
+
+            <div class="contatos">
+                <div class="phone">
+                    <img src="assets/icons/icone_telefone.svg" alt="Ícone do telefone de contato">
+                    <p>(11) 0900-1010</p>
+                </div>
+                <div class="mail">
+                    <img src="assets/icons/icone_email.svg" alt="Ícone de email de contato">
+                    <p>contato@gamer.com.br</p>
+                </div>
+            </div>
+
+            <div class="midias-sociais">
+                <a href="">
+                    <img src="assets/icons/facebook.svg" alt="Imagem link do Facebook da empresa">
+                </a>
+                <a href="">
+                    <img src="assets/icons/linkedin.svg" alt="Imagem link do Linkedin da empresa">
+                </a>
+                <a href="">
+                    <img src="assets/icons/intagram.svg" alt="Imagem link do Instagram da empresa">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="layout-grid alinhamento-between-center">
+            <!-- Menu Hamburger. Visível apenas no smartphone -->
+            <img class="menu-hamburger" onclick="mostrarMenu()" src="assets/icons/bars.svg"
+                alt="Ícone de Telefone. Abre e fecha o menu principal, no celular">
+
+            <img class="logo" src="assets/images/logotipo-gamer.svg"
+                alt="Imagem logotipo gamer com um controle de vídeo game ao centro">
+
+            <nav class="menu" id="menu">
+                <a href="index.html">Início</a>
+                <a href="cadastro-jogadores.html">Jogadores</a>
+                <a href="cadastro-de-equipes.html">Equipes</a>
+                <a href="index.html#noticias">Notícias</a>
+
+                <!-- vísível apenas no mobile -->
+                <a class="phone">
+                    <img src="assets/icons/icone_telefone.svg" alt="Ícone do telefone de contato">
+                    <p>(11) 0900-1010</p>
+                </a>
+                <a class="mail">
+                    <img src="assets/icons/icone_email.svg" alt="Ícone de email de contato">
+                    <p>contato@gamer.com.br</p>
+                </a>
+
+
+                <div class="midias-sociais">
+                    <a href="">
+                        <img src="assets/icons/facebook.svg" alt="Imagem link do facebook da empresa">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/linkedin.svg" alt="Imagem link do Linkedin da empresa">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/intagram.svg" alt="Imagem link do instagram da empresa">
+                    </a>
+                </div>
+            </nav>
+
+            <!-- menu 3 pontinhos -->
+            <img class="menu-pontinhos" onclick="mostrarUsuarios()" src="assets/icons/pointers.svg"
+                alt="Ícone 3 pontinhos, abre e fecha o menu de usuários">
+
+            <div id="menu-usuarios" class="menu-usuarios">
+                <a href="login.html">
+                    <img src="assets/icons/user.svg" alt="Ícone de perfil">
+                </a>
+                <a href="">
+                    <img src="assets/icons/bag.svg" alt="Ícone de sacola">
+                </a>
+                <a href="">
+                    <img src="assets/icons/search.svg" alt="Ícone lupa de pesquisa">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN -->
+
+<main>
+    <article id="voltar" class="banner">
+        <h1>Liga Gamers</h1>
+        <a href="" class="btn-sobre">Sobre</a>
+    </article>
+
+    <a class="come-back-button" href="#voltar"><img src="assets/icons/seta.png" alt=""></a>
+
+    <section class="jogos">
+        <div class="Mais-popular">
+            <img src="assets/images/fifa23.png" alt="">
+            <div class="container">
+                <div class="button">
+                    <p>Mais popular</p>
+                </div>
+            </div>
+        </div>
+        <div class="Ultimo-jogo">
+            <img src="assets/images/csgo.png" alt="">
+            <div class="container">
+                <div class="button">
+                    <p>Último jogo</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="time-programer">
+        <div class="time-title">
+            <h1>Entre para o time programmer</h1>
+            <p class="line"></p>
+        </div>
+        <div class="cards">
+            <div class="img-card-kj">
+                <img src="assets/images/kiljoy.png" alt="">
+                <div class="card kj-card">
+                    <img src="assets/images/Controle.png" alt="">
+                    <h1>20 JOGOS DIFERENTES</h1>
+                    <p>São mais de 20 jogos em 2 plataformas dispóniveis para que você possa aprender melhores
+                        técnicas.</p>
+                </div>
+            </div>
+            <div class="img-card-jinx">
+                <img src="assets/images/jinx.png" alt="">
+                <div class="card jinx-card">
+                    <img src="assets/images/Pessoa.png" alt="">
+                    <h1>53 PROFESSORES</h1>
+                    <p>Temos 53 Proplayers no nosso time para ensinar todas as estratégias, você vai aprender do
+                        básico ao avançado. Tempo de treinamento, descanso, equipamentos. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="noticias" id="noticias">
+        <h1 class="title">Notícias</h1>
+        <div class="container-flex">
+            <div class="container-top">
+                <div class="container">
+                    <img src="assets/images/VCT-eSports 1.png" alt="">
+                    <h2>Título da Notícia</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste distinctio ex recusandae adipisci
+                        asperiores veniam cumque vel, tempora saepe laudantium doloremque illo possimus quas. Dolor
+                        harum
+                        nostrum fuga ullam delectus?</p>
+                </div>
+                <div class="container">
+                    <img src="assets/images/VCT-eSports 2.png" alt="">
+                    <h2>Título da Notícia</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolorum nulla, pariatur debitis
+                        iure
+                        recusandae consectetur temporibus, repellendus, eligendi natus obcaecati. Cupiditate totam
+                        sapiente
+                        quaerat eligendi voluptates molestiae, repellendus labore!</p>
+                </div>
+                <div class="container">
+                    <img src="assets/images/VCT-eSports 3.png" alt="">
+                    <h2>Título da Notícia</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit saepe id molestiae dolorem
+                        accusantium ut voluptatem sed commodi est tenetur officia ab distinctio enim assumenda, tempora
+                        ratione quam adipisci dolor!</p>
+                </div>
+                <div class="container">
+                    <img src="assets/images/VCT-eSports 4.png" alt="">
+                    <h2>Título da Notícia</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illum error voluptatibus alias
+                        eveniet a fuga earum iste. Harum minus nihil esse natus veniam alias ipsa, a quibusdam repellat
+                        nesciunt!</p>
+                </div>
+            </div>
+            <div class="container-bottom">
+                <div class="container">
+                    <img src="assets/images/VCT-eSports 1.png" alt="">
+                    <h2>Título da Notícia</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam fugit quam rerum rem
+                        voluptatum
+                        error nulla quidem ipsa ullam, laborum animi vitae deleniti sint molestiae incidunt. Ex, vel
+                        voluptatem?</p>
+                </div>
+                <div class="container">
+                    <img src="assets/images/VCT-eSports 2.png" alt="">
+                    <h2>Título da Notícia</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus velit numquam, temporibus
+                        beatae
+                        aperiam quaerat ex rerum excepturi explicabo at voluptatem quasi quos soluta vero obcaecati.
+                        Ducimus
+                        recusandae excepturi quam?</p>
+                </div>
+                <div class="container">
+                    <img src="assets/images/VCT-eSports 3.png" alt="">
+                    <h2>Título da Notícia</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo magni dolorem dolore ratione,
+                        officia in
+                        voluptatibus quae harum dolores. Quod laboriosam sunt ullam fugit, perferendis dignissimos unde
+                        sapiente esse facilis.</p>
+                </div>
+                <div class="container">
+                    <img src="assets/images/VCT-eSports 4.png" alt="">
+                    <h2>Título da Notícia</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus veniam blanditiis
+                        excepturi
+                        aliquid cum minima necessitatibus quae perferendis, rem iure numquam, aspernatur eum id harum
+                        ipsam
+                        asperiores architecto sapiente. Non!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- footer -->
+<footer>
+    <div class="linear-gradient"></div>
+    <div class="footer-flex">
+        <div class="coluna1">
+            <img src="assets/images/logotipo-gamer.svg" alt="logotipo gamer" id="logo">
+            <p class="text">Nosso sucesso na criação de soluções de negócios se deve em grande parte à nossa equipe
+                talentosa e altamente
+                comprometida.</p>
+            <div class="midias-sociais">
+
+                <a href="">
+
+                    <img src="assets/icons/icone_facebook_footer.png" alt="Facebook icone para ancoragem">
+
+                </a>
+
+                <a href="">
+
+                    <img src="assets/icons/icone_linkedin_footer.png" alt="Linkedin icone para ancoragem">
+
+                </a>
+
+                <a href="">
+
+                    <img src="assets/icons/icone_intagram_footer.png" alt="Instagram icone para ancoragem">
+
+                </a>
+            </div>
+        </div>
+
+        <div class="links-flex">
+            <h1 class="title" style="text-transform: capitalize;">Links Úteis</h1>
+            <div class="links">
+                <div class="links-top">
+                    <li><p class="tracinho"></p><a href="index.html">Início</a></li>
+                    <li><p class="tracinho"></p><a href="">Jogadores</a></li>
+                    <li><p class="tracinho"></p><a href="index.html#noticias">Notícias</a></li>
+                </div>
+                <div class="links-bottom">
+                    <li><p class="tracinho"></p><a href="login.html">Login</a></li>
+                    <li><p class="tracinho"></p><a href="cadastro-de-equipes.html">Equipes</a></li>
+                </div>
+            </div>
+        </div>
+
+        <div class="contatos">
+            <h1 class="title" style="text-transform: capitalize;">Contatos</h1>
+            <div class="informacoes">
+                <p style="color: #F9AA01;">Localização:</p>
+                <p>Rua Niterói, 180 - São Caetano do Sul- SP</p>
+                <p style="color: #F9AA01;">Junte-se a nós:</p>
+                <p>contato@gamer.com.br </p>
+                <p style="color: #F9AA01;">Telefone:</p>
+                <p>(11) 0900-1010</p>
+            </div>
+        </div>
+
+        <div class="newsletter">
+            <h1 class="title" style="text-transform: capitalize;">Newsletter</h1>
+            <div class="linha">
+                <img src="assets/icons/email-icon.png" alt="">
+                <input type="email" placeholder="Digite sua e-mail:">
+            </div>
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>©Copyright2022-GamerJogosDigitais</p>
+    </div>
+</footer>
+
+<script>
+
+    function mostrarMenu() {
+        // pega a navbar pelo id
+        document.getElementById("menu").classList.toggle("mostrar-menu");
+    }
+
+    function mostrarUsuarios() {
+        document.getElementById("menu-usuarios").classList.toggle("mostrar-usuarios");
+    }
+
+</script>
+
+</body>
+
+</html>

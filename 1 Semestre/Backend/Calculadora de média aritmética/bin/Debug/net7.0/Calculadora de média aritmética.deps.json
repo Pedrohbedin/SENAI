@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Calculadora de média aritmética/1.0.0": {
+        "runtime": {
+          "Calculadora de média aritmética.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Calculadora de média aritmética/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

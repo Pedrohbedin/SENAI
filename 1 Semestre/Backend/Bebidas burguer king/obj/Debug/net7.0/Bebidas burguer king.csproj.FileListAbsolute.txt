@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\bin\Debug\net7.0\Bebidas burguer king.exe
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\bin\Debug\net7.0\Bebidas burguer king.deps.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\bin\Debug\net7.0\Bebidas burguer king.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\bin\Debug\net7.0\Bebidas burguer king.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\bin\Debug\net7.0\Bebidas burguer king.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\Bebidas burguer king.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\Bebidas burguer king.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\Bebidas burguer king.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\Bebidas burguer king.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\Bebidas burguer king.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\Bebidas burguer king.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\refint\Bebidas burguer king.dll
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\Bebidas burguer king.pdb
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\Bebidas burguer king.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\Backend\Bebidas burguer king\obj\Debug\net7.0\ref\Bebidas burguer king.dll
