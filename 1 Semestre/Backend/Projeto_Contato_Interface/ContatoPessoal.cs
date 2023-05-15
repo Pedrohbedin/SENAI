@@ -21,7 +21,7 @@ namespace Projeto_Cartao_Interface
 
         public bool ValidarCPF(string _cpf)
         {
-             if(_cpf.Length == 11) {
+            if(_cpf.Length == 11) {
                 return true;
             }
             else {

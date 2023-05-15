@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Pedro\\SENAI\\1 Semestre\\Backend\\Projeto_Cartao_Interface\\Projeto_Cartao_Interface.csproj": {}
+    "C:\\Users\\User\\Desktop\\SENAI\\1 Semestre\\Backend\\Projeto_Contato_Interface\\Projeto_Cartao_Interface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Pedro\\SENAI\\1 Semestre\\Backend\\Projeto_Cartao_Interface\\Projeto_Cartao_Interface.csproj": {
+    "C:\\Users\\User\\Desktop\\SENAI\\1 Semestre\\Backend\\Projeto_Contato_Interface\\Projeto_Cartao_Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Pedro\\SENAI\\1 Semestre\\Backend\\Projeto_Cartao_Interface\\Projeto_Cartao_Interface.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\SENAI\\1 Semestre\\Backend\\Projeto_Contato_Interface\\Projeto_Cartao_Interface.csproj",
         "projectName": "Projeto_Cartao_Interface",
-        "projectPath": "C:\\Users\\User\\Desktop\\Pedro\\SENAI\\1 Semestre\\Backend\\Projeto_Cartao_Interface\\Projeto_Cartao_Interface.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\SENAI\\1 Semestre\\Backend\\Projeto_Contato_Interface\\Projeto_Cartao_Interface.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Pedro\\SENAI\\1 Semestre\\Backend\\Projeto_Cartao_Interface\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\SENAI\\1 Semestre\\Backend\\Projeto_Contato_Interface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

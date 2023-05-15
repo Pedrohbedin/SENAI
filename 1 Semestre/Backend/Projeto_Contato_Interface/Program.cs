@@ -1,7 +1,7 @@
 ﻿using Projeto_Cartao_Interface;
 
 Agenda agenda = new Agenda();
-ContatoComercial contato;
+Contato contato;
 string nome;
 string telefone;
 string email;
@@ -41,9 +41,14 @@ switch (resposta) {
         Console.WriteLine($"Insira o CPF/CNPJ");
         registroPessoa = Console.ReadLine()!;
     } while(registroPessoa.Length != 11 && registroPessoa.Length != 14);
-
-    contato = new ContatoComercial(nome, telefone, email, registroPessoa);
-    agenda.Adicionar(contato);
+    if (registroPessoa.Length == 14) {
+        contato = new ContatoComercial(nome, telefone, email, registroPessoa);
+        agenda.Adicionar(contato);
+    }
+    else {
+        contato = new ContatoPessoal(nome, telefone, email, registroPessoa);
+        agenda.Adicionar(contato);
+    }
     }
     
     break;
