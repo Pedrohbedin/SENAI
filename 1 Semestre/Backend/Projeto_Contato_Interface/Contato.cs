@@ -11,6 +11,6 @@ namespace Projeto_Cartao_Interface
         public string? Telefone {get; set; }
         public string? Email {get; set; }
         public string? RegistroPessoa {get; set; }
-        public string ? RegistroDaPessoa {get; set; }
+        public string? RegistroDaPessoa {get; set; }
     }
 }
