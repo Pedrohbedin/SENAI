@@ -7,66 +7,119 @@ namespace Projeto_Final_Sprint_3
 {
     public class Login
     {
-
-        List<Produto> produtos = new List<Produto>();
-        
-        public void Adicinar(Produto _produto) {
-            produtos.Add(_produto);
-        }
-
         // Declaração dos metodos
         public static void LoginUsuario() {
+            string input;
+            bool logado = false; 
+            Usuario usuario = new Usuario();
 
-            string? emailInserido;
-            string? senhaInserida;
-            string email = "teste";
-            string senha = "teste";
-            do 
-            {
-                Console.WriteLine($"Insira seu email:");
-                emailInserido = Console.ReadLine();
-
-                Console.WriteLine($"Insira sua senha:");
-                senhaInserida = Console.ReadLine();
-                
-                if (emailInserido != email || senhaInserida != senha) {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"\nEmail ou senha incorretos\n");
-                    Console.ResetColor();
+            do {
+                    Console.Clear();
+                    Console.WriteLine(@$"
+                    [1] Cadastrar usuario
+                    [2] Logue com o seu usuario
+                    [3] Delete um usuário
+                    [4] Listar Usuarios
+                    [5] Sair do programa
+                    ");
+                    input = Console.ReadLine()!;
                     
-                }
-            } while(senhaInserida != senha || emailInserido != email );
-            Console.Clear();
+                    switch(input) {
+                        case"1":
+                        Console.Clear();
+                        usuario.Cadastrar();
+                        break;
 
-            Menu();
+                        case"2":
+                        logado = usuario.Login();
+
+                        if (logado == true) {
+                            Menu();
+                        }
+                        break;
+
+                        case"3":
+                        Console.Clear();
+                        Console.WriteLine($"Insira o código do usuario a ser removido");
+                        int codigoMarca = int.Parse(Console.ReadLine()!);
+                        usuario.Deletar(codigoMarca);
+                        break;
+                        
+                        case"4":
+                        usuario.Listar();
+                        Console.ReadLine();
+                        break;
+                    }
+                } while(input != "5");
+                
+            Console.Clear();
         } 
 
         public static void Menu() {
-            List<Marca> Marcas = new List<Marca>();
+            bool logado = true;
             string? input;
-            Produto produto;
+            
+            Marca marca = new Marca();
+            Produto produto = new Produto();
 
-            do {
-                Console.WriteLine(@$"
+            
+
+        do {
+            Console.WriteLine(@$"
         [1] Cadastrar marca
         [2] Listar marcas
-        [3] Cadastrar produto
-        [4] Listar produtos
+        [3] Remover marca
+
+        [4] Cadastrar produto
+        [5] Listar produtos
+        [6] Remover produto
+
+        [7] Deslogar
         ");
         input = Console.ReadLine();
 
         switch (input) {
-            case "3":
-            Marca marca = new Marca(1, "nome", DateTime.Now);
-            Marca marca1 = new Marca(2, "nome2", DateTime.Now);
 
-            Marcas.Add(marca);
-            Console.WriteLine(marca);
-            Console.WriteLine(marca1);
-            
+            case"1":
+                marca.Cadastrar();
             break;
+
+            case "2":
+             Console.Clear();        
+                marca.Listar();
+                Console.WriteLine($"Pressione qualquer tecla para continuar...");
+                Console.ReadLine();
+            break;
+            case "3":
+            Console.Clear();
+            Console.WriteLine($"Insira o código da marca a ser removida");
+            int codigoMarca = int.Parse(Console.ReadLine()!);
+            marca.Deletar(codigoMarca);
+            break;
+            case "4":
+            Console.Clear();
+            produto.Cadastrar();
+            break;
+            case "5":
+            Console.Clear();
+            produto.Listar();
+            Console.WriteLine($"Pressione qualquer tecla para continuar...");
+            Console.ReadLine();
+            break;
+            case "6":
+            Console.Clear();
+            Console.WriteLine($"Insira o código da marca a ser removida");
+            int codigoProduto = int.Parse(Console.ReadLine()!);
+            produto.Deletar(codigoProduto);
+            break;
+            case "7":
+            logado = false;
+            break;
+
         }
-            }while(input != "4");
+
+        }while(logado == true);
+
         }
     }
 }
