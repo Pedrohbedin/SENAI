@@ -65,6 +65,7 @@ namespace Projeto_Final_Sprint_3
             
 
         do {
+            Console.Clear();
             Console.WriteLine(@$"
         [1] Cadastrar marca
         [2] Listar marcas

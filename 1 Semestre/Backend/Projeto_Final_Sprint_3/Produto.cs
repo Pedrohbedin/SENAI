@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -48,7 +49,7 @@ namespace Projeto_Final_Sprint_3
                     Console.WriteLine(@$"
                     Codigo: {p.Codigo}
                     Nome: {p.NomeProduto}
-                    Preco: {p.Preco}
+                    Preco: {CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", p.Preco}
                     Data: {p.DataCadastro}
                     Marca: {Marca.listaDeMarcas.Find(x => x.Codigo == p.MarcaCodigo)!.NomeMarca}
                     ");

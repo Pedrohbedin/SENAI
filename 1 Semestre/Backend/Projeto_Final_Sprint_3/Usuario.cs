@@ -61,16 +61,8 @@ namespace Projeto_Final_Sprint_3
             
             Console.WriteLine($"Insira sua senha:");
             SenhaInserida = Console.ReadLine();
-
-            if (listaUsuarios.Count > 0) { 
-                foreach(Usuario usuario in listaUsuarios) {
-                    if (SenhaInserida == usuario.Senha && EmailInserido == usuario.Email) {
-                        return true;
-                    }
-                    else {
-                    return false;
-                    }
-                }
+            
+            if (listaUsuarios.Count > 0) {
                 return true;
             }
             else {
