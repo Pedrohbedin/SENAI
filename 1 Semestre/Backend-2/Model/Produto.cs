@@ -56,5 +56,54 @@ namespace Backend_2.Model
 
             File.AppendAllLines(PATH, linhas);
         }
+
+        public Produto Cadastrar() {
+            Produto novoProduto = new Produto();
+            bool Error = false;
+
+            Console.Clear();
+
+            do {
+                Console.WriteLine($"Insira o código do produto:");
+                string Codigo = Console.ReadLine()!;
+            try {
+                novoProduto.Codigo = int.Parse(Codigo);
+
+                Error = false;
+            }
+            catch (Exception) {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\nInsira um número!!!\n");
+                Console.ResetColor();
+                Error = true;
+            }
+            } while(Error);
+            
+
+            Console.WriteLine($"Insira o nome do produto:");
+            novoProduto.Nome = Console.ReadLine()!;
+
+            do {
+            Console.WriteLine($"Insira o preço do produto:");
+            string Preco = Console.ReadLine()!; 
+            
+
+            try {
+                novoProduto.Preco = float.Parse(Preco);
+
+                Error = false;
+            }
+            catch (Exception) {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\nInsira um número!!!\n");
+                Console.ResetColor();
+                Error = true;
+            }
+
+
+            } while(Error);
+
+            return novoProduto;        
+        }
     }
 }

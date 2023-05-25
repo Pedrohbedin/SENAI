@@ -13,6 +13,7 @@ namespace Backend_2.Controller
         ProdutoView produtoView = new ProdutoView();
 
         public void ListarProdutos() {
+            produto.Inserir(produto.Cadastrar()); //
             List<Produto> produtos = produto.Ler();
             produtoView.Listar(produtos);
         }

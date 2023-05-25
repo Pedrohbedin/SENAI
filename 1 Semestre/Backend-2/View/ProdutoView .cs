@@ -12,12 +12,11 @@ namespace Backend_2.View
 
         public void Listar(List<Produto> produto) {
             foreach (Produto item in produto) {
-                Console.WriteLine(@$"
-                Código: {item.Codigo}
-                Nome: {item.Nome}
-                Preco: {item.Preco:C2}");
-            }
-            Console.WriteLine($"");
+                Console.WriteLine(@$"------------------------------
+Código: {item.Codigo}
+Nome: {item.Nome}
+Preco: {item.Preco:C2}");}
+            Console.WriteLine($"------------------------------");
             
         }
     }
