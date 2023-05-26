@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\bin\Debug\net7.0\Projeto02.exe
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\bin\Debug\net7.0\Projeto02.deps.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\bin\Debug\net7.0\Projeto02.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\bin\Debug\net7.0\Projeto02.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\bin\Debug\net7.0\Projeto02.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\Projeto02.csproj.AssemblyReference.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\Projeto02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\Projeto02.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\Projeto02.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\Projeto02.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\Projeto02.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\refint\Projeto02.dll
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\Projeto02.pdb
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\Projeto02.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\1 Semestre\Backend-2\Projeto02\obj\Debug\net7.0\ref\Projeto02.dll
