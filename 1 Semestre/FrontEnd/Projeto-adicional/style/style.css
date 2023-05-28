@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 
 * {
     box-sizing: border-box;
@@ -15,16 +16,9 @@ body {
 
 header {
     width: 100%;
-    height: 100px;
     display: flex;
-    padding: 0px 10px;
+    padding: 25px 6px;
     position: absolute;
-}
-
-.elements {
-    width: 100%;
-    height: 100%;
-    display: flex;
     justify-content: space-around;
     align-items: center;
 }
@@ -34,9 +28,9 @@ header {
     color: white;
 }
 
-.search-bar input {
+.search-bar {
     background-color: #fffffF;
-    width: 460px;
+    width: 465px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -48,20 +42,23 @@ header {
 
 }
 
-.search-bar input:focus {
+.search-bar:focus {
     background-color: rgba(255, 255, 255, 1);
 }
 
-nav {
-    
+ul {
     display: flex;
     gap: 30px;
+    list-style: none;
+}
+
+li {
+    list-style: none;
 }
 
 a { 
     color: #E9CDFD;
     display: inline-block; 
-    margin: 0;
     text-transform: capitalize;
     text-decoration: none;
     transition: 0.4s;
@@ -76,13 +73,13 @@ a:hover {
     display: flex;
 }
 
-.fast-acess span {
+span {
     color: #E9CDFD;
     border: 2px solid rgba(255, 255, 255, .4);
     padding: 5px;
     border-radius: 8rem;
     display:inline-block; 
-    margin:0;
+    
     text-transform:capitalize;
     text-decoration: none;
 }
@@ -100,16 +97,11 @@ main .section01 {
     height: 95%;
 }
 
-.resto {
-    position: relative;
-    z-index: 2;
-}
-
 main .section01 img {
     position: relative;
     top: 100px;
     left: 100px;
-    width: 850px;
+    width: 1050px;
     z-index: 0;
 }
 
@@ -120,30 +112,38 @@ main .section01 img {
     height: 100%;
 }
 
-.section01 article {
+.section01 p {
+    font-size: 20px;
+}
+
+.section01 h1 {
+    font-size: 75px;
+}
+
+article {
     display: flex; 
     flex-direction: column;
     gap: 35px;
     width: 481px;
 }
 
-.caracters article .title {
+.section02 article .title {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
 }
 
-.caracters article .title span {
+.section02 article .title span {
     font-size: 40px;
     color: #C472CF;
 }
 
-.caracters .title h1 {
+.section02 .title h1 {
     font-size: 25px;
 }
 
-.caracters p {
+.section02 p {
     display: flex;
     padding-left: 53px;
     font-size: 17px;
@@ -167,41 +167,554 @@ main .section01 img {
 
 .section02 {
     width: 100%;
-    height: 290px;
     background-color: #FFF3FA;
+    z-index: 1;
 }
 
-.caracters {
-    height: 100%;
+.section02 {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    padding: 6%;
+    justify-content: space-around;
 }
 
-.caracters article {
+@media (max-width: 720px) {
+    .section02 {
+      flex-direction: column;
+      padding: 6%;
+      gap: 70px;
+    }
+}
+
+.section02 article {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20%;
     width: 275px;
 }
 
-.caracters article h1 {
+.section02 article h1 {
     color: black;
 }
 
-.caracters article p {
+.section02 article p {
     color: gray;
 }
 
-main .section03 {
-    position: absolute;
+.section03{
     display: flex;
-    height: 100px;
-    width: 100%;
-    background-color: aqua;
-    z-index: 2;
+    padding: 7% 10%;
+    flex-direction: column;
+    gap: 10vh;
+    text-align: center;
 }
 
-.section03 .title {
+.section03 .Tt  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    color: black;
+    padding: 0 25%;
+}
 
+.section03 .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section03 article {
+    font-size: 17px;
+}
+
+.section03 article p {
+    color: rgb(160, 160, 160);
+}
+
+.section03 article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+main .section03 article a {
+    color: black;
+}
+
+main .section04 {
+    padding: 5% 10%;
+    background-color: #FFF3FA;
+    color: black;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+main .section04 .Tt {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+main .section04 div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.section04 .down-section {
+    margin-top: 5%;
+}
+
+.section04 article{
+    background-color: white;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    box-shadow: 0 4px 8px 0 rgba(110, 110, 110, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section04 .left-section article {
+    padding: 7% 7%;
+}
+
+.section04 article button {
+    width: 150px;
+    height: 45px;
+    background-color: transparent;
+    border-radius: 2rem;
+    border: 2px solid rgb(187, 122, 187);
+    color: rgb(156, 36, 156);
+}
+
+.section04 h1 {
+    font-family: 'Inter', sans-serif
+}
+
+.section04 .left-section article h1 {
+    color: black;
+    font-size: 30px;
+}
+
+.section04 .left-section article p{
+    color: #838383;
+}
+
+.section04 .left-section {
+    display: flex;
+    width: 45%;
+}
+
+.section04 .right-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section04 .right-section .up-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.section04 .down-section {
+    display: flex;
+}
+
+.section04 .down-section article {
+    display: flex;
+    width: 100%;
+    padding: 7% 7%;
+}
+
+.section04 .right-section .up-section article {
+    text-align: left;
+    gap: 6px;
+    padding: 3% 3%;
+}
+
+.section04 .right-section .up-section article h1 {
+    font-size: 30px;
+    width: 40%;
+}
+
+.section04 .right-section .up-section article p {
+    font-size: 17px;
+    width: 40%;
+    color: black;
+}
+
+.section04 .right-section .down-section article {
+    display: flex;
+    gap: 20px;
+    padding: 3% 2%;
+}
+
+.section04 .right-section .down-section article h1 {
+    font-size: 30px;
+}
+
+.section04 .right-section .down-section article p {
+    font-size: 17px;
+    color: #838383;
+}
+
+.section05 {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 4%;
+    gap: 30px;
+}
+
+.section05 article h1 {
+    color: black;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.section05 article p {
+    color: black;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+}
+
+.section05 article {
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(110, 110, 110, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2% 2%;
+
+}
+
+.section05 .header05 {
+    display: flex;
+    flex-direction: row;
+    gap: 55%;
+    align-items: center;
+}
+
+.section05 nav {
+    display: flex;
+    justify-content: row;
+    gap: 5%;
+}
+
+.section05 article {
+    gap: 0;
+}
+
+.section05 .shops {
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.section05 .left-part {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 100px;
+    padding-top: 10px;
+}
+
+.section05 .part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    height: 100%;
+}
+
+.section05 span {
+    color: #e07cc6;
+    border: 2px solid #e07cc6;
+    font-size: 20px;
+}
+
+.section05 .arrows {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.section06 {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 4%;
+    gap: 30px;
+}
+
+.section06 .h {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section06 .down-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section06 section {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(110, 110, 110, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 2%  2%;
+    gap: 20px;
+}
+
+.section06 nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.section06 nav a {
+    color: #838383;
+}
+
+.section06 nav a:hover {
+    color: #C472CF;
+}
+
+.section06 aside {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section06 .bar-things{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.section06 .bar-statistic {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section06 .progress-bar{
+    /* vamos declarar nossa
+      variável com o nome de
+      "progress". Ela terá seu
+      valor entre 0 e 100.
+      */
+    --progress: 24;
+    height: 20px;
+    border-radius: 0.3rem;
+    background-color: #EDEFEC;
+    display: flex;
+  }
+  
+.section06 .progress-bar::before{
+    content: "";
+    /* aqui estamos chamando
+      nossa variável. Como a
+      largura do pseudo-elemento
+      estará entre 0% e 100%, temos
+      que converter o valor da nossa
+      variável em porcentagem. Para
+      isso, basta multiplicar por 1%.
+      */
+    width: calc(var(--progress) * 1%);
+    background-color: #C370D4;
+    border-radius: 0.3rem;
+}
+
+
+.section06 button {
+    width: 35%;
+    height: 10%;
+    border-radius: 2rem;
+    background-color: #C66ED2;
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+}
+
+.section07 {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding: 3% 7%;
+    gap: 40px;
+}
+
+.section07 .top-things {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section07 article {
+    box-shadow: 0 4px 8px 0 rgba(110, 110, 110, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section07 article div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 5%;
+}
+
+.section07 .botton-arrows{
+    display: flex;
+    justify-content: center;
+}
+
+.section07 h1 {
+    font-size: 20px; font-family: 'Inter', sans-serif;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 4350px;
+    flex-direction: column;
+}
+
+footer .up {
+    background-color: blue;
+    padding: 4% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+footer .txt {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    gap: 30px;
+}
+
+footer input[type=text] {
+    outline: none;
+    width: 355px;
+    height: 50px;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+footer input[type=submit] {
+    width: 175px;
+    height: 50px;
+    background-color: #FFC300;
+    border-radius: 8rem;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.mid {
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mid div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mid div a {
+    color: #838383;
+}
+
+.mid div a:first-of-type {
+    color: black;
+}
+
+.bottom {
+    border-top: 2px solid rgba(131, 131, 131, 0.2);
+    color: #838383;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 1%;
+}
+
+@media (max-width: 720px) {
+
+    header nav {
+        display: none;
+    }
+
+    header .search-bar {
+        display: none;
+    }
+
+    .section01 figure img {
+        width: 200px;
+    }
+
+    .section01 {
+        flex-direction: column-reverse;
+    }
+
+    .section01 p {
+        font-size: 20px;
+    }
+    
+    .section01 h1 {
+        font-size: 35px;
+    }
+
+    .section01 article {
+        gap: 0px;
+        width: 100%;
+    }
+    
+    .section01 img {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .section02 {
+      flex-direction: column;
+      padding: 6%;
+      gap: 70px;
+    }
+
+    .section03 .content {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section04 .Vv {
+        flex-direction: column;
+    }
+
+    .section04 article {
+        align-items: center;
+        margin: 0;
+    }
+
+    .left-section {
+        width: 100%;
+    }
+
+    .up-section {
+        flex-direction: column;
+        width: 100%;
+    }
 }
