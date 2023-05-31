@@ -56,7 +56,7 @@ li {
     list-style: none;
 }
 
-a { 
+header a { 
     color: #E9CDFD;
     display: inline-block; 
     text-transform: capitalize;
@@ -85,6 +85,14 @@ span {
 }
 
 /* MAIN */
+
+main a { 
+    color: #E9CDFD;
+    display: inline-block; 
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.4s;
+}
 
 main .section01 {
     background: rgb(255,72,245);
@@ -378,7 +386,6 @@ main .section04 div {
 
 .section05 article {
     color: black;
-    box-shadow: 0 4px 8px 0 rgba(110, 110, 110, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 2% 2%;
 
 }
@@ -544,29 +551,6 @@ main .section04 div {
     gap: 30px;
 }
 
-.section07 .top-things {
-    display: flex;
-    justify-content: space-between;
-}
-
-.section07 article {
-    box-shadow: 0 4px 8px 0 rgba(110, 110, 110, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-direction: column;
-}
-
-.section07 article div {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    padding: 5%;
-}
-
-.section07 .botton-arrows{
-    display: flex;
-    justify-content: center;
-}
-
 .section07 h1 {
     font-size: 20px; font-family: 'Inter', sans-serif;
 }
@@ -635,6 +619,13 @@ footer input[type=submit] {
     color: black;
 }
 
+
+.section07 .top-things {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 .bottom {
     border-top: 2px solid rgba(131, 131, 131, 0.2);
     color: #838383;
@@ -652,10 +643,6 @@ footer input[type=submit] {
 
     header .search-bar {
         display: none;
-    }
-
-    .section01 figure img {
-        width: 200px;
     }
 
     .section01 {
@@ -707,8 +694,29 @@ footer input[type=submit] {
         width: 100%;
     }
 
-    .up-section {
+    .section04 .right-section .up-section {
         flex-direction: column;
         width: 100%;
     }
+
+    .section05 {
+        flex-direction: column;
+    }
+
+    .section05 .shops {
+        flex-direction: column;
+    }
+
+    .section07 .top-things {
+        flex-direction: column;
+    }
+
+    .section04 .top-things {
+        flex-direction: column;
+    }
+
+    .header05 {
+        
+    }
+    
 }
