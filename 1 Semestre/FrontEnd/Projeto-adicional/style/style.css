@@ -136,7 +136,7 @@ main .section01 img {
     gap: 10px;
 }
 
-.section02 article .title span {
+.section02 span {
     font-size: 40px;
     color: #C472CF;
 }
@@ -176,7 +176,7 @@ main .section01 img {
 .section02 {
     display: flex;
     align-items: center;
-    padding: 6%;
+    padding: 6% 0;
     justify-content: space-around;
 }
 
@@ -368,7 +368,7 @@ main .section04 div {
 .section05 {
     display: flex;
     flex-direction: column;
-    padding: 2% 4%;
+    padding: 4% 0;
     gap: 30px;
 }
 
@@ -397,26 +397,10 @@ main .section04 div {
     align-items: center;
 }
 
-.section05 nav {
-    display: flex;
-    justify-content: row;
-    gap: 5%;
-}
-
 .section05 .shops {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.section05 .left-part {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 10px;
-    padding-bottom: 100px;
-    padding-top: 10px;
 }
 
 .section05 .part {
@@ -430,7 +414,7 @@ main .section04 div {
 .section05 span {
     color: #e07cc6;
     border: 2px solid #e07cc6;
-    font-size: 20px;
+    font-size: 27px;
 }
 
 .section05 .arrows {
@@ -713,10 +697,6 @@ footer input[type=submit] {
 
     .section04 .top-things {
         flex-direction: column;
-    }
-
-    .header05 {
-        
     }
     
 }
