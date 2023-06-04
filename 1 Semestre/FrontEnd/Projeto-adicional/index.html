@@ -10,7 +10,15 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" />
 
 <body>
 
@@ -18,9 +26,9 @@
 
     <header>
         <h1 class="logo">RELAP</h1>
-        <input class="search-bar" type="text" placeholder="Search">
+        <input type="text" placeholder="Search" class="search-bar shadow p-3 bg-body-tertiary rounded">
         <nav>
-            <ul>
+            <ul class="">
                 <li><a href="">Store</a></li>
                 <li><a href="">Features</a></li>
                 <li><a href="">About</a></li>
@@ -39,16 +47,27 @@
 
     <main>
         <section class="section01">
-            <figure>
-                <img class="img-fluid" src="assets/images/banner-notebook-tec-manha.png" alt="imagem computador">
-            </figure>
-            <article>
-                <p>MINIM VENIAM</p>
-                <h1>Ut labore et dolore</h1>
-                <button>Buy now</button>
-            </article>
+            <div style="padding-left: 10px;" class="overflow-hidden pl-sm-0 container-fluid">
+                <div style="padding-left: 0;" class="pl-sm-0 container">
+                    <div style="padding-left: 0;" class="pl-sm-0 row flex-lg-row d-sm-flex flex-column-reverse">
+                        <div style="padding-left: 0;" class="pl-sm-0 col-lg-6 col-sm-12">
+                            <figure>
+                                <img class="float-start img-fluid" src="assets/images/banner-notebook-tec-manha.png"
+                                    alt="imagem computador">
+                            </figure>
+                        </div>
+                        <div class="pl-sm-0 pt-5 text-lg-start col-lg-6 col-sm-12 mb-5">
+                            <article>
+                                <p>MINIM VENIAM</p>
+                                <h1 class="fs-sm-6">Ut labore et dolore</h1>
+                                <button>Buy now</button>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="section02">
+        <section class="z-1 position-relative section02">
             <div style="background-color: #FFF3FA;" class="container-fluid">
                 <div class="container">
                     <div class="row">
@@ -135,36 +154,39 @@
                 <h1 style="font-size: 17px; text-transform: uppercase; font-family: 'Inter', sans-serif;">Deserunt</h1>
                 <h2 style="font-size: 60px; font-family: 'Inter', sans-serif;">Mollit anim</h2>
             </div>
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row">
-                        <article class="col shadow mb-5 bg-body-tertiary rounded">
+            <div style="padding: 0; width: 100%;" class="container-fluid">
+                <div style="margin: 0; width: 100%;" class="container">
+                    <div style="padding: 0; width: 100%;" class="row">
+                        <article class="col-sm-5 shadow mb-5 bg-body-tertiary rounded">
                             <h1>Sed ut perspiciatis</h1>
                             <p>Unde omnis iste natus error</p>
                             <button>Shop now</button>
-                            <figure>
-                                <img src="" alt="">
+                            <figure class="float-end">
+                                <img class="img-fluid" src="assets/images/zyro-image.png" alt="">
                             </figure>
                         </article>
-                        <div class="col">
+                        <div class="col-sm-7">
                             <div class="container-fluid">
-                                <div class="container">
+                                <div style="padding: 0;" class="container">
                                     <div class="row">
-                                        <div class="container-fluid">
+                                        <div style="padding: 0;" class="container-fluid ">
                                             <div class="container">
-                                                <div class="row">
-                                                    <article class="col shadow p-3 mb-5 bg-body-tertiary rounded">
+                                                <div class="row p-0">
+                                                    <article
+                                                        class="col-md-6 offset-12 shadow p-3 mb-5 bg-body-tertiary rounded">
                                                         <h1>Tatam rem aperiam</h1>
                                                         <p>$199</p>
                                                         <figure>
-                                                            <img src="" alt="">
+                                                            <img class="img-fluid"
+                                                                src="assets/images/zyro-image (3).png" alt="">
                                                         </figure>
                                                     </article>
-                                                    <article class="col shadow p-3 mb-5 bg-body-tertiary rounded">
+                                                    <article class="col-md-6 shadow p-3 mb-5 bg-body-tertiary rounded">
                                                         <h1>Eaque ipsa</h1>
                                                         <p>$99</p>
                                                         <figure>
-                                                            <img src="" alt="">
+                                                            <img class="img-fluid"
+                                                                src="assets/images/zyro-image (2).png" alt="">
                                                         </figure>
                                                     </article>
                                                 </div>
@@ -176,7 +198,8 @@
                                                 <p>Architecto beatae vitae dicta sunt</p>
                                                 <button>Shop now</button>
                                                 <figure>
-                                                    <img src="" alt="">
+                                                    <img class="img-fluid" src="assets/images/zyro-image (1).png"
+                                                        alt="">
                                                 </figure>
                                             </article>
                                         </div>
@@ -195,14 +218,15 @@
                         <h1 class="text-md-start text-center col-sm-6"
                             style="color:black; font-family: 'Inter', sans-serif;">Unde omnis</h1>
                         <nav class="p-0 col-sm-6">
+
                             <div class="p-0 container-fluid">
                                 <div class="p-0 container">
                                     <div class="row">
-                                        <li class="text-end col fs-6"><a href="#">Phones</a></li>
-                                        <li class="text-end col fs-6"><a href="#">Eletronics</a></li>
-                                        <li class="text-end col fs-6"><a href="#">Appliences</a></li>
-                                        <li class="text-end col fs-6"><a href="#">Clothes</a></li>
-                                        <li class="text-end col fs-6"> <a href="#">Kids</a></li>
+                                        <li class="text-center col fs-6"><a href="#">Phones</a></li>
+                                        <li class="text-center col fs-6"><a href="#">Eletronics</a></li>
+                                        <li class="text-center col fs-6"><a href="#">Appliences</a></li>
+                                        <li class="text-center col fs-6"><a href="#">Clothes</a></li>
+                                        <li class="text-center col fs-6"> <a href="#">Kids</a></li>
                                     </div>
                                 </div>
                             </div>
@@ -210,172 +234,211 @@
                     </div>
                 </div>
             </div>
-            <div class="w-100 container-fluid">
-                <div class="w-100 container">
-                    <div class="row">
-                        <article class="m-3 col shadow p-3 mb-5 bg-body-tertiary rounded"
-                            style="display: flex; align-items: center; flex-direction: column;">
-                            <img class=" img-fluid" src="assets/images/Fone1.png" alt="">
-                            <div class="part">
-                                <div class="left-part">
-                                    <h1>Nemo enim ipsam</h1>
-                                    <p>$180</p>
+            <div class="container-fluid">
+                <div class="container">
+                    <div id="carousel1" class="owl-carousel owl-theme row">
+                        <div class="g-col">
+                            <article class="m-3 px-2 py-1 card shadow mb-5 bg-body-tertiary rounded">
+                                <img class="object-fit-contain" src="assets/images/Fone1.png" alt="">
+                                <div class="part">
+                                    <div class="left-part">
+                                        <h1>Nemo enim ipsam</h1>
+                                        <p>$180</p>
+                                    </div>
+                                    <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a>
+                                    </li>
                                 </div>
-                                <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a></li>
-                            </div>
-                        </article>
-                        <article class="m-3 col shadow p-3 mb-5 bg-body-tertiary rounded"
-                            style="display: flex; align-items: center; flex-direction: column;">
-                            <img class=" img-fluid" src="assets/images/Fone2.png" alt="">
-                            <div class="part">
-                                <div class="left-part">
-                                    <h1>Sed quia consequuntur</h1>
-                                    <p>$180</p>
+                            </article>
+                        </div>
+                        <div class="g-col">
+                            <article class="m-3 px-2 py-1 card shadow mb-5 bg-body-tertiary rounded">
+                                <img class="object-fit-contain" src="assets/images/Fone2.png" alt="">
+                                <div class="part">
+                                    <div class="left-part">
+                                        <h1>Sed quia consequuntur</h1>
+                                        <p>$180</p>
+                                    </div>
+                                    <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a>
+                                    </li>
                                 </div>
-                                <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a></li>
-                            </div>
-                        </article>
-                        <article class="m-3 col shadow p-3 mb-5 bg-body-tertiary rounded"
-                            style="display: flex; align-items: center; flex-direction: column;">
-                            <img class=" img-fluid" src="assets/images/CaixaDeSom.png" alt="">
-                            <div class="part">
-                                <div class="left-part">
-                                    <h1>Aut odit aut fugit</h1>
-                                    <p>$180</p>
+                            </article>
+                        </div>
+                        <div class="g-col">
+                            <article class="m-3 px-2 py-1 card shadow mb-5 bg-body-tertiary rounded">
+                                <img class="object-fit-contain" src="assets/images/CaixaDeSom (2).png" alt="">
+                                <div class="part">
+                                    <div class="left-part">
+                                        <h1>Aut odit aut fugit</h1>
+                                        <p>$180</p>
+                                    </div>
+                                    <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a>
+                                    </li>
                                 </div>
-                                <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a></li>
-                            </div>
-                        </article>
-                        <article class="m-3 col shadow p-3 mb-5 bg-body-tertiary rounded"
-                            style="display: flex; align-items: center; flex-direction: column; ">
-                            <img class=" img-fluid" src="assets/images/CaixaDeSom2.png" alt="">
-                            <div class="part">
-                                <div class="left-part">
-                                    <h1>Quia voluptas aspernatur</h1>
-                                    <p>$180</p>
+                            </article>
+                        </div>
+                        <div class="g-col">
+                            <article class="m-3 px-2 py-1 card shadow mb-5 bg-body-tertiary rounded">
+                                <img class="object-fit-contain" src="assets/images/CaixaDeSom2.png" alt="">
+                                <div class="part">
+                                    <div class="left-part">
+                                        <h1>Quia voluptas aspernatur</h1>
+                                        <p>$180</p>
+                                    </div>
+                                    <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a>
+                                    </li>
                                 </div>
-                                <li><a href=""><span class="material-symbols-outlined">shopping_cart</span></a></li>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="arrows">
-                <li><a href=""><span class="material-symbols-outlined">
-                            arrow_back_ios_new
-                        </span></a></li>
-                <li><a href=""><span class="material-symbols-outlined">arrow_forward_ios</span></a></li>
             </div>
         </section>
         <section style="background-color: #FDF2FF;" class="section06">
-            <div class="h">
-                <h1 style="font-size: 50px;">Magni dolores</h1>
-                <p style="font-size: 50px;">12:17:08:42</p>
-            </div>
-            <div class="down-content">
-                <section>
-                    <h1 style="font-size: 35px; font-family: 'Inter', sans-serif;">Voluptate</h1>
-                    <nav>
-                        <a href="">Phones</a>
-                        <a href="">Electronics</a>
-                        <a href="">Applieances</a>
-                        <a href="">Clothes</a>
-                        <a href="">Kids</a>
-                    </nav>
-                </section>
-                <div>
-                    <img class="img-fluid" src="assets/images/Fone2.png" alt="">
-                </div>
-                <aside>
-                    <h1 style="font-size: 35px; font-family: 'Inter', sans-serif;">Quis autem vel eum iure reprehenderit
-                    </h1>
-                    <h2 style="font-family: 'Inter', sans-serif;">$199</h2>
-                    <p style="color: #adadad">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi laudantium
-                        quia, blanditiis aut
-                        mollitia quod temporibus ea minus sit ab quibusdam m dolor sit amet, consectetur adipis m dolor
-                        sit amet, consectetur adipis.</p>
-                    <div class="bar-things">
-                        <div class="bar-statistic">
-                            <p>Sold: 120</p>
-                            <p>Quantity: 500</p>
+            <div class="container-fluid p-0">
+                <div class="container p-0">
+                    <div class="row p-0">
+                        <div class="h">
+                            <h1 class="fs-1">Magni dolores</h1>
+                            <p id="timer" class="fs-1"></p>
                         </div>
-                        <div class="progress-bar"></div>
+                        <div class="container-fluid">
+                            <div class="container">
+                                <div class="row gap-3">
+                                    <section class="col">
+                                        <h1 class="fs-3" style="font-family: 'Inter', sans-serif;">Voluptate</h1>
+                                        <nav class="row">
+                                            <a class="col-lg-12" href="">Phones</a>
+                                            <a class="col-lg-12" href="">Electronics</a>
+                                            <a class="col-lg-12" href="">Applieances</a>
+                                            <a class="col-lg-12" href="">Clothes</a>
+                                            <a class="col-lg-12" href="">Kids</a>
+                                        </nav>
+                                    </section>
+                                    <div class="col-sm">
+                                        <img class="img-fluid" src="assets/images/Fone2.png" alt="">
+                                    </div>
+                                    <aside class="col">
+                                        <h1 class="fs-4" style="font-family: 'Inter', sans-serif;">Quis autem vel eum
+                                            iure
+                                            reprehenderit
+                                        </h1>
+                                        <div class="container-fluid">
+                                            <h2 class="fs-4" style="font-family: 'Inter', sans-serif;">$199 <del
+                                                    style="text-decoration-color: red;"
+                                                    class="fs-6 text-body-tertiary">$299</del></h2>
+                                        </div>
+                                        <p class="f-4" style="color: #adadad">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit. Nisi laudantium quia, blanditiis aut mollitia quod
+                                            temporibus ea minus sit ab quibusdam m dolor sit amet, consectetur adipis m
+                                            dolor sit amet, consectetur adipis.</p>
+                                        <div class="bar-things">
+                                            <div class="bar-statistic">
+                                                <p class="fw-bold"">Sold: 120</p>
+                                                <p class=" fw-bold"">Quantity: 500</p>
+                                            </div>
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                        <button>Add to cart</button>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <button>Add to cart</button>
-                </aside>
+                </div>
             </div>
         </section>
         <section class="section07">
-            <h1 style="font-size: 20px;">VELIT ESSE</h1>
-            <h2 style="font-size: 50px; font-family: 'Inter', sans-serif;">Quam nihil</h2>
-            <div class="top-things">
-                <article class="card shadow mb-5 bg-body-tertiary rounded">
-                    <img class="card-img-top img-fluid" src="assets/images/img2.png" alt="">
-                    <div class="card-body">
-                        <h1 class="card-title" style="font-size: 20px;">Vel ilum qui dolorem eum fugiat</h1>
-                        <p class="card-text">June 01/2019</p>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <h1 style="font-size: 20px;">VELIT ESSE</h1>
+                        <h2 class="fs-1" style="font-family: 'Inter', sans-serif;">Quam nihil</h2>
+                        <div class="top-things">
+                            <div id="carousel2" class="owl-carousel owl-theme carousel2">
+                                <div class="item">
+                                    <article class="m-3 card shadow mb-5 bg-body-tertiary rounded">
+                                        <img class="card-img-top img-fluid" src="assets/images/img2.png" alt="">
+                                        <div class="card-body">
+                                            <h1 class="card-title" style="font-size: 20px;">Vel ilum qui dolorem eum
+                                                fugiat</h1>
+                                            <p class="card-text">June 01/2019</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="item">
+                                    <article class="m-3 card shadow mb-5 bg-body-tertiary rounded">
+                                        <img class="card-img-top img-fluid" src="assets/images/img.png" alt="">
+                                        <div class="card-body">
+                                            <h1 class="card-title" style="font-size: 20px;">Quo voluptas nulla pariatur
+                                            </h1>
+                                            <p class="card-text">June 01/2019</p>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="item">
+                                    <article class="m-3 card shadow mb-5 bg-body-tertiary rounded">
+                                        <img class="card-img-top img-fluid" src="assets/images/img3.png" alt="">
+                                        <div class="card-body">
+                                            <h1 class="card-title" style="font-size: 20px;">At vero eos et accusamus et
+                                                iusti
+                                            </h1>
+                                            <p class="card-text">June 01/2019</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article class="card shadow mb-5 bg-body-tertiary rounded">
-                    <img class="card-img-top img-fluid" src="assets/images/img.png" alt="">
-                    <div class="card-body">
-                        <h1 class="pcard-title" style="font-size: 20px;">Quo voluptas nulla pariatur</h1>
-                        <p class="card-text">June 01/2019</p>
-                    </div>
-                </article>
-                <article class="card shadow mb-5 bg-body-tertiary rounded">
-                    <img class="card-img-top img-fluid" src="assets/images/img3.png" alt="">
-                    <div class="card-body">
-                        <h1 class="card-title" style="font-size: 20px;">At vero eos et accusamus et iusti</h1>
-                        <p class="card-text">June 01/2019</p>
-                    </div>
-                </article>
-            </div>
-            <div class="d-flex justify-content-center"">
-                <li><a href=""><span class=" material-symbols-outlined">arrow_back_ios_new</span></a></li>
-                <li><a href=""><span class="material-symbols-outlined">arrow_forward_ios</span></a></li>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer class="--bs-primary-rgb">
         <section class="up">
-            <div class="txt">
-                <h1 style="font-size: 20px;">ODIO DIGNISSIMOS</h1>
-                <h2 style="font-size: 70px; font-family: 'Inter', sans-serif;">Ducimus qui</h2>
-                <p style="color: #7C70E3;">Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                    excepturi sint occaecati cupiditate non provident</p>
-            </div>
-            <div class="input">
-                <input type="text" placeholder="Your email">
-                <input type="submit" value="Submit">
-            </div>
-        </section>
-        <section>
             <div class="container-fluid">
                 <div class="container">
                     <div class="row">
-                        <div class="row col-sm-3">
+                        <div class="col-lg-6 col-sm-12">
+                            <h1 style="font-size: 20px;">ODIO DIGNISSIMOS</h1>
+                            <h2 style="font-size: 70px; font-family: 'Inter', sans-serif;">Ducimus qui</h2>
+                            <p style="color: #7C70E3;">Praesentium voluptatum deleniti atque corrupti quos dolores et
+                                quas molestias excepturi sint occaecati cupiditate non provident</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 input">
+                            <input type="text" class="mb-5 w-75 form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-lg" placeholder="Your email">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="my-5 mid container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="fw-bold row col gap-3">
                             <a href="">Tempor</a>
                             <a href="">Similique</a>
                             <a href="">Deserunt mollit anim</a>
                             <a href="">Sed ut perspiciatis</a>
                         </div>
-                        <div class="row col-sm-3">
+                        <div class="fw-bold row col gap-3">
                             <a href="">Sunt in culpa</a>
                             <a href="">Sunt in culpa </a>
                             <a href="">Mollit anim</a>
                             <a href="">Perpiciatis</a>
                         </div>
-                        <div class="row col-sm-3">
+                        <div class="fw-bold row col gap-3">
                             <a href="">Qui officia</a>
                             <a href="">Deserunt</a>
                             <a href="">Mllitia</a>
                             <a href="">Laborum</a>
                         </div>
-                        <div class="row col-sm-3">
+                        <div class="fw-bold row col gap-3">
                             <a href="">Magma</a>
                             <a href="">123 dignissimos ducimus, 42</a>
                             <a href="">minim@info.com</a>
@@ -386,11 +449,104 @@
             </div>
         </section>
         <section class="bottom">
-            <p>Copyright 2019. All Rights Reserved</p>
-            <div></div>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <p class="text-center col-6">Copyright 2019. All Rights Reserved</p>
+                        <div class="col-6 icons text-center">
+                            <a href=""><img class="w-23" src="assets/icons/twitter.png" alt=""></a>
+                            <a href=""><img src="assets/icons/simbolo-de-aplicativo-do-facebook.png" alt=""></a>
+                            <a href=""><img src="assets/icons/instagram.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
 
+    <script>
+        var timerElement = document.getElementById('timer');
+        var seconds = 0;
+        var minutes = 0;
+        var hours = 12;
+
+        function startTimer() {
+            setInterval(updateTimer, 1000);
+        }
+
+        function updateTimer() {
+            seconds--;
+            if (seconds <= 0) {
+                seconds = 59;
+                minutes--;
+            }
+            if (minutes <= 0) {
+                minutes = 59;
+                hours--;
+            }
+            if (minutes <= 0) {
+                hours--;
+            }
+
+            var formattedTime = formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds);
+            timerElement.innerHTML = formattedTime;
+        }
+
+        function formatTime(time) {
+            return (time < 10) ? '0' + time : time;
+        }
+
+        startTimer();
+    </script>
+
+    <script>
+        $('#carousel1').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                800: {
+                    items: 2
+                },
+                1200: {
+                    items: 4
+                }
+            }
+        })
+
+        $('#carousel2').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                800: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>

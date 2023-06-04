@@ -21,7 +21,9 @@ header {
     position: absolute;
     justify-content: space-around;
     align-items: center;
+    color: white;
 }
+
 
 .logo h1 {
     font-size: 30px;
@@ -98,20 +100,24 @@ main .section01 {
     background: rgb(255,72,245);
     background: linear-gradient(45deg, rgba(191,113,203,1) 0%, rgba(50,36,173,1) 100%);
     height: 100%;
+    
 }
 
-main .section01 img {
-    top: 10vh;
-    left: 10%;
-    width: 70%;
-    z-index: 0;
+.owl-dots {
+    display: none;
+}
+
+.section05 .owl-carousel .owl-item img {
+    height: 350px;
 }
 
 .section01 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
+    padding: 12% 0;
+    color: white;
+}
+
+.section01 img{
+    width: 1000px;
 }
 
 .section01 p {
@@ -119,13 +125,12 @@ main .section01 img {
 }
 
 .section01 h1 {
-    font-size: 75px;
+    font-size: 65px;
 }
 
 .section01 article {
     display: flex; 
     flex-direction: column;
-    gap: 35px;
     width: 481px;
 }
 
@@ -151,7 +156,7 @@ main .section01 img {
     font-size: 17px;
 }
 
-.section01 article button {
+.section01 article button{
     width: 175px;
     height: 50px;
     background-color: rgb(255, 195, 0);
@@ -247,7 +252,7 @@ main .section03 article a {
 }
 
 main .section04 {
-    padding: 3% 7%;
+    padding: 3% 0 ;
     background-color: #FFF3FA;
     color: black;
     display: flex;
@@ -291,6 +296,11 @@ main .section04 div {
     border-radius: 2rem;
     border: 2px solid rgb(187, 122, 187);
     color: rgb(156, 36, 156);
+}
+
+.icons img{
+    width: 20px;
+    
 }
 
 .section04 h1 {
@@ -384,8 +394,6 @@ main .section04 div {
 
 .section05 article {
     color: black;
-    padding: 2% 2%;
-
 }
 
 .section05 .header05 {
@@ -454,7 +462,6 @@ main .section04 div {
 
 .section06 nav {
     display: flex;
-    flex-direction: column;
     height: 100%;
     justify-content: space-around;
 }
@@ -474,6 +481,17 @@ main .section04 div {
     gap: 30px;
 }
 
+.section06 button {
+    width: 150px;
+    height: 45px;
+    border-radius: 2rem;
+    background-color: #C66ED2;
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+}
+
 .section06 .bar-things{
     display: flex;
     gap: 10px;
@@ -491,7 +509,7 @@ main .section04 div {
       "progress". Ela terá seu
       valor entre 0 e 100.
       */
-    --progress: 24;
+    --progress: 25;
     height: 20px;
     border-radius: 0.3rem;
     background-color: #EDEFEC;
@@ -514,17 +532,6 @@ main .section04 div {
 }
 
 
-.section06 button {
-    width: 35%;
-    height: 10%;
-    border-radius: 2rem;
-    background-color: #C66ED2;
-    border: none;
-    color: white;
-    font-size: 13px;
-    font-family: 'Inter', sans-serif;
-}
-
 .section07 {
     display: flex;
     flex-direction: column;
@@ -538,36 +545,17 @@ main .section04 div {
 }
 
 footer {
+    color: white;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 footer .up {
-    background-color: blue;
+    background-color: #3023AE;
     padding: 4% 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
 }
 
 footer .txt {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    gap: 30px;
-}
-
-footer input[type=text] {
-    outline: none;
-    width: 355px;
-    height: 50px;
-    border-radius: 6px;
-    padding: 5px;
-    font-size: 15px;
-    border: none;
 }
 
 footer input[type=submit] {
@@ -580,21 +568,9 @@ footer input[type=submit] {
     border: none;
     outline: none;
 }
-
-.mid {
-    padding: 3%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.mid div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .mid div a {
     color: #838383;
+    text-decoration: none;
 }
 
 .mid div a:first-of-type {
@@ -627,74 +603,6 @@ footer input[type=submit] {
         display: none;
     }
 
-    .section01 {
-        flex-direction: column-reverse;
-    }
-
-    .section01 p {
-        font-size: 20px;
-    }
     
-    .section01 h1 {
-        font-size: 35px;
-    }
-
-    .section01 article {
-        gap: 0px;
-        width: 100%;
-    }
-    
-    .section01 img {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .section02 {
-      flex-direction: column;
-      padding: 6%;
-      gap: 70px;
-    }
-
-    .section03 .content {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .section04 .Vv {
-        flex-direction: column;
-    }
-
-    .section04 article {
-        align-items: center;
-        margin: 0;
-    }
-
-    .left-section {
-        width: 100%;
-    }
-
-    .section04 .right-section .up-section {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .section05 {
-        flex-direction: column;
-    }
-
-    .section05 .shops {
-        flex-direction: column;
-    }
-
-    .section07 .top-things {
-        flex-direction: column;
-    }
-
-    .section04 .top-things {
-        flex-direction: column;
-    }
     
 }
