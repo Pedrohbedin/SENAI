@@ -1,0 +1,64 @@
+@model Equipe
+@{
+    ViewData["Title"] = "Equipes";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/equipes.css">
+</head>
+
+@if (ViewBag.UserName == null)
+{
+    <a class="navbar-brand" asp-controller="Login" asp-action="Index">Login</a>
+}
+
+
+else
+{
+    <section class="container-grid cadastro-equipes">
+
+
+        <form method="post" action="@Url.Action("Cadastrar")" enctype="multipart/form-data" class="frm-cad-equipe">
+            <div class="cadequipe-titulo">
+                <h1>Cadastro de Equipes</h1>
+                <hr>
+            </div>
+
+            <input type="text" name="Nome" class="campo-entrada" placeholder="Digite o nome da sua equipe:">
+            <label class="foto" for="foto-file">
+                Nenuma imagem selecionada...
+                <input input type="file" name="Imagem" id="foto-file">
+            </label>
+
+            <button type="submite">Cadastro</button>
+        </form>
+
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Foto</th>
+                    <th>&spades;</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Equipe equipe in ViewBag.Equipe)
+                {
+                    <tr>
+                        <td>@equipe.IdEquipe</td>
+                        <td>@equipe.Nome</td>
+                        <td><img src="/img/Equipe/@equipe.Imagem" alt="" width="50px"></td>
+                        <td><a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img
+                                    class="yellow-trash" src="~/assets/trash.png" alt=""></a>
+                            <a asp-area="" asp-controller="Equipe" asp-action="Editar"
+                                asp-route-id="@equipe.IdEquipe">Editar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+}

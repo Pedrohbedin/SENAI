@@ -1,0 +1,40 @@
+@model Jogador
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<link rel="stylesheet" href="~/css/jogadores.css">
+
+<section class="container-grid cadastro-equipes">
+    <form method="post" action="@Url.Action("Atualizar")" enctype="multipart/form-data" class="frm-cad-equipe">
+    <div class="cadequipe-titulo">
+        <h1>Editar jogadores</h1>
+        <hr>
+    </div>
+    <input type="" class="form-control" name="IdJogador" aria-describedby="NameHelp" value="@ViewBag.Jogador.IdJogador">
+    <select class="campo-entrada" id="equipe-select" aria-label="Default select example" name="Equipe">
+        <option selected>Selecione uma Equipe</option>
+        @foreach (Equipe item in ViewBag.Equipe)
+            {
+                if (item.IdEquipe == ViewBag.Jogador.IdEquipe)
+                {
+                    <option value=@item.IdEquipe>@item.Nome</option>
+                }
+                else
+                {
+                    <option value=@item.IdEquipe>@item.Nome</option>
+                }
+            }
+    </select>
+    <input class="campo-entrada" type="text" name="Nome" id="nome-jogador" placeholder="Digite o nome do Jogador:">
+    <input class="campo-entrada" type="email" name="Email" id="email-jogador" placeholder="Digite o Email do Jogador:">
+    <input class="campo-entrada" type="password" name="Senha" id="senha" placeholder="Digite a Senha:">
+    <button type="submit">Atualizar</button>
+
+
+
+
+</form>
+</section>
+
