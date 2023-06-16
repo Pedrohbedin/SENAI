@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lXOYhAYPTxNKjlRoNFs3/fYxScklaIODuf3SW9p/kRk=",
+  "Hash": "p6e0ZhBnP3WJCTjZZ2fvRc5bsM8RgL5EYmaozFb1PO8=",
   "Source": "Projeto-Gamer",
   "BasePath": "_content/Projeto-Gamer",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\Botao_voltar_ao_topo.svg"
+    },
+    {
+      "Identity": "C:\\Users\\42470848873\\Desktop\\SENAI\\1 Semestre\\Backend-2\\Projeto-Gamer-MVC\\wwwroot\\assets\\edit-3-xxl.png",
+      "SourceId": "Projeto-Gamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\42470848873\\Desktop\\SENAI\\1 Semestre\\Backend-2\\Projeto-Gamer-MVC\\wwwroot\\",
+      "BasePath": "_content/Projeto-Gamer",
+      "RelativePath": "assets/edit-3-xxl.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\edit-3-xxl.png"
     },
     {
       "Identity": "C:\\Users\\42470848873\\Desktop\\SENAI\\1 Semestre\\Backend-2\\Projeto-Gamer-MVC\\wwwroot\\assets\\envelope-icon.png",

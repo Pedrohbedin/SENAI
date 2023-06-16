@@ -50,10 +50,10 @@ else
                         <td>@equipe.IdEquipe</td>
                         <td>@equipe.Nome</td>
                         <td><img src="/img/Equipe/@equipe.Imagem" alt="" width="50px"></td>
-                        <td><a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img
+                        <td style="gap: 10px"><a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img
                                     class="yellow-trash" src="~/assets/trash.png" alt=""></a>
                             <a asp-area="" asp-controller="Equipe" asp-action="Editar"
-                                     asp-route-id="@equipe.IdEquipe">Editar</a>
+                                     asp-route-id="@equipe.IdEquipe"><img src="~/assets/edit-3-xxl.png" alt="" width="20px"></a>
                         </td>
                     </tr>
                 }

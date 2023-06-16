@@ -3,7 +3,6 @@
 /* Main */
 
 main {
-    height: 1231px;
     background-image: url(../assets/images/background-equipes-mobile.png);
     background-size: contain;
     background-position: top;
@@ -19,7 +18,7 @@ main {
 main .cadastro-equipes {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 100px;
     align-items: center;
     position: relative;
     z-index: 0;

@@ -21,10 +21,10 @@ else
             </div>
 
             <select class="campo-entrada" id="equipe-select" aria-label="Default select example" name="Equipe">
-                <option selected>Selecione uma Equipe</option>
+                <option style="background-color: transparent;" selected>Selecione uma Equipe</option>
                 @foreach (Equipe equipe in ViewBag.Equipe)
                 {
-                    <option value=@equipe.IdEquipe>@equipe.Nome</option>
+                    <option style="background-color: transparent;" value=@equipe.IdEquipe>@equipe.Nome</option>
                 }
             </select>
             <input class="campo-entrada" type="text" name="Nome" id="nome-jogador" placeholder="Digite o nome do Jogador:">
@@ -56,9 +56,9 @@ else
                         <td>@jogador.Nome</td>
                         <td>@jogador.Email</td>
                         <td><img src="/img/Equipe/@jogador.Equipe.Imagem" alt="" width="50px"></td>
-                        <td>
+                        <td style="gap: 20px;">
                             <a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador"><img class="yellow-trash" src="~/assets/trash.png" alt=""></a>
-                            <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a>
+                            <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador"><img src="~/assets/edit-3-xxl.png" alt="" width="20px"></a>
                         </td>
                     </tr>
                 }
