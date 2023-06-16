@@ -44,6 +44,7 @@ else
                     <th>Id</th>
                     <th>Nome</th>
                     <th>Email</th>
+                    <th>Equipe</th>
                     <th>&spades;</th>
                 </tr>
             </thead>
@@ -54,11 +55,10 @@ else
                         <td>@jogador.IdJogador</td>
                         <td>@jogador.Nome</td>
                         <td>@jogador.Email</td>
-                        <td>@jogador.IdEquipe</td>
-                        <td><a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador"><img
-                                    class="yellow-trash" src="~/assets/trash.png" alt=""></a>
-                            <a asp-area="" asp-controller="Jogador" asp-action="Editar"
-                                asp-route-id="@jogador.IdJogador">Editar</a>
+                        <td><img src="/img/Equipe/@jogador.Equipe.Imagem" alt="" width="50px"></td>
+                        <td>
+                            <a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador"><img class="yellow-trash" src="~/assets/trash.png" alt=""></a>
+                            <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a>
                         </td>
                     </tr>
                 }

@@ -232,6 +232,10 @@ main .cadastro-equipes table td img.yellow-trash {
     width: 15px;
 }
 
+main .cadastro-equipes select option {
+    color: black;
+}
+
 
 
 /* Desktop */

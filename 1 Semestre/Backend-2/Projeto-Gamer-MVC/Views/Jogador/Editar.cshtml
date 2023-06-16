@@ -12,7 +12,8 @@
         <h1>Editar jogadores</h1>
         <hr>
     </div>
-    <input type="" class="form-control" name="IdJogador" aria-describedby="NameHelp" value="@ViewBag.Jogador.IdJogador">
+    <input type="hidden" class="form-control" name="IdJogador" aria-describedby="NameHelp" value="@ViewBag.Jogador.IdJogador">
+    <input type="hidden" name="IdEquipe" value="@ViewBag.Jogador.IdEquipe">
     <select class="campo-entrada" id="equipe-select" aria-label="Default select example" name="Equipe">
         <option selected>Selecione uma Equipe</option>
         @foreach (Equipe item in ViewBag.Equipe)

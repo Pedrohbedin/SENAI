@@ -128,11 +128,15 @@
                 </div>
 
                 <ul class="menu-footer">
-                    <li class="menu-ftitem"><a href="#">Início</a></li>
-                    <li class="menu-ftitem"><a href="#">Jogadores</a></li>
+                    <li class="menu-ftitem"><a asp-controller="Home" asp-action="Index">Início</a></li>
+                    <li class="menu-ftitem"><a asp-controller="Jogador" asp-action="Index">Jogadores</a></li>
                     <li class="menu-ftitem"><a href="~/#noticias">Notícias</a></li>
-                    <li class="menu-ftitem"><a href="#">Login</a></li>
-                    <li class="menu-ftitem" id="link-equipe"><a href="#">Equipes</a></li>
+                    @if(ViewBag.UserName != null) {
+                        <li class="menu-ftitem"><a asp-controller="Login" asp-action="Logout">Logout</a></li>
+                    }else {
+                        <li class="menu-ftitem"><a asp-controller="Login" asp-action="Login">Login</a></li>
+                    }
+                    <li class="menu-ftitem" id="link-equipe"><a asp-controller="Equipe" asp-action="Index">Equipes</a></li>
                 </ul>
             </div>
 
