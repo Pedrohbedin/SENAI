@@ -26,7 +26,6 @@ else
 
             <input type="text" name="Nome" class="campo-entrada" placeholder="Digite o nome da sua equipe:">
             <label class="foto" for="foto-file">
-                Nenuma imagem selecionada...
                 <input input type="file" name="Imagem" id="foto-file">
             </label>
 
@@ -54,7 +53,7 @@ else
                         <td><a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img
                                     class="yellow-trash" src="~/assets/trash.png" alt=""></a>
                             <a asp-area="" asp-controller="Equipe" asp-action="Editar"
-                                asp-route-id="@equipe.IdEquipe">Editar</a>
+                                     asp-route-id="@equipe.IdEquipe">Editar</a>
                         </td>
                     </tr>
                 }

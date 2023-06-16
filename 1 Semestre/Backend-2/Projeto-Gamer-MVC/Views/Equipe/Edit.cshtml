@@ -6,10 +6,14 @@
 
 <link rel="stylesheet" href="~/css/equipes.css">
 
-<section class="container-grid cadastro-equipes">
+@if (ViewBag.UserName == null)
+{
+    <a class="navbar-brand" asp-controller="Login" asp-action="Index">Login</a>
+}else {
+    <section class="container-grid cadastro-equipes">
     <form method="post" action="@Url.Action("Atualizar")" enctype="multipart/form-data" class="frm-cad-equipe">
         <div class="cadequipe-titulo">
-            <h1>Cadastro de Equipes</h1>
+            <h1>Editar de Equipes</h1>
             <hr>
         </div>
 
@@ -17,10 +21,10 @@
         <input type="hidden" name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
         <input type="text" name="Nome" class="campo-entrada" placeholder="Digite o nome da sua equipe:">
         <label class="foto" for="foto-file">
-            Nenuma imagem selecionada...
             <input input type="file" name="Imagem" id="foto-file">
         </label>
 
         <button type="submite">Atualizar</button>
     </form>
 </section>
+}
