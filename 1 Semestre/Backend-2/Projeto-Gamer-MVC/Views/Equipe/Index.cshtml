@@ -9,7 +9,19 @@
 
 @if (ViewBag.UserName == null)
 {
-    <a class="navbar-brand" asp-controller="Login" asp-action="Index">Login</a>
+    <section class="container-grid cadastro-equipes">
+        <div class="frm-cad-equipe">
+            <div class="cadequipe-titulo">
+                <h1>Login não realizado</h1>
+                <hr>
+            </div>
+            <p style="font-size: 17px;" class="card-text">Faça o login para poder acessar o conteúdo requisitado</p>
+            <div class="nlog-btns">
+                <a asp-controller="Login" asp-action="Index" class="card-link">Login</a>
+                <a class="card-link" asp-controller="Home" asp-action="Index">Home</a>
+            </div>
+        </div>
+    </section>
 }
 
 
@@ -44,19 +56,22 @@ else
                 </tr>
             </thead>
             <tbody>
-                @foreach (Equipe equipe in ViewBag.Equipe)
-                {
-                    <tr>
-                        <td>@equipe.IdEquipe</td>
-                        <td>@equipe.Nome</td>
-                        <td><img src="/img/Equipe/@equipe.Imagem" alt="" width="50px"></td>
-                        <td style="gap: 10px"><a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img
-                                    class="yellow-trash" src="~/assets/trash.png" alt=""></a>
-                            <a asp-area="" asp-controller="Equipe" asp-action="Editar"
-                                     asp-route-id="@equipe.IdEquipe"><img src="~/assets/edit-3-xxl.png" alt="" width="20px"></a>
-                        </td>
-                    </tr>
-                }
+                <div class="overflow-y-auto" style="max-height: 250px;">
+                    @foreach (Equipe equipe in ViewBag.Equipe)
+                    {
+                        <tr>
+                            <td>@equipe.IdEquipe</td>
+                            <td>@equipe.Nome</td>
+                            <td><img src="/img/Equipe/@equipe.Imagem" alt="" width="50px"></td>
+                            <td style="gap: 10px"><a asp-area="" asp-controller="Equipe" asp-action="Excluir"
+                                    asp-route-id="@equipe.IdEquipe"><img class="yellow-trash" src="~/assets/trash.png"
+                                        alt=""></a>
+                                <a asp-area="" asp-controller="Equipe" asp-action="Editar" asp-route-id="@equipe.IdEquipe"><img
+                                        src="~/assets/edit-3-xxl.png" alt="" width="20px"></a>
+                            </td>
+                        </tr>
+                    }
+                </div>
             </tbody>
         </table>
     </section>

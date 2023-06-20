@@ -228,6 +228,27 @@ main .cadastro-equipes table td img.yellow-trash {
     width: 15px;
 }
 
+main .nlog-btns {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+main .nlog-btns a {
+    width: 243px;
+    height: 40px;
+    background-color: #F9AA01;
+    font-family: TitilliumWeb-Bold, sans-serif;
+    font-size: 24px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+
 
 
 /* Desktop */
@@ -257,5 +278,13 @@ main .cadastro-equipes table td img.yellow-trash {
     }
     main .cadastro-equipes .frm-cad-equipe button {
         width: 243px;
+    }
+
+    main .nlog-btns a {
+        width: 243px;
+    }
+
+    main .nlog-btns {
+        flex-direction: row;
     }
 }
