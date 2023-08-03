@@ -45,3 +45,5 @@ SELECT * FROM Modelo
 SELECT * FROM Veiculo
 SELECT * FROM Cliente
 SELECT * FROM Aluguel
+
+Insert Aluguel values(6,10,'02/08/2023','02/09/2023')
