@@ -51,7 +51,7 @@ SELECT
 FROM 
 	Atendimento
 inner join Veterinario on Atendimento.IdVeterinario = Veterinario.IdVeterinario
-inner join Pets AS Pets on Atendimento.IdPets = Pets.IdPets
+inner join Pets on Atendimento.IdPets = Pets.IdPets
 inner join Raca on Pets.IdRaca = Raca.IdRaca 
 inner join TipoDePet on Pets.IdTipoDePet = TipoDePet.IdTipoDePet
 inner join Dono on Pets.IdDono = Dono.IdDono

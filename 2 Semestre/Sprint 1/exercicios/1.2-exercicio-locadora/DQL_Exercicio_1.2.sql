@@ -20,11 +20,10 @@ SELECT
 	Aluguel.DataDeRetiro AS Retirada,
 	Aluguel.DataDevolucao AS Devolução, 
 	Cliente.Nome AS Nome, 
-	Marca.Nome AS Marca
+	Modelo.Nome AS Modelo
 FROM 
-	Veiculo, Aluguel, Cliente,Marca 
-WHERE 
-	Cliente.IdCliente = Aluguel.IdCliente
-	AND Veiculo.IdVeiculo = Aluguel.IdVeiculo
-	AND Marca.IdMarca = Veiculo.IdMarca
+	Aluguel
+inner join Cliente on Aluguel.IdCliente = Cliente.IdCliente
+inner join Veiculo AS V on Aluguel.IdVeiculo = V.IdVeiculo
+inner join Modelo on V.IdModelo = Modelo.IdModelo
 ORDER BY Cliente.Nome ASC
