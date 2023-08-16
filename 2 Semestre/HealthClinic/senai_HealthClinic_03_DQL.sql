@@ -1,5 +1,9 @@
 --DQL 
 
+USE HealthClinic_Tarde
+
+--Exibe todos os dados de uma ou mais consultas 
+
 SELECT
 Consultas.IdConsulta,
 Consultas.DataAgendamento AS [Data],
@@ -17,7 +21,7 @@ INNER JOIN Paciente ON Consultas.IdPaciente = Paciente.IdPaciente
 INNER JOIN Situacao ON Consultas.IdSituacao = Situacao.IdSituacao
 INNER JOIN Clinica ON Medico.IdClinica = Clinica.IdClinica
 
---Criar função que determina os médicos de uma determinada especialidade
+--Determina os medicos de uma especialidade
 
 SELECT 
 Medico.Nome AS Médico,
@@ -26,7 +30,7 @@ FROM Especialidade
 	INNER JOIN Medico ON Especialidade.IdEspecialidade = Medico.IdEspecialidade
 WHERE Especialidade.Titulo LIKE  'Cirurgião';
 
--- Criar procedure para retornar a idade de um determinado usuário  
+-- Determina a idade de um paciente em específico
 
 Select 
 	Paciente.Nome,

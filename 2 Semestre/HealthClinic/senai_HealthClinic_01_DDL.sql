@@ -2,6 +2,8 @@
 
 USE HealthClinic_Tarde
 
+-- Crição das tabelas 
+
 CREATE TABLE TipoUsuario 
 (
 	IdTipoUsuario INT PRIMARY KEY IDENTITY,

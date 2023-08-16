@@ -1,5 +1,9 @@
 --DML
 
+USE HealthClinic_Tarde
+
+--Insert dos valores
+
 INSERT INTO TipoUsuario
 	VALUES('Paciente')
 
