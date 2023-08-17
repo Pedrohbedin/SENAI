@@ -31,10 +31,3 @@ FROM Especialidade
 WHERE Especialidade.Titulo LIKE  'Cirurgião';
 
 -- Determina a idade de um paciente em específico
-
-Select 
-	Paciente.Nome,
-	DATEDIFF(YY, Paciente.DataNascimento, GETDATE()) AS Idade
-FROM Paciente
-	
-
