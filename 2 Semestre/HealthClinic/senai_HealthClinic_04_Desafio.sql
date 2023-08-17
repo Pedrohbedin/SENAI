@@ -1,10 +1,13 @@
 CREATE PROCEDURE procedure_name
+@CampoBusca VARCHAR (50)
 AS
-SELECT 
-Medico.Nome AS Médico,
-	Especialidade.Titulo AS Especialidade
-FROM Especialidade
-	INNER JOIN Medico ON Especialidade.IdEspecialidade = Medico.IdEspecialidade
-WHERE Especialidade.Titulo LIKE  'Cirurgião'
+Select 
+	Paciente.Nome,
+	DATEDIFF(YY, Paciente.DataNascimento, GETDATE()) AS Idade
+FROM Paciente
+WHERE Paciente.Nome LIKE @CampoBusca
+WHERE Paciente.Nome = NULL 
 
-EXEC procedure_name;
+DROP PROCEDURE procedure_name
+
+EXEC procedure_name 'Jose'

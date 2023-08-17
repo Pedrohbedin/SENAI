@@ -1,10 +1,11 @@
-CREATE FUNCTION IdadePaciente(@dt VARCHAR(50))
+CREATE FUNCTION IdadePaciente(@Especialidade VARCHAR(50))
 RETURNS TABLE
 AS
-RETURN (Select 
-	Paciente.Nome,
-	DATEDIFF(YY, Paciente.DataNascimento, GETDATE()) AS Idade
-FROM Paciente
-WHERE Paciente.Nome LIKE @dt)
+RETURN (SELECT 
+Medico.Nome AS Médico,
+	Especialidade.Titulo AS Especialidade
+FROM Especialidade
+	INNER JOIN Medico ON Especialidade.IdEspecialidade = Medico.IdEspecialidade
+WHERE Especialidade.Titulo LIKE  @Especialidade)
 
-SELECT * FROM IdadePaciente('Jose')
+SELECT * FROM IdadePaciente('Cirurgião')
