@@ -1,11 +1,13 @@
-CREATE FUNCTION IdadePaciente(@Especialidade VARCHAR(50))
-RETURNS TABLE
+CREATE PROCEDURE procedure_name
+@CampoBusca VARCHAR (50)
 AS
-RETURN (SELECT 
-Medico.Nome AS Médico,
-	Especialidade.Titulo AS Especialidade
-FROM Especialidade
-	INNER JOIN Medico ON Especialidade.IdEspecialidade = Medico.IdEspecialidade
-WHERE Especialidade.Titulo LIKE  @Especialidade)
+Select 
+	Paciente.Nome,
+	DATEDIFF(YY, Paciente.DataNascimento, GETDATE()) AS Idade
+FROM Paciente
+WHERE Paciente.Nome LIKE @CampoBusca
+WHERE Paciente.Nome = NULL 
 
-SELECT * FROM IdadePaciente('Cirurgião')
+DROP PROCEDURE procedure_name
+
+EXEC procedure_name 'Jose'
