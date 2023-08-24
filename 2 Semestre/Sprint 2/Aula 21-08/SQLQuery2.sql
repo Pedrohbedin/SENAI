@@ -11,9 +11,3 @@ VALUES
 (
 2,'Carros'
 )
-
-SELECT 
-Genero.Nome,
-Filme.Titulo
-FROM Filme
-INNER JOIN Genero ON Filme.IdGenero = Genero.IdGenero
