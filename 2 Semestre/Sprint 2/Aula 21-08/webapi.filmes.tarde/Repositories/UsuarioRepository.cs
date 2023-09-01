@@ -16,7 +16,7 @@ namespace webapi.filmes.tarde.Repositories
                 con.Open();
 
                 UsuarioDomain Usuario;
-                string queryLogin = $"SELECT * FROM Usuario WHERE Email = @Email AND Senha = @Senha";
+                string queryLogin = $"SELECT IdUsuario, Email, Permissao FROM Usuario WHERE Email = @Email AND Senha = @Senha";
 
                 using (SqlCommand cmd = new SqlCommand(queryLogin, con))
                 {
@@ -31,8 +31,7 @@ namespace webapi.filmes.tarde.Repositories
                             {
                                 IdUsuario = Convert.ToInt32(rdr["IdUsuario"]),
                                 Email = rdr["Email"].ToString(),
-                                Senha = rdr["Senha"].ToString(),
-                                Permicao = Convert.ToBoolean(rdr["Permicao"])
+                                Permissao = rdr["Permissao"].ToString()
                             };
                             return Usuario;
                         }

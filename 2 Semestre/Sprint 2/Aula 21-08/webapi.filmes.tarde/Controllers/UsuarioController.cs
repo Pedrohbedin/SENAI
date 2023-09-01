@@ -18,7 +18,7 @@ namespace webapi.filmes.tarde.Controllers
             _UsuarioRepository = new UsuarioRepository();
         }
 
-        [HttpGet]
+        [HttpPost]
 
         public IActionResult Login( string Email, string Senha)
         {
