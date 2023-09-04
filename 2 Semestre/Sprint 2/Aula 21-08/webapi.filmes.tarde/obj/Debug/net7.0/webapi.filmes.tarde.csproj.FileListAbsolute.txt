@@ -64,3 +64,11 @@ C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\obj\Debug\net7.0\webapi.filmes.tarde.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\bin\Debug\net7.0\webapi.filmes.tarde.xml
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\obj\Debug\net7.0\webapi.filmes.tarde.xml
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 21-08\webapi.filmes.tarde\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

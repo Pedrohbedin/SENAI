@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using webapi.filmes.tarde.Domains;
 using webapi.filmes.tarde.Interfaces;
@@ -20,6 +21,7 @@ namespace webapi.filmes.tarde.Controllers
         }
 
         [HttpGet]
+        [Authorize]
 
         public IActionResult ListarTodos()
         {

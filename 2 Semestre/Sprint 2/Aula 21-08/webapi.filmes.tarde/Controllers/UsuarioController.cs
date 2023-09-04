@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
@@ -41,8 +42,8 @@ namespace webapi.filmes.tarde.Controllers
                 var claims = new[]
                 {
                     //formato da Claim(tipo, valor)
-                    new Claim(JwtRegisteredClaimNames.Jti, UsuarioAchado.IdUsuario.ToString()),
-                    new Claim(JwtRegisteredClaimNames.Email, UsuarioAchado.Email),
+                    new Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Jti, usuario.IdUsuario.ToString()),
+                    new Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Email, usuario.Email),
                     new Claim(ClaimTypes.Role, UsuarioAchado.Permissao),
                     new Claim("Claim personalizada", "Valor personalizado")
                 };
