@@ -11,6 +11,7 @@ namespace webapi.filmes.tarde.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
+    [Authorize(Roles = "Administrador")]
     public class FilmeController : ControllerBase
     {
         private IFilmeRepository _FilmeRepository { get; set; }
@@ -21,7 +22,6 @@ namespace webapi.filmes.tarde.Controllers
         }
 
         [HttpGet]
-        [Authorize]
 
         public IActionResult ListarTodos()
         {

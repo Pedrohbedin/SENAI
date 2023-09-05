@@ -14,6 +14,7 @@ namespace webapi.filmes.tarde.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
+    [Authorize(Roles = "Administrador")]
     public class UsuarioController : ControllerBase
     {
         private IUsuarioRepository _UsuarioRepository { get; set; }
