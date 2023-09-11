@@ -6,10 +6,10 @@
 
         public int IdTipoUsuario { get; set; }
 
-        public UsuarioDomain? Usuario { get; set; }
-
         public string? Email { get; set; }
 
         public string? Senha { get; set; }
+
+        public TiposUsuarioDomain TipoUsuario { get; set; }
     }
 }

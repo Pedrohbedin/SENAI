@@ -10,7 +10,6 @@ namespace senai.inlock.webApi_.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
-    [Authorize(Roles = "Administrador , Comum")]
     public class JogoController : Controller
     {
         private IJogoRepository _jogoRepository { get; set; }
@@ -21,7 +20,7 @@ namespace senai.inlock.webApi_.Controllers
         }
 
         [HttpGet]
-
+        [Authorize(Roles = "Comum, Administrador")]
         public IActionResult ListarTodos()
         {
             try
@@ -32,6 +31,22 @@ namespace senai.inlock.webApi_.Controllers
             }
             catch (Exception error)
             {
+                return BadRequest(error.Message);
+            }
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Administrador")]
+        public IActionResult Cadastrar(JogoDomain novoJogo)
+        {
+            try
+            {
+                _jogoRepository.Cadastrar(novoJogo);
+                return Ok(novoJogo);
+            }
+            catch (Exception error)
+            {
+
                 return BadRequest(error.Message);
             }
         }

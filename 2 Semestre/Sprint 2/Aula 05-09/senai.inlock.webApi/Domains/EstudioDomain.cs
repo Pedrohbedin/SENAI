@@ -4,5 +4,6 @@
     {
         public int IdEstudio { get; set; }
         public string? Nome { get; set; }
+        public List<JogoDomain> Jogos { get; set; }
     }
 }

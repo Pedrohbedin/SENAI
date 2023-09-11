@@ -44,3 +44,5 @@ C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 05-09\senai.inlock.w
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 05-09\senai.inlock.webApi\obj\Debug\net7.0\senai.inlock.webApi..pdb
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 05-09\senai.inlock.webApi\obj\Debug\net7.0\senai.inlock.webApi..genruntimeconfig.cache
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 05-09\senai.inlock.webApi\obj\Debug\net7.0\ref\senai.inlock.webApi..dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 05-09\senai.inlock.webApi\bin\Debug\net7.0\senai.inlock.webApi..xml
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 2\Aula 05-09\senai.inlock.webApi\obj\Debug\net7.0\senai.inlock.webApi..xml

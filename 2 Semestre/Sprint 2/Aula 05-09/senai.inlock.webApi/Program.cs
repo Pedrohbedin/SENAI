@@ -32,10 +32,10 @@ builder.Services.AddAuthentication(options =>
         ClockSkew = TimeSpan.FromMinutes(5),
 
         //De onde está vindo (issuer)
-        ValidIssuer = "senai.inlock.webApi",
+        ValidIssuer = "senai.inlock.webApi.",
 
         //Para onde está indo (audience)
-        ValidAudience = "senai.inlock.webApi",
+        ValidAudience = "senai.inlock.webApi.",
     };
 
 });
@@ -59,6 +59,8 @@ builder.Services.AddSwaggerGen(options =>
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 
+    /* Issue */
+
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
         Name = "Authorization",
@@ -69,21 +71,24 @@ builder.Services.AddSwaggerGen(options =>
         Description = "Value: Bearer Toker.JMT"
     });
 
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    options.AddSecurityRequirement
+    (new OpenApiSecurityRequirement
+        {
             {
+                new OpenApiSecurityScheme
                 {
-                    new OpenApiSecurityScheme
+                    Reference = new OpenApiReference
                     {
-                        Reference = new OpenApiReference
-                        {
-                            Type = ReferenceType.SecurityScheme,
-                            Id = "Bearer"
-                        }
-                    },
-                    new string[]{ }
-                }
-            });
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                },
+                new string[]{ }
+            }
+        }
+    );
 });
+
 
 var app = builder.Build();
 

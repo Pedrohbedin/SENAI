@@ -6,7 +6,7 @@
 
         public int IdEstudio { get; set; }
 
-        public EstudioDomain? Estudio { get; set; }
+        public string? Estudio { get; set; }
 
         public string? Nome { get; set; }
 
