@@ -26,6 +26,6 @@ namespace webapi.inlock.codefirst.Domains
         public Guid IdTipoUsuario { get; set; }
 
         [ForeignKey("IdTipoUsuario")]
-        public TiposUsuario? TipoUsuario { get; set; }
+        public TiposUsuario TipoUsuario { get; set; }
     }
 }

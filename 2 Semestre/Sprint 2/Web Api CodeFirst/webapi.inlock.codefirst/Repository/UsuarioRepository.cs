@@ -19,7 +19,7 @@ namespace webapi.inlock.codefirst.Repository
         {
             try
             {
-                Usuario usuarioBuscado = ctx.Usuario.FirstOrDefault(x => x.Email == email);
+                Usuario usuarioBuscado = ctx.Usuario.FirstOrDefault(x => x.Email == email)!;
 
                 if (usuarioBuscado != null)
                 {
@@ -34,6 +34,7 @@ namespace webapi.inlock.codefirst.Repository
                         return null!;
                     }
                 }
+                return null!;
             }
             catch (Exception)
             {
@@ -47,6 +48,7 @@ namespace webapi.inlock.codefirst.Repository
             try
             {
                 usuario.Senha = Criptografia.GerarHash(usuario.Senha!);
+                usuario.IdTipoUsuario = usuario.TipoUsuario.IdTiposUsuario;
 
                 ctx.Usuario.Add(usuario);
 
