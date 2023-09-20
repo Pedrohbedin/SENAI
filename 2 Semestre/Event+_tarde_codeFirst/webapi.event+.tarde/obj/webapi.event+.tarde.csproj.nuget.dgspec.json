@@ -40,9 +40,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "EntityFramework": {
+            "BCrypt.Net-Next": {
               "target": "Package",
-              "version": "[6.4.4, )"
+              "version": "[4.0.3, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
