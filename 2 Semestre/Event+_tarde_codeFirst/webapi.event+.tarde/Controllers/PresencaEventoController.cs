@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using webapi.event_.tarde.Domains;
 using webapi.event_.tarde.Interfaces;
 using webapi.event_.tarde.Repositories;
@@ -34,6 +36,7 @@ namespace webapi.event_.tarde.Controllers
         }
 
         [HttpGet("Listar")]
+        [Authorize(Roles = "Administrador")]
         public IActionResult Listar()
         {
             try
@@ -46,21 +49,8 @@ namespace webapi.event_.tarde.Controllers
                 return BadRequest(e.Message);
             }
         }
-
-        [HttpGet("BuscarPorId")]
-        public IActionResult BuscarPorId(Guid Id)
-        {
-            try
-            {
-                return Ok(_PresencaEventoRepository.BuscarPorId(Id));
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
         [HttpDelete]
+        [Authorize(Roles = "Aluno, Administrador")]
         public IActionResult Deletar(Guid Id)
         {
             try
@@ -77,12 +67,28 @@ namespace webapi.event_.tarde.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Aluno, Administrador")]
         public IActionResult Atualizar(Guid Id, PresencaEvento presencaEvento)
         {
             try
             {
                 _PresencaEventoRepository.Atualizar(Id, presencaEvento);
                 return Ok();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpGet("ListarMinhas")]
+        [Authorize(Roles = "Aluno, Administrador")]
+        public IActionResult ListarMinhas(Guid id)
+        {
+            try
+            {
+                return Ok(_PresencaEventoRepository.ListarMinhas(id));
             }
             catch (Exception)
             {

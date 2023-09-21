@@ -28,6 +28,12 @@ namespace webapi.event_.tarde.Repositories
         {
             try
             {
+                Evento eventoAchado = ctx.Evento.FirstOrDefault(x => x.IdEvento == id);
+                TipoEventoRepository tipoEvento = new TipoEventoRepository();
+                InstituicaoRepository instituicao = new InstituicaoRepository();
+                eventoAchado.TipoEvento = tipoEvento.BuscarPorId(eventoAchado.IdTipoEvento);
+                eventoAchado.Instituicao = instituicao.BuscarPorId(eventoAchado.IdInstituicao);
+
                 return ctx.Evento.FirstOrDefault(x => x.IdEvento == id);
             }
             catch (Exception)
@@ -67,6 +73,15 @@ namespace webapi.event_.tarde.Repositories
 
         public List<Evento> Listar()
         {
+            TipoEventoRepository tipoEvento = new TipoEventoRepository();
+            InstituicaoRepository instituicao = new InstituicaoRepository();
+
+            foreach (Evento evento in ctx.Evento.ToList())
+            {
+                evento.TipoEvento = tipoEvento.BuscarPorId(evento.IdTipoEvento);
+                evento.Instituicao = instituicao.BuscarPorId(evento.IdInstituicao);
+            }
+
             return ctx.Evento.ToList();
         }
     }

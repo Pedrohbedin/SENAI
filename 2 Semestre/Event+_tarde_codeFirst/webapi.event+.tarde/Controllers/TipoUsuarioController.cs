@@ -18,8 +18,11 @@ namespace webapi.event_.tarde.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(TipoUsuario tipoUsuario) 
+        public IActionResult Cadastrar(string titulo) 
         {
+            TipoUsuario tipoUsuario = new TipoUsuario();
+            
+            tipoUsuario.Titulo = titulo;
             try
             {
                 _tiposUsuarioRepository.Cadastrar(tipoUsuario);
@@ -77,8 +80,12 @@ namespace webapi.event_.tarde.Controllers
         }
 
         [HttpPut]
-        public IActionResult Atualizar(Guid Id, TipoUsuario tipoUsuario)
+        public IActionResult Atualizar(Guid Id, string titulo)
         {
+            TipoUsuario tipoUsuario = new TipoUsuario();
+
+            tipoUsuario.Titulo = titulo;
+
             try
             {
                 _tiposUsuarioRepository.Atualizar(Id, tipoUsuario);

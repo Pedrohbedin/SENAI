@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;
 using webapi.event_.tarde.Domains;
 using webapi.event_.tarde.Interfaces;
 using webapi.event_.tarde.Repositories;
@@ -34,6 +36,7 @@ namespace webapi.event_.tarde.Controllers
         }
 
         [HttpGet("Listar")]
+        [Authorize(Roles = "Aluno, Administrador")]
         public IActionResult Listar()
         {
             try
@@ -77,6 +80,7 @@ namespace webapi.event_.tarde.Controllers
         }
 
         [HttpPut]
+
         public IActionResult Atualizar(Guid Id, Evento evento)
         {
             try

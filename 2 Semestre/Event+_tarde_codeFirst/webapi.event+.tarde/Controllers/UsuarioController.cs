@@ -19,7 +19,7 @@ namespace webapi.event_.tarde.Controllers
         }
 
         [HttpPost]
-
+        [Authorize(Roles = "Administrador")]
         public IActionResult Post(Usuario usuario)
         {
             try
@@ -35,7 +35,6 @@ namespace webapi.event_.tarde.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Aluno, Administrador")]
         public IActionResult BuscarPorEmailESenha(string email, string senha)
         {
             try

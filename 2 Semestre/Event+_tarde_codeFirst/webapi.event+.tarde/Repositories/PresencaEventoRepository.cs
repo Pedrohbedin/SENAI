@@ -64,7 +64,29 @@ namespace webapi.event_.tarde.Repositories
 
         public List<PresencaEvento> Listar()
         {
+            EventoRepository evento = new EventoRepository();
+            UsuarioRepository usuario = new UsuarioRepository();
+
+            foreach (PresencaEvento presencaEvento in ctx.PresencaEvento.ToList())
+            {
+                presencaEvento.Evento = evento.BuscarPorId(presencaEvento.IdEvento);
+                presencaEvento.Usuario = usuario.BuscarPorId(presencaEvento.IdUsuario);
+            };
             return ctx.PresencaEvento.ToList();
+        }
+
+        public List<PresencaEvento> ListarMinhas(Guid id)
+        {
+            EventoRepository evento = new EventoRepository();
+            UsuarioRepository usuario = new UsuarioRepository();
+
+            foreach (PresencaEvento presencaEvento in ctx.PresencaEvento.ToList())
+            {
+                presencaEvento.Evento = evento.BuscarPorId(presencaEvento.IdEvento);
+                presencaEvento.Usuario = usuario.BuscarPorId(presencaEvento.IdUsuario);
+            };
+
+            return ctx.PresencaEvento.Where(x => x.IdUsuario == id).ToList();
         }
     }
 }
