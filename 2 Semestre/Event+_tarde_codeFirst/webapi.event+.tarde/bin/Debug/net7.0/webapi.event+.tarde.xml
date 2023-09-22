@@ -16,5 +16,11 @@
         <member name="M:webapi.event_.tarde.Migrations.BD_v1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="M:webapi.event_.tarde.Repositories.ComentarioEventoRepository.Atualizar(System.Guid,webapi.event_.tarde.Domains.ComentarioEvento)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.event_.tarde.Repositories.ComentarioEventoRepository.BuscarPorId(System.Guid)">
+            <inheritdoc/>
+        </member>
     </members>
 </doc>

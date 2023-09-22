@@ -12,18 +12,26 @@ namespace webapi.event_.tarde.Repositories
         {
             ctx = new EventContext();
         }
+
+        /// <inheritdoc/>
         public void Atualizar(Guid id, ComentarioEvento comentarioEvento)
         {
-            BuscarPorId(id).Descricao = comentarioEvento.Descricao;
-            BuscarPorId(id).Exibe = comentarioEvento.Exibe;
-            BuscarPorId(id).IdUsuario = comentarioEvento.IdUsuario;
-            BuscarPorId(id).Usuario = comentarioEvento.Usuario;
-            BuscarPorId(id).IdEvento = comentarioEvento.IdEvento;
-            BuscarPorId(id).Evento = comentarioEvento.Evento;
+            var entidade = BuscarPorId(id);
 
-            ctx.SaveChanges();
+            if (entidade != null)
+            {
+                entidade.Descricao = comentarioEvento.Descricao;
+                entidade.Exibe = comentarioEvento.Exibe;
+                entidade.IdUsuario = comentarioEvento.IdUsuario;
+                entidade.Usuario = comentarioEvento.Usuario;
+                entidade.IdEvento = comentarioEvento.IdEvento;
+                entidade.Evento = comentarioEvento.Evento;
+
+                ctx.SaveChanges();
+            }
         }
 
+        /// <inheritdoc/>
         public ComentarioEvento BuscarPorId(Guid id)
         {
             try
@@ -43,7 +51,7 @@ namespace webapi.event_.tarde.Repositories
             {
                 ctx.ComentarioEvento.Add(comentarioEvento);
                 ctx.SaveChanges();
-            }
+            }   
             catch (Exception)
             {
 
