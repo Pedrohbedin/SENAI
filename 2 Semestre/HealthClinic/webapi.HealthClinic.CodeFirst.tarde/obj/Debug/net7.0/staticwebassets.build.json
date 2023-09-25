@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "lZcdVrOYIqrs1e+YP6RjzO8i0NRiR+C7u4I17aLS/rA=",
+  "Source": "webapi.HealthClinic.CodeFirst.tarde",
+  "BasePath": "_content/webapi.HealthClinic.CodeFirst.tarde",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

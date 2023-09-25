@@ -15,7 +15,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Domains
         public Usuario? Usuario { get; set; }
         [Required(ErrorMessage = "O id da especialidade é um campo obrigatório")]
         public Guid IdEspecialidade { get; set; }
-        [ForeignKey(nameof(Especialidade))]
+        [ForeignKey(nameof(IdEspecialidade))]
         public Especialidade? Especialidade { get; set; }
         [Required(ErrorMessage = "O id clinica é um campo obrigatório")]
         public Guid IdClinica { get; set; }

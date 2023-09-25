@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace webapi.HealthClinic.CodeFirst.tarde.Domains
@@ -7,22 +8,29 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Domains
     {
         [Key]
         public Guid IdConsulta { get; set; } = Guid.NewGuid();
+
         [Required(ErrorMessage = "O Id do médico é um campo obrigatório")]
         public Guid IdMedico { get; set; }
+
         [ForeignKey(nameof(IdMedico))]
-        public Medico? Medico { get; set; }
+        public Medico Medico { get; set; }
+
         [Required(ErrorMessage = "O id do paciente é um campo obrigatório")]
         public Guid IdPaciente { get; set; }
+
         [ForeignKey(nameof(IdPaciente))]
-        public Paciente? Paciente { get; set; }
+        public Paciente Paciente { get; set; }
+
         [Column(TypeName = "DATE")]
         [Required(ErrorMessage = "A data de agendamento é um campo obrigatório")]
         public DateTime DataAgendamento { get; set; }
+
         [Column(TypeName = "VARCHAR(100)")]
         [Required(ErrorMessage = "A descricao é um campo obrigatório")]
         public string? Descricao { get; set; }
-        [Required(ErrorMessage = "O Id da situação é um campo obrigatório")]
+
         public Guid IdSituacao { get; set; }
+
         [ForeignKey(nameof(IdSituacao))]
         public Situacao? Situacao { get; set; }
     }

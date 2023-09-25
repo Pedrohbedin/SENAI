@@ -13,12 +13,12 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Domains
         public Guid IdTipoUsuario { get; set; }
         [ForeignKey(nameof(IdTipoUsuario))]
         public TipoUsuario? TipoUsuario;
-        [Column(TypeName = "VARHCAR(110)")]
+        [Column(TypeName = "VARCHAR(110)")]
         [Required(ErrorMessage = "O email é um campo obrigatório")]
         public string? Email { get; set; }
         [Column(TypeName = "CHAR(60)")]
         [Required(ErrorMessage = "Senha é obrigatória!!!")]
         [StringLength(60, MinimumLength = 6, ErrorMessage = "Senha deve conter de 6 a 60 caracteres")]
-        public int MyProperty { get; set; }
+        public string? Senha { get; set; }
     }
 }
