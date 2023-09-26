@@ -81,3 +81,4 @@ C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.C
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\BCrypt.Net-Next.dll

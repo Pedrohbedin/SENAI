@@ -61,7 +61,16 @@ namespace webapi.event_.tarde.Repositories
 
         public void Deletar(Guid id)
         {
-            ctx.ComentarioEvento.Remove(BuscarPorId(id));
+            try
+            {
+                ctx.ComentarioEvento.Remove(BuscarPorId(id));
+                ctx.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public List<ComentarioEvento> Listar()

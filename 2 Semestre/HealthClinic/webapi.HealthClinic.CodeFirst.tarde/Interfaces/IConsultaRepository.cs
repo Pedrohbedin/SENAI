@@ -6,6 +6,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Interfaces
     {
         void Agendar(Consultas consulta);
         void Cancelar(Guid id);
-        List<Consultas> Listar(Guid idUsuario);
+        void IncluirDescricao(string descricao, Guid Id);
+        List<Consultas> ListarPorUsuario(Guid idUsuario);
     }
 }
