@@ -22,5 +22,10 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
         {
             ctx.Especialidade.Remove(ctx.Especialidade.FirstOrDefault(x => x.IdEspecialidade == Id));
         }
+
+        public List<Especialidade> Listar()
+        {
+            return ctx.Especialidade.ToList();
+        }
     }
 }

@@ -21,10 +21,10 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Domains
         public string? RazaoSocial { get; set; }
         [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "O horario de abertura é um campo obrigatório")]
-        public TimeSpan? HoraAbertura { get; set; } 
+        public string? HoraAbertura { get; set; } 
         [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "O horario de fechamento é um campo obrigatório")]
-        public TimeSpan? HoraFechamento { get; set; }
+        public string? HoraFechamento { get; set; }
         [Column(TypeName = "VARCHAR(100)")]
         [Required(ErrorMessage = "O endereço é um campo obrigatório")]
         public string? Endereco { get; set; }

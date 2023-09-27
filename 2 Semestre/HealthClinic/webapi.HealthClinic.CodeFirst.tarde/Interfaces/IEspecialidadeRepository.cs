@@ -6,5 +6,6 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Interfaces
     {
         void Cadastrar(Especialidade especialidade);
         void Deletar(Guid Id);
+        List<Especialidade> Listar();
     }
 }
