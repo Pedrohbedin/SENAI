@@ -37,12 +37,10 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(100)");
 
-                    b.Property<TimeSpan?>("HoraAbertura")
-                        .IsRequired()
+                    b.Property<TimeOnly>("HoraAbertura")
                         .HasColumnType("TIME");
 
-                    b.Property<TimeSpan?>("HoraFechamento")
-                        .IsRequired()
+                    b.Property<TimeOnly>("HoraFechamento")
                         .HasColumnType("TIME");
 
                     b.Property<string>("Nome")
@@ -244,6 +242,8 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
+                    b.HasIndex("IdTipoUsuario");
+
                     b.ToTable("Usuario");
                 });
 
@@ -310,6 +310,17 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                         .IsRequired();
 
                     b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario", b =>
+                {
+                    b.HasOne("webapi.HealthClinic.CodeFirst.tarde.Domains.TipoUsuario", "TipoUsuario")
+                        .WithMany()
+                        .HasForeignKey("IdTipoUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TipoUsuario");
                 });
 #pragma warning restore 612, 618
         }

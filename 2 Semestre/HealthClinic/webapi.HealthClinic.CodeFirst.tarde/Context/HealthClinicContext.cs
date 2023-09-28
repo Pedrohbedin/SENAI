@@ -17,7 +17,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = NOTE04-S14; DataBase = healthClinic.codeFirst.tarde; User Id = sa; Pwd = Senai@134; TrustServerCertificate = true");
+            optionsBuilder.UseSqlServer("Server = NOTE04-S14; DataBase = healthClinic.codeFirst.tarde; User Id = sa; Pwd = Senai@134; TrustServerCertificate = true", x => x.UseDateOnlyTimeOnly());
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

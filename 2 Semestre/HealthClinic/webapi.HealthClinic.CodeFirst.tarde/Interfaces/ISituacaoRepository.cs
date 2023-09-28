@@ -6,5 +6,8 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Interfaces
     {
         void Cadastrar(Situacao situacao);
         void Deletar(Guid Id);
+        List<Situacao> Listar();
+        Situacao BuscarPorId(Guid Id);
+        void Atualizar(Situacao situacao, Guid Id);
     }
 }

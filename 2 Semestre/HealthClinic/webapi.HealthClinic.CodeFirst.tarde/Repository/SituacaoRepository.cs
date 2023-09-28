@@ -14,6 +14,10 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
             ctx = new HealthClinicContext();
         }
 
+        public Situacao BuscarPorId(Guid Id)
+        {
+            return ctx.Situacao.FirstOrDefault(x => x.idSituacao == Id);
+        }
 
         public void Cadastrar(Situacao situacao)
         {
@@ -25,6 +29,11 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
         {
             ctx.Situacao.Remove(ctx.Situacao.FirstOrDefault(x => x.idSituacao == Id));
             ctx.SaveChanges();
+        }
+
+        public List<Situacao> Listar()
+        {
+            return ctx.Situacao.ToList();
         }
     }
 }

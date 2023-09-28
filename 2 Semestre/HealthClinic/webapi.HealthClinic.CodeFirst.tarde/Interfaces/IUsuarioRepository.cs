@@ -7,5 +7,6 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Interfaces
         void Cadastrar(Usuario usuario);
         void Deletar(Guid id);
         Usuario BuscarPorEmailESenha(string email, string senha);
+        Usuario Atualizar(Usuario usuario, Guid Id);
     }
 }

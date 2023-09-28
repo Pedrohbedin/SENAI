@@ -11,6 +11,12 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
         {
             ctx = new HealthClinicContext();
         }
+
+        public Paciente BuscarPorId(Guid Id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Cadastrar(Paciente paciente)
         {
             try

@@ -82,3 +82,12 @@ C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.C
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\System.Web.Mvc.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\System.Web.Razor.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\System.Web.Helpers.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\System.Web.WebPages.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\bin\Debug\net7.0\EntityFrameworkCore.SqlServer.DateOnlyTimeOnly.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\HealthClinic\webapi.HealthClinic.CodeFirst.tarde\obj\Debug\net7.0\EFCoreSqlServerDateOnlyTimeOnly.cs

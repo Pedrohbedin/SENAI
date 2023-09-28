@@ -12,6 +12,12 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
         {
             ctx = new HealthClinicContext();
         }
+
+        public Especialidade BuscarPorId(Guid Id)
+        {
+            return ctx.Especialidade.FirstOrDefault(x => x.IdEspecialidade == Id);
+        }
+
         public void Cadastrar(Especialidade especialidade)
         {
             ctx.Especialidade.Add(especialidade);

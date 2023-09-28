@@ -19,8 +19,8 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                     Nome = table.Column<string>(type: "VARCHAR(50)", nullable: false),
                     CNPJ = table.Column<string>(type: "CHAR(14)", maxLength: 14, nullable: false),
                     RazaoSocial = table.Column<string>(type: "VARCHAR(50)", nullable: false),
-                    HoraAbertura = table.Column<TimeSpan>(type: "TIME", nullable: false),
-                    HoraFechamento = table.Column<TimeSpan>(type: "TIME", nullable: false),
+                    HoraAbertura = table.Column<TimeOnly>(type: "time", nullable: false),
+                    HoraFechamento = table.Column<TimeOnly>(type: "time", nullable: false),
                     Endereco = table.Column<string>(type: "VARCHAR(100)", nullable: false)
                 },
                 constraints: table =>
@@ -76,6 +76,12 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Usuario", x => x.IdUsuario);
+                    table.ForeignKey(
+                        name: "FK_Usuario_TipoUsuario_IdTipoUsuario",
+                        column: x => x.IdTipoUsuario,
+                        principalTable: "TipoUsuario",
+                        principalColumn: "IdTipoUsuario",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -119,7 +125,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                     IdPaciente = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     idUsuario = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "VARCHAR(110)", nullable: false),
-                    DataNascimento = table.Column<DateTime>(type: "DATE", nullable: false),
+                    DataNascimento = table.Column<DateTime>(type: "date", nullable: false),
                     Telefone = table.Column<string>(type: "CHAR(11)", nullable: false),
                     RG = table.Column<string>(type: "CHAR(9)", nullable: false),
                     CPF = table.Column<string>(type: "CHAR(11)", nullable: false),
@@ -144,7 +150,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                     IdConsulta = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdMedico = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdPaciente = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DataAgendamento = table.Column<DateTime>(type: "DATE", nullable: false),
+                    DataAgendamento = table.Column<DateTime>(type: "date", nullable: false),
                     Descricao = table.Column<string>(type: "VARCHAR(100)", nullable: false),
                     IdSituacao = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
@@ -228,6 +234,11 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                 table: "Usuario",
                 column: "Email",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Usuario_IdTipoUsuario",
+                table: "Usuario",
+                column: "IdTipoUsuario");
         }
 
         /// <inheritdoc />
@@ -235,9 +246,6 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Consultas");
-
-            migrationBuilder.DropTable(
-                name: "TipoUsuario");
 
             migrationBuilder.DropTable(
                 name: "Medico");
@@ -256,6 +264,9 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
 
             migrationBuilder.DropTable(
                 name: "Usuario");
+
+            migrationBuilder.DropTable(
+                name: "TipoUsuario");
         }
     }
 }

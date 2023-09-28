@@ -12,6 +12,11 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
             ctx = new HealthClinicContext();
         }
 
+        public Medico BuscarPorId(Guid Id)
+        {
+            return ctx.Medico.FirstOrDefault(x => x.IdUsuario == Id);
+        }
+
         public void Cadastrar(Medico medico)
         {
             try

@@ -12,7 +12,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Domains
         [Required(ErrorMessage = "O id do tipo de usuario é um campo obrigatório")]
         public Guid IdTipoUsuario { get; set; }
         [ForeignKey(nameof(IdTipoUsuario))]
-        public TipoUsuario? TipoUsuario;
+        public TipoUsuario? TipoUsuario { get; set; }
         [Column(TypeName = "VARCHAR(110)")]
         [Required(ErrorMessage = "O email é um campo obrigatório")]
         public string? Email { get; set; }

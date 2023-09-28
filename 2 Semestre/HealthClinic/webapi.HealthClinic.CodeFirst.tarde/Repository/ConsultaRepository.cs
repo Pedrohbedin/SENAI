@@ -18,6 +18,11 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
             ctx.SaveChanges();
         }
 
+        public Consultas BuscarPorId(Guid Id)
+        {
+            return ctx.Consultas.FirstOrDefault(x => x.IdConsulta == Id);
+        }
+
         public void Cancelar(Guid id)
         {
             ctx.Consultas.Remove(ctx.Consultas.FirstOrDefault(x => x.IdConsulta == id));
@@ -27,6 +32,11 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
         {
             ctx.Consultas.FirstOrDefault(x => x.IdConsulta == Id).Descricao = descricao;
             ctx.SaveChanges();
+        }
+
+        public List<Consultas> Listar()
+        {
+            return ctx.Consultas.ToList();
         }
 
         public List<Consultas> ListarPorUsuario(Guid idUsuario)

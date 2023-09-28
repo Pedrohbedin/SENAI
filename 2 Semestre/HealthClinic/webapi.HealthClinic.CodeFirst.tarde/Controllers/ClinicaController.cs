@@ -33,5 +33,16 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         {
             return Ok(_clinicaRepository.Listar());
         }
+        [HttpGet("BuscarPorId")]
+        public IActionResult BuscarPorId(Guid Id)
+        {
+            return Ok(_clinicaRepository.BuscarPorId(Id));
+        }
+        [HttpPut]
+        public IActionResult Atualizar(Clinica clinica, Guid Id)
+        {
+            _clinicaRepository.Atualizar(clinica, Id);
+            return Ok();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace webapi.HealthClinic.CodeFirst.tarde.Domains
@@ -21,10 +22,12 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Domains
         public string? RazaoSocial { get; set; }
         [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "O horario de abertura é um campo obrigatório")]
-        public string? HoraAbertura { get; set; } 
+        public TimeOnly HoraAbertura { get; set; }
+
         [Column(TypeName = "TIME")]
         [Required(ErrorMessage = "O horario de fechamento é um campo obrigatório")]
-        public string? HoraFechamento { get; set; }
+        public TimeOnly HoraFechamento { get; set; }
+
         [Column(TypeName = "VARCHAR(100)")]
         [Required(ErrorMessage = "O endereço é um campo obrigatório")]
         public string? Endereco { get; set; }

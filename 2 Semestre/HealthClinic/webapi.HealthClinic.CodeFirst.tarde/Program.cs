@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
@@ -7,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddMvc()
+    .AddNewtonsoftJson();
 
 builder.Services.AddAuthentication(options =>
 {
