@@ -4,6 +4,934 @@
         <name>webapi.HealthClinic.CodeFirst.tarde</name>
     </assembly>
     <members>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.ClinicaController">
+            <summary>
+            Controlador responsável pelas operações relacionadas à entidade Clinica.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ClinicaController.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica)">
+            <summary>
+            Cadastra uma nova clínica.
+            </summary>
+            <param name="clinica">Os dados da clínica a serem cadastrados.</param>
+            <returns>Os dados da clínica cadastrada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ClinicaController.Deletar(System.Guid)">
+            <summary>
+            Deleta uma clínica pelo seu Id.
+            </summary>
+            <param name="Id">O Id da clínica a ser deletada.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ClinicaController.Listar">
+            <summary>
+            Lista todas as clínicas cadastradas.
+            </summary>
+            <returns>Uma lista de clínicas.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ClinicaController.BuscarPorId(System.Guid)">
+            <summary>
+            Busca uma clínica pelo seu Id.
+            </summary>
+            <param name="Id">O Id da clínica a ser buscada.</param>
+            <returns>Os dados da clínica encontrada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ClinicaController.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica,System.Guid)">
+            <summary>
+            Atualiza os dados de uma clínica pelo seu Id.
+            </summary>
+            <param name="clinica">Os novos dados da clínica.</param>
+            <param name="Id">O Id da clínica a ser atualizada.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController">
+            <summary>
+            Controlador responsável pelas operações relacionadas a consultas.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController.#ctor(webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository)">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController"/>.
+            </summary>
+            <param name="consultaRepository">O repositório de consultas.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController.Agendar(webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas)">
+            <summary>
+            Agenda uma nova consulta.
+            </summary>
+            <param name="consulta">Os dados da consulta a ser agendada.</param>
+            <returns>Os dados da consulta agendada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController.Cancelar(System.Guid)">
+            <summary>
+            Cancela uma consulta pelo seu Id.
+            </summary>
+            <param name="Id">O Id da consulta a ser cancelada.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController.IncluirDescricao(System.String,System.Guid)">
+            <summary>
+            Inclui uma descrição em uma consulta pelo seu Id.
+            </summary>
+            <param name="descricao">A descrição a ser incluída na consulta.</param>
+            <param name="Id">O Id da consulta.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController.ListarPorUsuario(System.Guid)">
+            <summary>
+            Lista as consultas de um usuário pelo seu Id.
+            </summary>
+            <param name="IdUsuario">O Id do usuário.</param>
+            <returns>Uma lista de consultas do usuário.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController.BuscarPorId(System.Guid)">
+            <summary>
+            Busca uma consulta pelo seu Id.
+            </summary>
+            <param name="id">O Id da consulta.</param>
+            <returns>Os dados da consulta encontrada.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.EspecialidadeController">
+            <summary>
+            Controlador responsável pelas operações relacionadas a especialidades médicas.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.EspecialidadeController.#ctor(webapi.HealthClinic.CodeFirst.tarde.Interfaces.IEspecialidadeRepository)">
+            <summary>
+            
+            </summary>
+            <param name="especialidadeRepository"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.EspecialidadeController.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Especialidade)">
+            <summary>
+            Cadastra uma nova especialidade médica.
+            </summary>
+            <param name="especialidade">Os dados da especialidade a ser cadastrada.</param>
+            <returns>Os dados da especialidade cadastrada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.EspecialidadeController.Deletar(System.Guid)">
+            <summary>
+            Deleta uma especialidade médica pelo seu Id.
+            </summary>
+            <param name="Id">O Id da especialidade a ser deletada.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.EspecialidadeController.Listar">
+            <summary>
+            Lista todas as especialidades médicas.
+            </summary>
+            <returns>Uma lista de especialidades médicas.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.EspecialidadeController.BuscarPorId(System.Guid)">
+            <summary>
+            Busca uma especialidade médica pelo seu Id.
+            </summary>
+            <param name="id">O Id da especialidade a ser buscada.</param>
+            <returns>Os dados da especialidade encontrada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.EspecialidadeController.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Especialidade,System.Guid)">
+            <summary>
+            Atualiza os dados de uma especialidade médica pelo seu Id.
+            </summary>
+            <param name="especialidade">Os novos dados da especialidade.</param>
+            <param name="id">O Id da especialidade a ser atualizada.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.LoginController">
+            <summary>
+            Controlador responsável pelas operações de autenticação e geração de tokens JWT.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.LoginController.Login(System.String,System.String)">
+            <summary>
+            Endpoint para autenticação de usuário e geração de token JWT.
+            </summary>
+            <param name="email">O email do usuário.</param>
+            <param name="senha">A senha do usuário.</param>
+            <returns>Um token JWT válido por um período limitado.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController">
+            <summary>
+            Controlador responsável pelas operações relacionadas a médicos.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController.#ctor(webapi.HealthClinic.CodeFirst.tarde.Interfaces.IMedicoRepository)">
+            <summary>
+            Construtor que recebe uma instância do repositório de médicos por injeção de dependência.
+            </summary>
+            <param name="medicoRepository">Instância do repositório de médicos.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Medico)">
+            <summary>
+            Cadastra um novo médico.
+            </summary>
+            <param name="medico">Os dados do médico a ser cadastrado.</param>
+            <returns>Os dados do médico cadastrado.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController.Deletar(System.Guid)">
+            <summary>
+            Deleta um médico pelo seu Id.
+            </summary>
+            <param name="id">O Id do médico a ser deletado.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController.Listar">
+            <summary>
+            Lista todos os médicos.
+            </summary>
+            <returns>Uma lista de médicos.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController.Atualizar(System.Guid,webapi.HealthClinic.CodeFirst.tarde.Domains.Medico)">
+            <summary>
+            Atualiza os dados de um médico pelo seu Id.
+            </summary>
+            <param name="id">O Id do médico a ser atualizado.</param>
+            <param name="medico">Os novos dados do médico.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um médico pelo seu Id.
+            </summary>
+            <param name="id">O Id do médico a ser buscado.</param>
+            <returns>Os dados do médico encontrado.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.PacienteController">
+            <summary>
+            Controlador responsável pelas operações relacionadas a pacientes.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.PacienteController.#ctor">
+            <summary>
+            
+            </summary>
+            <param name="pacienteRepository"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.PacienteController.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente)">
+            <summary>
+            Cadastra um novo paciente.
+            </summary>
+            <param name="paciente">Os dados do paciente a ser cadastrado.</param>
+            <returns>Os dados do paciente cadastrado.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.PacienteController.Deletar(System.Guid)">
+            <summary>
+            Deleta um paciente pelo seu Id.
+            </summary>
+            <param name="id">O Id do paciente a ser deletado.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.PacienteController.Listar">
+            <summary>
+            Lista todos os pacientes.
+            </summary>
+            <returns>Uma lista de pacientes.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.PacienteController.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente,System.Guid)">
+            <summary>
+            Atualiza os dados de um paciente pelo seu Id.
+            </summary>
+            <param name="paciente">Os novos dados do paciente.</param>
+            <param name="id">O Id do paciente a ser atualizado.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.PacienteController.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um paciente pelo seu Id.
+            </summary>
+            <param name="id">O Id do paciente a ser buscado.</param>
+            <returns>Os dados do paciente encontrado.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController">
+            <summary>
+            Controlador responsável pelas operações relacionadas a situações.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController"/>.
+            </summary>
+            <param name="situacaoRepository">O repositório de situações.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao)">
+            <summary>
+            Cadastra uma nova situação.
+            </summary>
+            <param name="situacao">Os dados da situação a ser cadastrada.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController.Deletar(System.Guid)">
+            <summary>
+            Deleta uma situação pelo seu Id.
+            </summary>
+            <param name="id">O Id da situação a ser deletada.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController.Listar">
+            <summary>
+            Lista todas as situações.
+            </summary>
+            <returns>Uma lista de situações.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController.BuscarPorId(System.Guid)">
+            <summary>
+            Busca uma situação pelo seu Id.
+            </summary>
+            <param name="id">O Id da situação a ser buscada.</param>
+            <returns>Os dados da situação encontrada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao,System.Guid)">
+            <summary>
+            Atualiza os dados de uma situação pelo seu Id.
+            </summary>
+            <param name="situacao">Os novos dados da situação.</param>
+            <param name="id">O Id da situação a ser atualizada.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.TipoUsuarioController">
+            <summary>
+            Controlador responsável por operações relacionadas a TipoUsuario.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.TipoUsuarioController.Cadastrar(System.String)">
+            <summary>
+            Método HTTP POST para cadastrar um novo TipoUsuario.
+            </summary>
+            <param name="titulo">O título do TipoUsuario a ser cadastrado.</param>
+            <returns>Um status de sucesso (201 - Created) após o cadastro bem-sucedido.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.TipoUsuarioController.Listar">
+            <summary>
+            Método HTTP GET para listar todos os tipos de usuário.
+            </summary>
+            <returns>Uma resposta OK com a lista de tipos de usuário do repositório.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.TipoUsuarioController.Deletar(System.Guid)">
+            <summary>
+            Método HTTP DELETE para deletar um TipoUsuario pelo seu Id.
+            </summary>
+            <param name="Id">O Id do TipoUsuario a ser deletado.</param>
+            <returns>Um status OK após a exclusão bem-sucedida.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.TipoUsuarioController.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.TipoUsuario,System.Guid)">
+            <summary>
+            Método HTTP PUT para atualizar um TipoUsuario pelo seu Id.
+            </summary>
+            <param name="tipoUsuario">Os dados do TipoUsuario a serem atualizados.</param>
+            <param name="id">O Id do TipoUsuario a ser atualizado.</param>
+            <returns>Um status OK após a atualização bem-sucedida.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.UsuarioController">
+            <summary>
+            Controlador responsável pelas operações relacionadas a usuários.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.UsuarioController.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.UsuarioController"/>.
+            </summary>
+            <param name="usuarioRepository">O repositório de usuários.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.UsuarioController.Post(webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuário.
+            </summary>
+            <param name="usuario">Os dados do usuário a ser cadastrado.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.UsuarioController.BuscarPorEmailESenha(System.String,System.String)">
+            <summary>
+            Busca um usuário pelo seu email e senha.
+            </summary>
+            <param name="email">O email do usuário.</param>
+            <param name="senha">A senha do usuário.</param>
+            <returns>Os dados do usuário encontrado, excluindo a senha.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.UsuarioController.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario,System.Guid)">
+            <summary>
+            Atualiza os dados de um usuário pelo seu Id.
+            </summary>
+            <param name="usuario">Os novos dados do usuário.</param>
+            <param name="id">O Id do usuário a ser atualizado.</param>
+            <returns>Uma resposta de sucesso.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica">
+            <summary>
+            Representa uma clínica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica.IdClinica">
+            <summary>
+            Obtém ou define o Id da clínica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica.Nome">
+            <summary>
+            Obtém ou define o nome da clínica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica.CNPJ">
+            <summary>
+            Obtém ou define o CNPJ da clínica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica.RazaoSocial">
+            <summary>
+            Obtém ou define a razão social da clínica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica.HoraAbertura">
+            <summary>
+            Obtém ou define o horário de abertura da clínica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica.HoraFechamento">
+            <summary>
+            Obtém ou define o horário de fechamento da clínica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica.Endereco">
+            <summary>
+            Obtém ou define o endereço da clínica.
+            </summary>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas">
+            <summary>
+            Representa uma consulta médica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas.IdConsulta">
+            <summary>
+            Obtém ou define o Id da consulta.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas.IdMedico">
+            <summary>
+            Obtém ou define o Id do médico associado à consulta.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas.Medico">
+            <summary>
+            Obtém ou define a referência ao médico associado à consulta.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas.IdPaciente">
+            <summary>
+            Obtém ou define o Id do paciente associado à consulta.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas.Paciente">
+            <summary>
+            Obtém ou define a referência ao paciente associado à consulta.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas.DataAgendamento">
+            <summary>
+            Obtém ou define a data de agendamento da consulta.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas.Descricao">
+            <summary>
+            Obtém ou define a descrição da consulta.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas.IdSituacao">
+            <summary>
+            Obtém ou define o Id da situação da consulta.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas.Situacao">
+            <summary>
+            Obtém ou define a referência à situação da consulta.
+            </summary>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Domains.Especialidade">
+            <summary>
+            Representa uma especialidade médica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Especialidade.IdEspecialidade">
+            <summary>
+            Obtém ou define o Id da especialidade.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Especialidade.Titulo">
+            <summary>
+            Obtém ou define o título da especialidade.
+            </summary>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico">
+            <summary>
+            Representa um médico.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico.IdMedico">
+            <summary>
+            Obtém ou define o Id do médico.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico.IdUsuario">
+            <summary>
+            Obtém ou define o Id do usuário associado ao médico.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico.Usuario">
+            <summary>
+            Obtém ou define a referência ao usuário associado ao médico.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico.IdEspecialidade">
+            <summary>
+            Obtém ou define o Id da especialidade do médico.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico.Especialidade">
+            <summary>
+            Obtém ou define a referência à especialidade do médico.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico.IdClinica">
+            <summary>
+            Obtém ou define o Id da clínica onde o médico atua.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico.Clinica">
+            <summary>
+            Obtém ou define a referência à clínica onde o médico atua.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico.Nome">
+            <summary>
+            Obtém ou define o nome do médico.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Medico.CRM">
+            <summary>
+            Obtém ou define o CRM (Conselho Regional de Medicina) do médico.
+            </summary>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente">
+            <summary>
+            Representa um paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.IdPaciente">
+            <summary>
+            Obtém ou define o Id do paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.IdUsuario">
+            <summary>
+            Obtém ou define o Id do usuário associado ao paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.Usuario">
+            <summary>
+            Obtém ou define a referência ao usuário associado ao paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.Nome">
+            <summary>
+            Obtém ou define o nome do paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.DataNascimento">
+            <summary>
+            Obtém ou define a data de nascimento do paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.Telefone">
+            <summary>
+            Obtém ou define o telefone do paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.RG">
+            <summary>
+            Obtém ou define o RG do paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.CPF">
+            <summary>
+            Obtém ou define o CPF do paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.CEP">
+            <summary>
+            Obtém ou define o CEP do paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente.Endereco">
+            <summary>
+            Obtém ou define o endereço do paciente.
+            </summary>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao">
+            <summary>
+            Representa a situação de alguma entidade.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao.IdSituacao">
+            <summary>
+            Obtém ou define o Id da situação.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao.SituacaoValor">
+            <summary>
+            Obtém ou define a situação.
+            </summary>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Domains.TipoUsuario">
+            <summary>
+            Representa um tipo de usuário.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.TipoUsuario.IdTipoUsuario">
+            <summary>
+            Obtém ou define o Id do tipo de usuário.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.TipoUsuario.Titulo">
+            <summary>
+            Obtém ou define o título do tipo de usuário.
+            </summary>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario">
+            <summary>
+            Representa um usuário do sistema.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario.IdUsuario">
+            <summary>
+            Obtém ou define o Id do usuário.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario.IdTipoUsuario">
+            <summary>
+            Obtém ou define o Id do tipo de usuário associado.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario.TipoUsuario">
+            <summary>
+            Obtém ou define a referência ao tipo de usuário associado.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario.Email">
+            <summary>
+            Obtém ou define o email do usuário.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario.Senha">
+            <summary>
+            Obtém ou define a senha do usuário.
+            </summary>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IClinicaRepository">
+            <summary>
+            Define as operações disponíveis para o repositório de clínicas.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IClinicaRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica)">
+            <summary>
+            Cadastra uma nova clínica.
+            </summary>
+            <param name="clinica">A clínica a ser cadastrada.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IClinicaRepository.Deletar(System.Guid)">
+            <summary>
+            Deleta uma clínica pelo seu Id.
+            </summary>
+            <param name="Id">O Id da clínica a ser deletada.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IClinicaRepository.Listar">
+            <summary>
+            Lista todas as clínicas cadastradas.
+            </summary>
+            <returns>Uma lista de clínicas.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IClinicaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca uma clínica pelo seu Id.
+            </summary>
+            <param name="Id">O Id da clínica a ser buscada.</param>
+            <returns>A clínica encontrada ou null se não encontrada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IClinicaRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica,System.Guid)">
+            <summary>
+            Atualiza os dados de uma clínica.
+            </summary>
+            <param name="clinica">A clínica com os dados atualizados.</param>
+            <param name="Id">O Id da clínica a ser atualizada.</param>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository">
+            <summary>
+            Define as operações disponíveis para o repositório de consultas.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository.Agendar(webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas)">
+            <summary>
+            Agenda uma nova consulta.
+            </summary>
+            <param name="consulta">A consulta a ser agendada.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository.Cancelar(System.Guid)">
+            <summary>
+            Cancela uma consulta pelo seu Id.
+            </summary>
+            <param name="Id">O Id da consulta a ser cancelada.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca uma consulta pelo seu Id.
+            </summary>
+            <param name="Id">O Id da consulta a ser buscada.</param>
+            <returns>A consulta encontrada ou null se não encontrada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository.IncluirDescricao(System.String,System.Guid)">
+            <summary>
+            Inclui uma descrição em uma consulta.
+            </summary>
+            <param name="descricao">A descrição a ser incluída.</param>
+            <param name="Id">O Id da consulta à qual a descrição será incluída.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository.ListarPorUsuario(System.Guid)">
+            <summary>
+            Lista todas as consultas de um usuário pelo seu Id.
+            </summary>
+            <param name="idUsuario">O Id do usuário cujas consultas serão listadas.</param>
+            <returns>Uma lista de consultas do usuário.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository.Listar">
+            <summary>
+            Lista todas as consultas cadastradas.
+            </summary>
+            <returns>Uma lista de consultas.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas,System.Guid)">
+            <summary>
+            Atualiza os dados de uma consulta.
+            </summary>
+            <param name="consulta">A consulta com os dados atualizados.</param>
+            <param name="Id">O Id da consulta a ser atualizada.</param>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IEspecialidadeRepository">
+            <summary>
+            Define as operações disponíveis para o repositório de especialidades.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IEspecialidadeRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Especialidade)">
+            <summary>
+            Cadastra uma nova especialidade.
+            </summary>
+            <param name="especialidade">A especialidade a ser cadastrada.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IEspecialidadeRepository.Deletar(System.Guid)">
+            <summary>
+            Deleta uma especialidade pelo seu Id.
+            </summary>
+            <param name="Id">O Id da especialidade a ser deletada.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IEspecialidadeRepository.Listar">
+            <summary>
+            Lista todas as especialidades cadastradas.
+            </summary>
+            <returns>Uma lista de especialidades.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IEspecialidadeRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca uma especialidade pelo seu Id.
+            </summary>
+            <param name="Id">O Id da especialidade a ser buscada.</param>
+            <returns>A especialidade encontrada ou null se não encontrada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IEspecialidadeRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Especialidade,System.Guid)">
+            <summary>
+            Atualiza os dados de uma especialidade.
+            </summary>
+            <param name="especialidade">A especialidade com os dados atualizados.</param>
+            <param name="Id">O Id da especialidade a ser atualizada.</param>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IMedicoRepository">
+            <summary>
+            Define as operações disponíveis para o repositório de médicos.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IMedicoRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Medico)">
+            <summary>
+            Cadastra um novo médico.
+            </summary>
+            <param name="medico">O médico a ser cadastrado.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IMedicoRepository.Deletar(System.Guid)">
+            <summary>
+            Deleta um médico pelo seu Id.
+            </summary>
+            <param name="Id">O Id do médico a ser deletado.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IMedicoRepository.Listar">
+            <summary>
+            Lista todos os médicos cadastrados.
+            </summary>
+            <returns>Uma lista de médicos.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IMedicoRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um médico pelo seu Id.
+            </summary>
+            <param name="Id">O Id do médico a ser buscado.</param>
+            <returns>O médico encontrado ou null se não encontrado.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IMedicoRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Medico,System.Guid)">
+            <summary>
+            Atualiza os dados de um médico.
+            </summary>
+            <param name="medico">O médico com os dados atualizados.</param>
+            <param name="Id">O Id do médico a ser atualizado.</param>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IPacienteRepository">
+            <summary>
+            Define as operações disponíveis para o repositório de pacientes.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IPacienteRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente)">
+            <summary>
+            Cadastra um novo paciente.
+            </summary>
+            <param name="paciente">O paciente a ser cadastrado.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IPacienteRepository.Deletar(System.Guid)">
+            <summary>
+            Deleta um paciente pelo seu Id.
+            </summary>
+            <param name="Id">O Id do paciente a ser deletado.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IPacienteRepository.Listar">
+            <summary>
+            Lista todos os pacientes cadastrados.
+            </summary>
+            <returns>Uma lista de pacientes.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IPacienteRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um paciente pelo seu Id.
+            </summary>
+            <param name="Id">O Id do paciente a ser buscado.</param>
+            <returns>O paciente encontrado ou null se não encontrado.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IPacienteRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente,System.Guid)">
+            <summary>
+            Atualiza os dados de um paciente.
+            </summary>
+            <param name="paciente">O paciente com os dados atualizados.</param>
+            <param name="Id">O Id do paciente a ser atualizado.</param>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ISituacaoRepository">
+            <summary>
+            Define as operações disponíveis para o repositório de situações.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ISituacaoRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao)">
+            <summary>
+            Cadastra uma nova situação.
+            </summary>
+            <param name="situacao">A situação a ser cadastrada.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ISituacaoRepository.Deletar(System.Guid)">
+            <summary>
+            Deleta uma situação pelo seu Id.
+            </summary>
+            <param name="Id">O Id da situação a ser deletada.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ISituacaoRepository.Listar">
+            <summary>
+            Lista todas as situações cadastradas.
+            </summary>
+            <returns>Uma lista de situações.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ISituacaoRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca uma situação pelo seu Id.
+            </summary>
+            <param name="Id">O Id da situação a ser buscada.</param>
+            <returns>A situação encontrada ou null se não encontrada.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ISituacaoRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao,System.Guid)">
+            <summary>
+            Atualiza os dados de uma situação.
+            </summary>
+            <param name="situacao">A situação com os dados atualizados.</param>
+            <param name="Id">O Id da situação a ser atualizada.</param>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ITipoUsuarioRepository">
+            <summary>
+            Interface para operações do repositório de TipoUsuario.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ITipoUsuarioRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.TipoUsuario)">
+            <summary>
+            Cadastra um novo TipoUsuario.
+            </summary>
+            <param name="tipoUsuario">O TipoUsuario a ser cadastrado.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ITipoUsuarioRepository.Deletar(System.Guid)">
+            <summary>
+            Deleta um TipoUsuario pelo seu Id.
+            </summary>
+            <param name="id">O Id do TipoUsuario a ser deletado.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ITipoUsuarioRepository.Listar">
+            <summary>
+            Lista todos os tipos de usuário.
+            </summary>
+            <returns>Uma lista de tipos de usuário.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ITipoUsuarioRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.TipoUsuario,System.Guid)">
+            <summary>
+            Atualiza um TipoUsuario pelo seu Id.
+            </summary>
+            <param name="tipoUsuario">Os dados do TipoUsuario a serem atualizados.</param>
+            <param name="Id">O Id do TipoUsuario a ser atualizado.</param>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IUsuarioRepository">
+            <summary>
+            Define as operações disponíveis para o repositório de usuários.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IUsuarioRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuário.
+            </summary>
+            <param name="usuario">O usuário a ser cadastrado.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IUsuarioRepository.Deletar(System.Guid)">
+            <summary>
+            Deleta um usuário pelo seu Id.
+            </summary>
+            <param name="id">O Id do usuário a ser deletado.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IUsuarioRepository.BuscarPorEmailESenha(System.String,System.String)">
+            <summary>
+            Busca um usuário pelo seu email e senha.
+            </summary>
+            <param name="email">O email do usuário.</param>
+            <param name="senha">A senha do usuário.</param>
+            <returns>O usuário encontrado ou null se não encontrado.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IUsuarioRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario,System.Guid)">
+            <summary>
+            Atualiza os dados de um usuário.
+            </summary>
+            <param name="usuario">O usuário com os dados atualizados.</param>
+            <param name="id">O Id do usuário a ser atualizado.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IUsuarioRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um usuário pelo seu Id.
+            </summary>
+            <param name="id">O Id do usuário a ser buscado.</param>
+            <returns>O usuário encontrado ou null se não encontrado.</returns>
+        </member>
         <member name="T:webapi.HealthClinic.CodeFirst.tarde.Migrations.Bd_v1">
             <inheritdoc />
         </member>
@@ -15,6 +943,287 @@
         </member>
         <member name="M:webapi.HealthClinic.CodeFirst.tarde.Migrations.Bd_v1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository">
+            <summary>
+            Implementação do repositório de clínicas.
+            </summary>
+        </member>
+        <member name="F:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository.ctx">
+            <summary>
+            O contexto do banco de dados.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository"/>.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository.BuscarPorId(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Clinica)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository.Deletar(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository.Listar">
+            <inheritdoc/>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository">
+            <summary>
+            Implementação do repositório de consultas.
+            </summary>
+        </member>
+        <member name="F:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository.ctx">
+            <summary>
+            O contexto do banco de dados.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository"/>.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository.Agendar(webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Consultas,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository.BuscarPorId(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository.Cancelar(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository.IncluirDescricao(System.String,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository.Listar">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.ConsultaRepository.ListarPorUsuario(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Repository.EspecialidadeRepository">
+            <summary>
+            Implementação do repositório de especialidades.
+            </summary>
+        </member>
+        <member name="F:webapi.HealthClinic.CodeFirst.tarde.Repository.EspecialidadeRepository.ctx">
+            <summary>
+            O contexto do banco de dados.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.EspecialidadeRepository.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Repository.EspecialidadeRepository"/>.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.EspecialidadeRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Especialidade,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.EspecialidadeRepository.BuscarPorId(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.EspecialidadeRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Especialidade)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.EspecialidadeRepository.Deletar(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.EspecialidadeRepository.Listar">
+            <inheritdoc/>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Repository.MedicoRepository">
+            <summary>
+            Implementação do repositório de médicos.
+            </summary>
+        </member>
+        <member name="F:webapi.HealthClinic.CodeFirst.tarde.Repository.MedicoRepository.ctx">
+            <summary>
+            O contexto do banco de dados.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.MedicoRepository.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Repository.MedicoRepository"/>.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.MedicoRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Medico,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.MedicoRepository.BuscarPorId(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.MedicoRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Medico)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.MedicoRepository.Deletar(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.MedicoRepository.Listar">
+            <inheritdoc/>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Repository.PacienteRepository">
+            <summary>
+            Implementação do repositório de pacientes.
+            </summary>
+        </member>
+        <member name="F:webapi.HealthClinic.CodeFirst.tarde.Repository.PacienteRepository.ctx">
+            <summary>
+            O contexto do banco de dados.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.PacienteRepository.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Repository.PacienteRepository"/>.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.PacienteRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.PacienteRepository.BuscarPorId(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.PacienteRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.PacienteRepository.Deletar(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.PacienteRepository.Listar">
+            <inheritdoc/>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Repository.SituacaoRepository">
+            <summary>
+            Implementação do repositório de situações.
+            </summary>
+        </member>
+        <member name="F:webapi.HealthClinic.CodeFirst.tarde.Repository.SituacaoRepository.ctx">
+            <summary>
+            O contexto do banco de dados.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.SituacaoRepository.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Repository.SituacaoRepository"/>.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.SituacaoRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.SituacaoRepository.BuscarPorId(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.SituacaoRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.SituacaoRepository.Deletar(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.SituacaoRepository.Listar">
+            <inheritdoc/>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Repository.TipoUsuarioRepository">
+            <summary>
+            Implementação do repositório de tipos de usuário.
+            </summary>
+        </member>
+        <member name="F:webapi.HealthClinic.CodeFirst.tarde.Repository.TipoUsuarioRepository.ctx">
+            <summary>
+            O contexto do banco de dados.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.TipoUsuarioRepository.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Repository.TipoUsuarioRepository"/>.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.TipoUsuarioRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.TipoUsuario,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.TipoUsuarioRepository.BuscarPorId(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.TipoUsuarioRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.TipoUsuario)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.TipoUsuarioRepository.Deletar(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.TipoUsuarioRepository.Listar">
+            <inheritdoc/>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Repository.UsuarioRepository">
+            <summary>
+            Implementação do repositório de usuários.
+            </summary>
+        </member>
+        <member name="F:webapi.HealthClinic.CodeFirst.tarde.Repository.UsuarioRepository.ctx">
+            <summary>
+            O contexto do banco de dados.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.UsuarioRepository.#ctor">
+            <summary>
+            Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Repository.UsuarioRepository"/>.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.UsuarioRepository.BuscarPorEmailESenha(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.UsuarioRepository.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.UsuarioRepository.Deletar(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.UsuarioRepository.BuscarPorId(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Repository.UsuarioRepository.Atualizar(webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Utils.Criptografia">
+            <summary>
+            Classe responsável por fornecer métodos para criptografia de senhas.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Utils.Criptografia.GerarHash(System.String)">
+            <summary>
+            Gera um hash seguro a partir de uma senha.
+            </summary>
+            <param name="senha">A senha a ser criptografada.</param>
+            <returns>O hash gerado.</returns>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Utils.Criptografia.CompararHash(System.String,System.String)">
+            <summary>
+            Compara uma senha fornecida com um hash de senha armazenado no banco de dados.
+            </summary>
+            <param name="senhaForm">A senha fornecida pelo usuário.</param>
+            <param name="senhaBanco">O hash de senha armazenado no banco de dados.</param>
+            <returns>True se as senhas coincidirem, caso contrário, false.</returns>
+        </member>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.ViewModels.LoginViewModel">
+            <summary>
+            ViewModel para dados de login.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.ViewModels.LoginViewModel.Email">
+            <summary>
+            Obtém ou define o endereço de email do usuário.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.ViewModels.LoginViewModel.Senha">
+            <summary>
+            Obtém ou define a senha do usuário.
+            </summary>
         </member>
     </members>
 </doc>

@@ -1,68 +1,68 @@
-﻿using Microsoft.Extensions.Diagnostics.HealthChecks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using webapi.HealthClinic.CodeFirst.tarde.Context;
 using webapi.HealthClinic.CodeFirst.tarde.Domains;
 using webapi.HealthClinic.CodeFirst.tarde.Interfaces;
 
 namespace webapi.HealthClinic.CodeFirst.tarde.Repository
 {
+    /// <summary>
+    /// Implementação do repositório de clínicas.
+    /// </summary>
     public class ClinicaRepository : IClinicaRepository
     {
+        /// <summary>
+        /// O contexto do banco de dados.
+        /// </summary>
         private readonly HealthClinicContext ctx;
 
-        public ClinicaRepository()
-        {
-            ctx = new HealthClinicContext();
-        }
+        /// <summary>
+        /// Inicializa uma nova instância da classe <see cref="ClinicaRepository"/>.
+        /// </summary>
+        public ClinicaRepository() => ctx = new HealthClinicContext();
 
+        /// <inheritdoc/>
         public void Atualizar(Clinica clinica, Guid Id)
         {
-
-            BuscarPorId(Id).Nome = clinica.Nome;
-            BuscarPorId(Id).HoraAbertura = clinica.HoraAbertura;
-            BuscarPorId(Id).HoraFechamento = clinica.HoraFechamento;
-            BuscarPorId(Id).CNPJ = clinica.CNPJ;
-            BuscarPorId(Id).Endereco = clinica.Endereco;
-            BuscarPorId(Id).RazaoSocial = clinica.RazaoSocial;
+            Clinica clinicaExistente = BuscarPorId(Id);
+            ctx.Entry(clinicaExistente).CurrentValues.SetValues(clinica);
             ctx.SaveChanges();
         }
 
-        public Clinica BuscarPorId(Guid Id)
-        {
-            return ctx.Clinica.FirstOrDefault(x => x.IdClinica == Id);
-        }
+        /// <inheritdoc/>
+        public Clinica BuscarPorId(Guid Id) => ctx.Clinica.FirstOrDefault(x => x.IdClinica == Id)!;
 
+        /// <inheritdoc/>
         public void Cadastrar(Clinica clinica)
         {
             try
             {
-                
                 ctx.Clinica.Add(clinica);
                 ctx.SaveChanges();
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
 
+        /// <inheritdoc/>
         public void Deletar(Guid Id)
         {
             try
             {
-                ctx.Clinica.Remove(ctx.Clinica.FirstOrDefault(x => x.IdClinica == Id));
+                ctx.Clinica.Remove(ctx.Clinica.FirstOrDefault(x => x.IdClinica == Id)!);
                 ctx.SaveChanges();
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
 
-        public List<Clinica> Listar()
-        {
-            return ctx.Clinica.ToList();
-        }
+        /// <inheritdoc/>
+        public List<Clinica> Listar() => ctx.Clinica.ToList();
     }
 }
