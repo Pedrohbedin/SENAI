@@ -4,6 +4,63 @@
         <name>webapi.HealthClinic.CodeFirst.tarde</name>
     </assembly>
     <members>
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext">
+            <summary>
+            Classe de contexto do Entity Framework para a aplicação HealthClinic.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.Clinica">
+            <summary>
+            Obtém ou define o conjunto de dados para a entidade Clinica.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.Consultas">
+            <summary>
+            Obtém ou define o conjunto de dados para a entidade Consultas.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.Especialidade">
+            <summary>
+            Obtém ou define o conjunto de dados para a entidade Especialidade.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.Medico">
+            <summary>
+            Obtém ou define o conjunto de dados para a entidade Medico.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.Paciente">
+            <summary>
+            Obtém ou define o conjunto de dados para a entidade Paciente.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.Situacao">
+            <summary>
+            Obtém ou define o conjunto de dados para a entidade Situacao.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.TipoUsuario">
+            <summary>
+            Obtém ou define o conjunto de dados para a entidade TipoUsuario.
+            </summary>
+        </member>
+        <member name="P:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.Usuario">
+            <summary>
+            Obtém ou define o conjunto de dados para a entidade Usuario.
+            </summary>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configura as opções de conexão com o banco de dados.
+            </summary>
+            <param name="optionsBuilder">Construtor de opções.</param>
+        </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Context.HealthClinicContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Configura o modelo de entidades.
+            </summary>
+            <param name="modelBuilder">Construtor de modelo.</param>
+        </member>
         <member name="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.ClinicaController">
             <summary>
             Controlador responsável pelas operações relacionadas à entidade Clinica.
@@ -49,7 +106,7 @@
             Controlador responsável pelas operações relacionadas a consultas.
             </summary>
         </member>
-        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController.#ctor(webapi.HealthClinic.CodeFirst.tarde.Interfaces.IConsultaRepository)">
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController.#ctor">
             <summary>
             Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.ConsultasController"/>.
             </summary>
@@ -96,7 +153,7 @@
             Controlador responsável pelas operações relacionadas a especialidades médicas.
             </summary>
         </member>
-        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.EspecialidadeController.#ctor(webapi.HealthClinic.CodeFirst.tarde.Interfaces.IEspecialidadeRepository)">
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.EspecialidadeController.#ctor">
             <summary>
             
             </summary>
@@ -156,11 +213,11 @@
             Controlador responsável pelas operações relacionadas a médicos.
             </summary>
         </member>
-        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController.#ctor(webapi.HealthClinic.CodeFirst.tarde.Interfaces.IMedicoRepository)">
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController.#ctor">
             <summary>
             Construtor que recebe uma instância do repositório de médicos por injeção de dependência.
             </summary>
-            <param name="medicoRepository">Instância do repositório de médicos.</param>
+            <param name="">Instância do repositório de médicos.</param>
         </member>
         <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.MedicoController.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Medico)">
             <summary>
@@ -206,7 +263,7 @@
             <summary>
             
             </summary>
-            <param name="pacienteRepository"></param>
+            <param name=""></param>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.PacienteController.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente)">
@@ -253,7 +310,7 @@
             <summary>
             Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController"/>.
             </summary>
-            <param name="situacaoRepository">O repositório de situações.</param>
+            <param name="">O repositório de situações.</param>
         </member>
         <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.SituacaoController.Cadastrar(webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao)">
             <summary>
@@ -332,7 +389,7 @@
             <summary>
             Inicializa uma nova instância da classe <see cref="T:webapi.HealthClinic.CodeFirst.tarde.Controllers.UsuarioController"/>.
             </summary>
-            <param name="usuarioRepository">O repositório de usuários.</param>
+            <param name="">O repositório de usuários.</param>
         </member>
         <member name="M:webapi.HealthClinic.CodeFirst.tarde.Controllers.UsuarioController.Post(webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario)">
             <summary>
@@ -893,6 +950,12 @@
             <param name="tipoUsuario">Os dados do TipoUsuario a serem atualizados.</param>
             <param name="Id">O Id do TipoUsuario a ser atualizado.</param>
         </member>
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Interfaces.ITipoUsuarioRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Busca um TipoUsuario pelo seu Id.
+            </summary>
+            <param name="Id">O Id do TipoUsuario a ser atualizado.</param>
+        </member>
         <member name="T:webapi.HealthClinic.CodeFirst.tarde.Interfaces.IUsuarioRepository">
             <summary>
             Define as operações disponíveis para o repositório de usuários.
@@ -932,16 +995,16 @@
             <param name="id">O Id do usuário a ser buscado.</param>
             <returns>O usuário encontrado ou null se não encontrado.</returns>
         </member>
-        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Migrations.Bd_v1">
+        <member name="T:webapi.HealthClinic.CodeFirst.tarde.Migrations.Db_v1">
             <inheritdoc />
         </member>
-        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Migrations.Bd_v1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Migrations.Db_v1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Migrations.Bd_v1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Migrations.Db_v1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Migrations.Bd_v1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:webapi.HealthClinic.CodeFirst.tarde.Migrations.Db_v1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
         <member name="T:webapi.HealthClinic.CodeFirst.tarde.Repository.ClinicaRepository">

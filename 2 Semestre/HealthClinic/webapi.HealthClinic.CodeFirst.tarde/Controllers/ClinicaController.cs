@@ -15,7 +15,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
     {
         private readonly IClinicaRepository _clinicaRepository;
 
-        public ClinicaController(IClinicaRepository clinicaRepository)
+        public ClinicaController()
         {
             _clinicaRepository = new ClinicaRepository();
         }

@@ -21,7 +21,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         /// </summary>
         /// <param name="especialidadeRepository"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        public EspecialidadeController(IEspecialidadeRepository especialidadeRepository)
+        public EspecialidadeController()
         {
             _especialidadeRepository = new EspecialidadeRepository();
         }

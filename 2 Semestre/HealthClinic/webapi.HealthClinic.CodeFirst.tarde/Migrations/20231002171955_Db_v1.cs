@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
 {
     /// <inheritdoc />
-    public partial class Bd_v1 : Migration
+    public partial class Db_v1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -44,12 +44,12 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                 name: "Situacao",
                 columns: table => new
                 {
-                    idSituacao = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    situacao = table.Column<bool>(type: "BIT", nullable: false)
+                    IdSituacao = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    SituacaoValor = table.Column<bool>(type: "BIT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Situacao", x => x.idSituacao);
+                    table.PrimaryKey("PK_Situacao", x => x.IdSituacao);
                 });
 
             migrationBuilder.CreateTable(
@@ -123,7 +123,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                 columns: table => new
                 {
                     IdPaciente = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    idUsuario = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdUsuario = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "VARCHAR(110)", nullable: false),
                     DataNascimento = table.Column<DateTime>(type: "date", nullable: false),
                     Telefone = table.Column<string>(type: "CHAR(11)", nullable: false),
@@ -136,8 +136,8 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                 {
                     table.PrimaryKey("PK_Paciente", x => x.IdPaciente);
                     table.ForeignKey(
-                        name: "FK_Paciente_Usuario_IdPaciente",
-                        column: x => x.IdPaciente,
+                        name: "FK_Paciente_Usuario_IdUsuario",
+                        column: x => x.IdUsuario,
                         principalTable: "Usuario",
                         principalColumn: "IdUsuario",
                         onDelete: ReferentialAction.Cascade);
@@ -171,7 +171,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                         name: "FK_Consultas_Situacao_IdSituacao",
                         column: x => x.IdSituacao,
                         principalTable: "Situacao",
-                        principalColumn: "idSituacao",
+                        principalColumn: "IdSituacao",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -222,6 +222,11 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                 table: "Paciente",
                 column: "CEP",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Paciente_IdUsuario",
+                table: "Paciente",
+                column: "IdUsuario");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TipoUsuario_Titulo",

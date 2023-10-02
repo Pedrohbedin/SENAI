@@ -147,6 +147,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
             modelBuilder.Entity("webapi.HealthClinic.CodeFirst.tarde.Domains.Paciente", b =>
                 {
                     b.Property<Guid>("IdPaciente")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CEP")
@@ -164,6 +165,9 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(110)");
 
+                    b.Property<Guid>("IdUsuario")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("VARCHAR(110)");
@@ -176,27 +180,26 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                         .IsRequired()
                         .HasColumnType("CHAR(11)");
 
-                    b.Property<Guid>("idUsuario")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("IdPaciente");
 
                     b.HasIndex("CEP")
                         .IsUnique();
+
+                    b.HasIndex("IdUsuario");
 
                     b.ToTable("Paciente");
                 });
 
             modelBuilder.Entity("webapi.HealthClinic.CodeFirst.tarde.Domains.Situacao", b =>
                 {
-                    b.Property<Guid>("idSituacao")
+                    b.Property<Guid>("IdSituacao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("situacao")
+                    b.Property<bool>("SituacaoValor")
                         .HasColumnType("BIT");
 
-                    b.HasKey("idSituacao");
+                    b.HasKey("IdSituacao");
 
                     b.ToTable("Situacao");
                 });
@@ -305,7 +308,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Migrations
                 {
                     b.HasOne("webapi.HealthClinic.CodeFirst.tarde.Domains.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("IdPaciente")
+                        .HasForeignKey("IdUsuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -18,10 +18,12 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
     public class LoginController : ControllerBase
     {
         private readonly IUsuarioRepository _usuarioRepository;
+        private readonly ITipoUsuarioRepository _tipoUsuarioRepository;
 
-        public LoginController(IUsuarioRepository usuarioRepository)
+        public LoginController()
         {
             _usuarioRepository = new UsuarioRepository();
+            _tipoUsuarioRepository = new TipoUsuarioRepository();
         }
 
         /// <summary>
@@ -35,13 +37,12 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         {
             try
             {
-                Usuario usuarioAchado = _usuarioRepository.BuscarPorEmailESenha(email!, senha!);
 
                 var claims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Jti, email!.ToString()),
                     new Claim(JwtRegisteredClaimNames.Email, email),
-                    new Claim(ClaimTypes.Role, usuarioAchado.TipoUsuario!.Titulo!)
+                    new Claim(ClaimTypes.Role, _usuarioRepository.BuscarPorEmailESenha(email, senha).TipoUsuario.Titulo.Trim())
                 };
 
                 var chaveSecreta = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("HealthClinic-chave-autenticacao-webapi-dev"));
@@ -59,7 +60,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
 
                 return Ok(new
                 {
-                    token = new JwtSecurityTokenHandler().WriteToken(token)
+                    token = new JwtSecurityTokenHandler().WriteToken(token),
                 });
             }
             catch (Exception)

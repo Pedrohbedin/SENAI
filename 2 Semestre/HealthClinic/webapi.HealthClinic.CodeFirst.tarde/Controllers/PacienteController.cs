@@ -19,7 +19,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="pacienteRepository"></param>
+        /// <param name=""></param>
         /// <exception cref="ArgumentNullException"></exception>
         public PacienteController()
         {

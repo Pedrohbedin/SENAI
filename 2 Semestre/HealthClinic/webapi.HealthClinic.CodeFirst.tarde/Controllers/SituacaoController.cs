@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using webapi.HealthClinic.CodeFirst.tarde.Domains;
 using webapi.HealthClinic.CodeFirst.tarde.Interfaces;
 using webapi.HealthClinic.CodeFirst.tarde.Repository;
@@ -20,7 +21,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         /// <summary>
         /// Inicializa uma nova instância da classe <see cref="SituacaoController"/>.
         /// </summary>
-        /// <param name="situacaoRepository">O repositório de situações.</param>
+        /// <param name="">O repositório de situações.</param>
         public SituacaoController()
         {
             _situacaoRepository = new SituacaoRepository();

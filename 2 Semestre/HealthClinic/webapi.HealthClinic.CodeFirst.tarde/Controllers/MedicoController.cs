@@ -20,8 +20,8 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         /// <summary>
         /// Construtor que recebe uma instância do repositório de médicos por injeção de dependência.
         /// </summary>
-        /// <param name="medicoRepository">Instância do repositório de médicos.</param>
-        public MedicoController(IMedicoRepository medicoRepository)
+        /// <param name="">Instância do repositório de médicos.</param>
+        public MedicoController()
         {
             _medicoRepository = new MedicoRepository();
         }

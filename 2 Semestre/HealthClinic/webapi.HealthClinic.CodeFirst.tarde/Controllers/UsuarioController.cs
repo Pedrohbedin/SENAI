@@ -20,7 +20,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         /// <summary>
         /// Inicializa uma nova instância da classe <see cref="UsuarioController"/>.
         /// </summary>
-        /// <param name="usuarioRepository">O repositório de usuários.</param>
+        /// <param name="">O repositório de usuários.</param>
         public UsuarioController()
         {
             _usuarioRepository = new UsuarioRepository();

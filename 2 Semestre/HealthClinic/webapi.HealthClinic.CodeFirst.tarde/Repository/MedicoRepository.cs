@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using webapi.HealthClinic.CodeFirst.tarde.Context;
+using webapi.HealthClinic.CodeFirst.tarde.Controllers;
 using webapi.HealthClinic.CodeFirst.tarde.Domains;
 using webapi.HealthClinic.CodeFirst.tarde.Interfaces;
 
@@ -73,6 +74,18 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
         }
 
         /// <inheritdoc/>
-        public List<Medico> Listar() => ctx.Medico.ToList();
+        public List<Medico> Listar()
+        {
+            List<Medico> medicos = ctx.Medico.ToList();
+            foreach (Medico medico in medicos)
+            {
+                medico.Usuario = ctx.Usuario.FirstOrDefault(x => x.IdUsuario == medico.IdUsuario);
+                medico.Especialidade = ctx.Especialidade.FirstOrDefault(x => x.IdEspecialidade == medico.IdEspecialidade);
+                medico.Clinica = ctx.Clinica.FirstOrDefault(x => x.IdClinica == medico.IdClinica);
+                medico.Usuario.TipoUsuario = ctx.TipoUsuario.FirstOrDefault(x => x.IdTipoUsuario == medico.Usuario.IdTipoUsuario);
+            }
+
+            return ctx.Medico.ToList();
+        }
     }
 }

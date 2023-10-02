@@ -1,4 +1,5 @@
-﻿using webapi.HealthClinic.CodeFirst.tarde.Context;
+﻿using System.Data;
+using webapi.HealthClinic.CodeFirst.tarde.Context;
 using webapi.HealthClinic.CodeFirst.tarde.Domains;
 using webapi.HealthClinic.CodeFirst.tarde.Interfaces;
 

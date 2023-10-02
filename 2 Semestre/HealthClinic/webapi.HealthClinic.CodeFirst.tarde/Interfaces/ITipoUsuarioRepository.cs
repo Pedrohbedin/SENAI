@@ -31,5 +31,10 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Interfaces
         /// <param name="tipoUsuario">Os dados do TipoUsuario a serem atualizados.</param>
         /// <param name="Id">O Id do TipoUsuario a ser atualizado.</param>
         void Atualizar(TipoUsuario tipoUsuario, Guid Id);
+        /// <summary>
+        /// Busca um TipoUsuario pelo seu Id.
+        /// </summary>
+        /// <param name="Id">O Id do TipoUsuario a ser atualizado.</param>
+        TipoUsuario BuscarPorId(Guid Id);
     }
 }
