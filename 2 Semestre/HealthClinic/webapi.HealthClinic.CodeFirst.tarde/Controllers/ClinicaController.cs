@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using webapi.HealthClinic.CodeFirst.tarde.Domains;
 using webapi.HealthClinic.CodeFirst.tarde.Interfaces;
 using webapi.HealthClinic.CodeFirst.tarde.Repository;
@@ -11,6 +12,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
+    [Authorize(Roles = "Administrador")]
     public class ClinicaController : ControllerBase
     {
         private readonly IClinicaRepository _clinicaRepository;

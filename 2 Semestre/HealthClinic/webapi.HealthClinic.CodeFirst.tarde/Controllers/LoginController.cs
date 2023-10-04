@@ -37,12 +37,11 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         {
             try
             {
-
                 var claims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Jti, email!.ToString()),
                     new Claim(JwtRegisteredClaimNames.Email, email),
-                    new Claim(ClaimTypes.Role, _usuarioRepository.BuscarPorEmailESenha(email, senha).TipoUsuario.Titulo.Trim())
+                    new Claim(ClaimTypes.Role, _usuarioRepository.BuscarPorEmailESenha(email, senha).TipoUsuario!.Titulo!.Trim())
                 };
 
                 var chaveSecreta = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("HealthClinic-chave-autenticacao-webapi-dev"));

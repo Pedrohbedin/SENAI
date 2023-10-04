@@ -84,7 +84,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
                 medico.Clinica = ctx.Clinica.FirstOrDefault(x => x.IdClinica == medico.IdClinica);
                 medico.Usuario.TipoUsuario = ctx.TipoUsuario.FirstOrDefault(x => x.IdTipoUsuario == medico.Usuario.IdTipoUsuario);
             }
-
+            ctx.SaveChanges();
             return ctx.Medico.ToList();
         }
     }

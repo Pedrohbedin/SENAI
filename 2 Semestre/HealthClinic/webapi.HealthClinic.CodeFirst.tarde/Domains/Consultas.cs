@@ -24,7 +24,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Domains
         /// Obtém ou define a referência ao médico associado à consulta.
         /// </summary>
         [ForeignKey(nameof(IdMedico))]
-        public Medico Medico { get; set; }
+        public Medico? Medico { get; set; }
 
         /// <summary>
         /// Obtém ou define o Id do paciente associado à consulta.
@@ -36,7 +36,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Domains
         /// Obtém ou define a referência ao paciente associado à consulta.
         /// </summary>
         [ForeignKey(nameof(IdPaciente))]
-        public Paciente Paciente { get; set; }
+        public Paciente? Paciente { get; set; }
 
         /// <summary>
         /// Obtém ou define a data de agendamento da consulta.

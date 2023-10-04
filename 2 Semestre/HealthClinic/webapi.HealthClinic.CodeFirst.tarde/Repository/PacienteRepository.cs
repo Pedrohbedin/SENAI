@@ -83,6 +83,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
                 {
                     paciente.Usuario = ctx.Usuario.FirstOrDefault(x => x.IdUsuario == paciente.IdUsuario);
                 }
+                ctx.SaveChanges();
                 return pacientes;
             }
             catch (Exception)

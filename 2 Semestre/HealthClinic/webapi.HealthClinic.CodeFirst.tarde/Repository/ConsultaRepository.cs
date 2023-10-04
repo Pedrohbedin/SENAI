@@ -71,6 +71,16 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Repository
         /// <inheritdoc/>
         public List<Consultas> ListarPorUsuario(Guid idUsuario)
         {
+            List<Consultas> consultas = ctx.Consultas.ToList();
+            foreach (Consultas consulta in consultas)
+            {
+                consulta.Medico = ctx.Medico.FirstOrDefault(x => x.IdMedico == consulta.IdMedico);
+                consulta.Paciente = ctx.Paciente.FirstOrDefault(x => x.IdPaciente == consulta.IdPaciente);
+                consulta.Situacao = ctx.Situacao.FirstOrDefault(x => x.IdSituacao == consulta.IdSituacao);
+            }
+
+            ctx.SaveChanges();
+
             List<Consultas> MinhasConsultas = ctx.Consultas
                 .Where(x => x.Medico.IdUsuario == idUsuario || x.Paciente.IdUsuario == idUsuario)
                 .ToList();

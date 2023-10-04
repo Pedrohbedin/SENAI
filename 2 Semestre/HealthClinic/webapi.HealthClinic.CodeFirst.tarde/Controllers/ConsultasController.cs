@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using webapi.HealthClinic.CodeFirst.tarde.Domains;
 using webapi.HealthClinic.CodeFirst.tarde.Interfaces;
 using webapi.HealthClinic.CodeFirst.tarde.Repository;
@@ -31,6 +31,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         /// <param name="consulta">Os dados da consulta a ser agendada.</param>
         /// <returns>Os dados da consulta agendada.</returns>
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
         public IActionResult Agendar(Consultas consulta)
         {
             try
@@ -50,6 +51,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         /// <param name="Id">O Id da consulta a ser cancelada.</param>
         /// <returns>Uma resposta de sucesso.</returns>
         [HttpDelete("{Id}")]
+        [Authorize(Roles = "Administrador")]
         public IActionResult Cancelar(Guid Id)
         {
             try
@@ -70,6 +72,7 @@ namespace webapi.HealthClinic.CodeFirst.tarde.Controllers
         /// <param name="Id">O Id da consulta.</param>
         /// <returns>Uma resposta de sucesso.</returns>
         [HttpPut("{Id}")]
+        [Authorize(Roles = "Administrador, Medico")]
         public IActionResult IncluirDescricao(string descricao, Guid Id)
         {
             try
