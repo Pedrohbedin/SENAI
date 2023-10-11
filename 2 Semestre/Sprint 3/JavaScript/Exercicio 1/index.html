@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inscrição</h1>
+    <form onsubmit="Saudar()">
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" placeholder="Insira seu nome">
+        <br>
+        <br>
+        <label for="nickname">Nickname</label>
+        <input id="nickname" type="text" placeholder="Insira seu nickname">
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+        <p id="nomeUsuario">qwe</p>
+        <button onclick="Replace()">Replace</button>
+    </form>
+    <script>
+        function Saudar(){
+            let nome = document.getElementById("nome").value;
+            let nickname = document.getElementById("nickname").value;
+            document.getElementById("nomeUsuario").innerText = `Olá, ${nickname.replace(nickname, nome)}`
+        }
+    </script>
+</body>
+</html>
