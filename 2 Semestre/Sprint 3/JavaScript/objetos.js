@@ -12,7 +12,7 @@ Eduardo.sobrenome = "Costa"
 
 let pessoas = []
 
-pessoas.push(Eduardo)
+pessoas.push()
 
 pessoas.push(pedro)
 
