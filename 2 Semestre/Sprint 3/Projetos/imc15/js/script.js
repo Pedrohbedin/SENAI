@@ -59,7 +59,7 @@ function adicionarRegistros() {
     let linhas = ""
     usuarios.forEach(function (oPessoa) {
         linhas +=
-            `
+        `
         <tr>
             <td>${oPessoa.nome}</td>
             <td>${oPessoa.altura}</td>
