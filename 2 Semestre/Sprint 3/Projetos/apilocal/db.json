@@ -1,12 +1,23 @@
 {
-  "imc": [
+  "contatos": [
     {
-      "nome": "Teste",
-      "altura": 1.8,
-      "peso": 135,
-      "situacao": "Ta laskado",
-      "imc": 56,
+      "cep": "03201080",
+      "endereco": "Rua das Lobélias",
+      "bairro": "Vila Bela",
+      "cidade": "São Paulo",
+      "estado": "SP",
       "id": 1
+    },
+    {
+      "cep": "03201080",
+      "endereco": "Rua das Lobélias",
+      "bairro": "Vila Bela",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "nome": "Pedro",
+      "telefone": "11988823290",
+      "numeroCasa": "380",
+      "id": 3
     }
   ]
 }
