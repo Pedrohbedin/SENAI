@@ -1,0 +1,17 @@
+{
+  "contatos": [
+    {
+      "cep": "03201080",
+      "rua": "Rua das Lobélias",
+      "numero": "555",
+      "complemento": "Apto.12",
+      "bairro": "Vila Bela",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "pais": "55",
+      "ddd": "11",
+      "telefone": "988823920",
+      "id": 1
+    }
+  ]
+}
