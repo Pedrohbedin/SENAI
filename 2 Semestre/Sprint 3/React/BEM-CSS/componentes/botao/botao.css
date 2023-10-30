@@ -20,6 +20,10 @@
     color: white;
 }
 
+.button--big {
+    width: 100%;
+}
+
 .button--danger {
     background-color: red;
 }
