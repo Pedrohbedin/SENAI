@@ -1,40 +1,19 @@
-import React, { useState } from "react";
-import Input from "../../Components/Input/Input";
-import Button from "../../Components/Button/Button";
-
+import React, { useEffect, useState } from "react";
 
 const TestePage = () => {
-  const [total, setTotal] = useState();
-  const [n1, setN1] = useState();
-  const [n2, setN2] = useState();
+  const [count, setCount] = useState(10);
+  const [calculation, setCalculation] = useState(10);
 
-  function handleCalcular(e) {
-    e.preventDefault();
-    setTotal(parseFloat(n1) + parseFloat(n2));
-  }
+  useEffect(() => {
+    setCalculation(() => count + 1)
+  }, [count]);
+
   return (
-    <form onSubmit={handleCalcular}>
-      <Input
-        tipo="number"
-        id="numero1"
-        nome="numero1"
-        ph="Insira o primeiro número"
-        valor={n1}
-        fnAltera={setN1}
-      />
-      <Input
-        tipo="number"
-        id="numero2"
-        nome="numero2"
-        ph="Insira o segundo número"
-        valor={n2}
-        fnAltera={setN2}
-      />
-      <br />
-      <Button tipo="submit" textoBotao="Somar" />
-      <br />
-      <span>Resultado:{total}</span>
-    </form>
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount((c) => c + 1)}>+</button>
+      <p>Calculation: {calculation}</p>
+    </div>
   );
 };
 

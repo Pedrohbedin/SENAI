@@ -4,7 +4,7 @@ import EventosPage from "./Pages/EventosPage/EventosPage";
 import HomePage from "./Pages/HomePage/HomePage";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import TipoEventosPage from "./Pages/TipoEventosPages/TipoEventosPage";
-import TestesPage from "./Pages/TestePage/TestePage";
+import TestesPage from  "./Pages/TestePage/TestePage";
 import Header from "../src/Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 

@@ -75,6 +75,11 @@
     text-decoration: none;
 
     border-bottom: 2px solid #201849;
+    transition: 0.2s;
+}
+
+.navbar__item:hover {
+    color: #B51D44;
 }
 
 
