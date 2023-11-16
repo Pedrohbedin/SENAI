@@ -11866,19 +11866,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\42470848873\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\42470848873\\Desktop\\SENAI\\2 Semestre\\Sprint 3\\Projetos\\Event+\\webapi.event+\\webapi.event+.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\SENAI\\2 Semestre\\Sprint 3\\Projetos\\Event+\\webapi.event+\\webapi.event+.csproj",
       "projectName": "webapi.event+",
-      "projectPath": "C:\\Users\\42470848873\\Desktop\\SENAI\\2 Semestre\\Sprint 3\\Projetos\\Event+\\webapi.event+\\webapi.event+.csproj",
-      "packagesPath": "C:\\Users\\42470848873\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\42470848873\\Desktop\\SENAI\\2 Semestre\\Sprint 3\\Projetos\\Event+\\webapi.event+\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\SENAI\\2 Semestre\\Sprint 3\\Projetos\\Event+\\webapi.event+\\webapi.event+.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\SENAI\\2 Semestre\\Sprint 3\\Projetos\\Event+\\webapi.event+\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\42470848873\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11968,7 +11968,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

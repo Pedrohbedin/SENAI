@@ -56,7 +56,7 @@ const TipoEventosPage = () => {
     }
     getTipoEventos();
   }, []);
-  const [tipoEventos, setTipoEventos] = useState("");
+  const [tipoEventos, setTipoEventos] = useState([]);
 
   function editActionAbort() {
     alert("Cancelar a tela de edição de dados");
