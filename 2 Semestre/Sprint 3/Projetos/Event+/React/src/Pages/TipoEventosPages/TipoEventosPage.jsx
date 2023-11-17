@@ -11,7 +11,7 @@ import Notification from "../../Components/Notification/Notification";
 import TableTb from "../../Components/TableTb/TableTb";
 
 const TipoEventosPage = () => {
-  const [Notification, setNotifyUser] = useState({});
+  const [notifyUser, setNotifyUser] = useState({});
 
   const [frmEdit, setFrmEdit] = useState(false);
 
@@ -87,7 +87,7 @@ const TipoEventosPage = () => {
 
   return (
     <MainContent>
-      <Notification {...setNotifyUser} setNotifyUser={setNotifyUser} />
+      <Notification {...notifyUser} setNotifyUser={setNotifyUser} />
       <section className="cadastro-evento-section">
         <Container>
           <div className="cadastro-evento__box">
