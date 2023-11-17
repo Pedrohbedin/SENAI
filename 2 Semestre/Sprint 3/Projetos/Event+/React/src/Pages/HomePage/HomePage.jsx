@@ -22,7 +22,7 @@ const HomePage = () => {
         console.log(promise.data);
         setNextEvents(promise.data);
       } catch (error) {
-        alert("Deu ruim na api");
+        console.log("Deu ruim na api");
       }
     }
     getProximosEventos();

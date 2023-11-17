@@ -7,12 +7,17 @@ import eventTypeImage from "../../assets/images/tipo-evento.svg";
 import Container from "../../Components/Container/Container";
 import { Input, Button } from "../../Components/FormComponents/FormComponents";
 import api from "../../Services/Services";
+import Notification from "../../Components/Notification/Notification";
 import TableTb from "../../Components/TableTb/TableTb";
 
 const TipoEventosPage = () => {
+  const [Notification, setNotifyUser] = useState({});
 
-  const [frmEdit /*, setFrmEdit*/] = useState(false);
+  const [frmEdit, setFrmEdit] = useState(false);
+
   const [titulo, setTitulo] = useState("");
+
+  const [tipoEventos, setTipoEventos] = useState([]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -24,7 +29,14 @@ const TipoEventosPage = () => {
 
     try {
       const retorno = await api.post("/TiposEvento", { titulo: titulo });
-      console.log(retorno.data);
+      setNotifyUser({
+        titleNote: "Sucesso",
+        textNote: `Cadastrado com sucesso!`,
+        imgIcon: "success",
+        imgAlt:
+          "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+        showMessage: true,
+      });
       setTitulo("");
     } catch (error) {
       console.log(error);
@@ -39,15 +51,27 @@ const TipoEventosPage = () => {
     alert("Mostrando a tela de update");
   }
 
-  function handleDelete() {
-    alert("Bora lá apagar na api");
+  async function handleDelete(id) {
+    try {
+      const retorno = await api.delete(`/TiposEvento/${id}`);
+      tipoEventos.filter((tipoEvento) => tipoEvento.idTipoEvento !== id);
+      setNotifyUser({
+        titleNote: "Sucesso",
+        textNote: `Cadastrado com sucesso!`,
+        imgIcon: "success",
+        imgAlt:
+          "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+        showMessage: true,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
     async function getTipoEventos() {
       try {
         const promise = await api.get("/TiposEvento");
-
         console.log(promise.data);
         setTipoEventos(promise.data);
       } catch (error) {
@@ -55,15 +79,15 @@ const TipoEventosPage = () => {
       }
     }
     getTipoEventos();
-  }, []);
-  const [tipoEventos, setTipoEventos] = useState("");
+  }, tipoEventos);
 
-  function editActionAbort() {
-    alert("Cancelar a tela de edição de dados");
-  }
+  // function editActionAbort() {
+  //   alert("Cancelar a tela de edição de dados");
+  // }
 
   return (
     <MainContent>
+      <Notification {...setNotifyUser} setNotifyUser={setNotifyUser} />
       <section className="cadastro-evento-section">
         <Container>
           <div className="cadastro-evento__box">
