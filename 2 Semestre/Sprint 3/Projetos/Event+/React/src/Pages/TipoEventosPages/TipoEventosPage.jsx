@@ -9,6 +9,7 @@ import { Input, Button } from "../../Components/FormComponents/FormComponents";
 import api from "../../Services/Services";
 import Notification from "../../Components/Notification/Notification";
 import TableTb from "../../Components/TableTb/TableTb";
+import Spinner from "../../Components/Spinner/Spinner";
 
 const TipoEventosPage = () => {
   const [notifyUser, setNotifyUser] = useState({});
@@ -17,13 +18,24 @@ const TipoEventosPage = () => {
 
   const [titulo, setTitulo] = useState("");
 
+  const [idEvento, setIdEvento] = useState("");
+
   const [tipoEventos, setTipoEventos] = useState([]);
+
+  const [showSpinner, setShowSpinner] = useState(false)
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     if (titulo.trim().length < 3) {
-      alert("O Título deve ter no míninmo 3 caracteres");
+      setNotifyUser({
+        titleNote: "Erro",
+        textNote: `O título deve conter no mínimo 3 caractéres!`,
+        imgIcon: "danger",
+        imgAlt:
+          "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+        showMessage: true,
+      });
       return;
     }
 
@@ -39,16 +51,72 @@ const TipoEventosPage = () => {
       });
       setTitulo("");
     } catch (error) {
-      console.log(error);
+      setNotifyUser({
+        titleNote: "Erro",
+        textNote: `Tipo de evento não cadastrado!`,
+        imgIcon: "danger",
+        imgAlt:
+          "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+        showMessage: true,
+      });
     }
   }
 
-  function handleUpdate() {
-    alert("Bora atualizar");
+  async function handleUpdate(e) {
+    e.preventDefault();
+    if (titulo.trim().length < 3) {
+      setNotifyUser({
+        titleNote: "Erro",
+        textNote: `O título deve conter no mínimo 3 caractéres!`,
+        imgIcon: "danger",
+        imgAlt:
+          "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+        showMessage: true,
+      });
+      return;
+    }
+    try {
+      const retorno = await api.put(`/TiposEvento/` + idEvento, {
+        titulo: titulo,
+      });
+
+      const retornoGet = await api.get("/TiposEvento");
+      setTipoEventos(retornoGet.data);
+      editActionAbort();
+    } catch (error) {
+      setNotifyUser({
+        titleNote: "Erro",
+        textNote: `Erro ao atualizar o tipo de evento`,
+        imgIcon: "danger",
+        imgAlt:
+          "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+        showMessage: true,
+      });
+    }
   }
 
-  function showUpdateForm() {
-    alert("Mostrando a tela de update");
+  async function showUpdateForm(idElemento) {
+    setFrmEdit(true);
+    try {
+      const retorno = await api.get("/TiposEvento/" + idElemento);
+      setTitulo(retorno.data.titulo);
+      setIdEvento(idElemento);
+    } catch (error) {
+      setNotifyUser({
+        titleNote: "Erro",
+        textNote: `Erro ao listar os tipos de evento`,
+        imgIcon: "danger",
+        imgAlt:
+          "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+        showMessage: true,
+      });
+    }
+  }
+
+  function editActionAbort() {
+    setFrmEdit(false);
+    setTitulo("");
+    setIdEvento(null);
   }
 
   async function handleDelete(id) {
@@ -57,37 +125,49 @@ const TipoEventosPage = () => {
       tipoEventos.filter((tipoEvento) => tipoEvento.idTipoEvento !== id);
       setNotifyUser({
         titleNote: "Sucesso",
-        textNote: `Cadastrado com sucesso!`,
+        textNote: `Deletado com sucesso!`,
         imgIcon: "success",
         imgAlt:
           "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
         showMessage: true,
       });
     } catch (error) {
-      console.log(error);
+      setNotifyUser({
+        titleNote: "Erro",
+        textNote: `Erro ao deletar!`,
+        imgIcon: "danger",
+        imgAlt:
+          "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+        showMessage: true,
+      });
     }
   }
 
   useEffect(() => {
     async function getTipoEventos() {
+      setShowSpinner(true)
       try {
         const promise = await api.get("/TiposEvento");
-        console.log(promise.data);
         setTipoEventos(promise.data);
       } catch (error) {
-        console.log("Deu ruim na api");
+        setNotifyUser({
+          titleNote: "Erro",
+          textNote: `Erro ao receber dados da api`,
+          imgIcon: "danger",
+          imgAlt:
+            "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+          showMessage: true,
+        });
       }
+      setShowSpinner(false)
     }
     getTipoEventos();
   }, tipoEventos);
 
-  // function editActionAbort() {
-  //   alert("Cancelar a tela de edição de dados");
-  // }
-
   return (
     <MainContent>
       <Notification {...notifyUser} setNotifyUser={setNotifyUser} />
+      { showSpinner ? <Spinner/> : null}
       <section className="cadastro-evento-section">
         <Container>
           <div className="cadastro-evento__box">
@@ -101,31 +181,58 @@ const TipoEventosPage = () => {
               className="ftipo-evento"
               onSubmit={frmEdit ? handleUpdate : handleSubmit}
             >
-              <p>
-                {!frmEdit ? (
-                  <>
-                    <Input
-                      type={"text"}
-                      id={"text"}
-                      name={"titulo"}
-                      placeholder={"Título"}
-                      required={"required"}
-                      value={titulo}
-                      manipulationFunction={(e) => {
-                        setTitulo(e.target.value);
-                      }}
+              {!frmEdit ? (
+                <>
+                  <Input
+                    type={"text"}
+                    id={"text"}
+                    name={"titulo"}
+                    placeholder={"Título"}
+                    required={"required"}
+                    value={titulo}
+                    manipulationFunction={(e) => {
+                      setTitulo(e.target.value);
+                    }}
+                  />
+                  <Button
+                    type={"submit"}
+                    id={"cadastrar"}
+                    name={"cadastrar"}
+                    texButton={"Cadastrar"}
+                  />
+                </>
+              ) : (
+                <>
+                  <Input
+                    type={"text"}
+                    id={"titulo"}
+                    name={"titulo"}
+                    placeholder={"Título"}
+                    required={"required"}
+                    value={titulo}
+                    manipulationFunction={(e) => {
+                      setTitulo(e.target.value);
+                    }}
+                  />
+                  <div className="buttons-editbox">
+                    <Button
+                      type={"submit"}
+                      id={"atualizar"}
+                      name={"atualizar"}
+                      texButton={"Atualizar"}
+                      aditionalClass="button-component--midle"
                     />
-                  </>
-                ) : (
-                  <p>Tela de edição</p>
-                )}
-              </p>
-              <Button
-                type={"submit"}
-                id={"cadastrar"}
-                name={"cadastrar"}
-                texButton={"Cadastrar"}
-              />
+                    <Button
+                      type={"button"}
+                      id={"cancelar"}
+                      name={"cancelar"}
+                      texButton={"Cancelar"}
+                      manipulationFunction={editActionAbort}
+                      aditionalClass="button-component--midle"
+                    />
+                  </div>
+                </>
+              )}
             </form>
           </div>
         </Container>
@@ -134,7 +241,8 @@ const TipoEventosPage = () => {
       <section className="lista-eventos-section">
         <Container>
           <Title titleText={"Lista Tipo de Eventos"} color="white" />
-          <TableTb
+          <TableTb 
+            href="#ftipo-evento"
             dados={tipoEventos}
             fnUpdate={showUpdateForm}
             fnDelete={handleDelete}

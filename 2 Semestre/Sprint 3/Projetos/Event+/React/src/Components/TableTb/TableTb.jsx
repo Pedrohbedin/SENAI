@@ -35,7 +35,7 @@ const TableTb = ({ dados, fnUpdate, fnDelete }) => {
                   className="table-data__icon"
                   src={editPen}
                   alt=""
-                  onClick={fnUpdate}
+                  onClick={() => {fnUpdate(e.idTipoEvento);}}
                 />
               </td>
 
