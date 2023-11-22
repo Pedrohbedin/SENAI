@@ -24,7 +24,7 @@ const NextEvent = ({ title, description, eventDate, idEvento }) => {
         onClick={() => {
           conectar(idEvento);
         }}
-        href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md"
+        href="#"
         className="event-card__connect-link"
       >
         Conectar

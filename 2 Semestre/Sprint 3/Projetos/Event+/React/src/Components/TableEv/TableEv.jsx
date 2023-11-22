@@ -1,17 +1,27 @@
 import React from "react";
-import "./TableTb.css";
+import "./TableEv.css";
 
 import editPen from "../../assets/images/edit-pen.svg";
 import trashDelete from "../../assets/images/trash-delete.svg";
+import { dateFormatDbToView } from "../../Utils/stringFunctions";
+import { Tooltip } from "react-tooltip";
 
-const TableTb = ({ dados, fnUpdate, fnDelete }) => {
-  console.log(dados);
+const TableEv = ({ dados, fnUpdate, fnDelete }) => {
   return (
     <table className="table-data">
       <thead className="table-data__head">
         <tr className="table-data__head-row">
           <th className="table-data__head-title table-data__head-title--big">
             Título
+          </th>
+          <th className="table-data__head-title table-data__head-title--big">
+            Tipo de Evento
+          </th>
+          <th className="table-data__head-title table-data__head-title--big">
+            Descrição
+          </th>
+          <th className="table-data__head-title table-data__head-title--big">
+            Data
           </th>
           <th className="table-data__head-title table-data__head-title--little">
             Editar
@@ -27,7 +37,23 @@ const TableTb = ({ dados, fnUpdate, fnDelete }) => {
           return (
             <tr className="table-data__head-row">
               <td className="table-data__data table-data__data--big">
-                {e.titulo}
+                {e.nomeEvento}
+              </td>
+              <td className="table-data__data table-data__data--big">
+                {e.tiposEvento.titulo}
+              </td>
+
+              <td
+                data-tooltip-id={e.idEvento}
+                data-tooltip-content={e.descricao}
+                data-tooltip-place="top"
+                className="table-data__data table-data__data--big table-data__description"
+              >
+                <Tooltip className="custom-tooltip" id={e.idEvento} />
+                {e.descricao}
+              </td>
+              <td className="table-data__data table-data__data--big ">
+                {dateFormatDbToView(e.dataEvento)}
               </td>
 
               <td className="table-data__data table-data__data--little">
@@ -35,7 +61,9 @@ const TableTb = ({ dados, fnUpdate, fnDelete }) => {
                   className="table-data__icon"
                   src={editPen}
                   alt=""
-                  onClick={() => {fnUpdate(e.idTipoEvento);}}
+                  onClick={() => {
+                    fnUpdate(e.idEvento);
+                  }}
                 />
               </td>
 
@@ -44,7 +72,7 @@ const TableTb = ({ dados, fnUpdate, fnDelete }) => {
                   className="table-data__icon"
                   src={trashDelete}
                   alt=""
-                  onClick={() => fnDelete(e.idTipoEvento)}
+                  onClick={() => fnDelete(e.idEvento)}
                 />
               </td>
             </tr>
@@ -55,4 +83,4 @@ const TableTb = ({ dados, fnUpdate, fnDelete }) => {
   );
 };
 
-export default TableTb;
+export default TableEv;
