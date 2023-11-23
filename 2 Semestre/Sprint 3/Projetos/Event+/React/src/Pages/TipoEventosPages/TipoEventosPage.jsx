@@ -22,11 +22,7 @@ const TipoEventosPage = () => {
 
   const [tipoEventos, setTipoEventos] = useState([]);
 
-<<<<<<< HEAD
   const [showSpinner, setShowSpinner] = useState(false);
-=======
-  const [showSpinner, setShowSpinner] = useState(false)
->>>>>>> 11b01d7611caeb1d1a14052186097f20ca285477
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -82,21 +78,13 @@ const TipoEventosPage = () => {
       return;
     }
     try {
-<<<<<<< HEAD
       await api.put(`/TiposEvento/` + idEvento, {
-=======
-      const retorno = await api.put(`/TiposEvento/` + idEvento, {
->>>>>>> 11b01d7611caeb1d1a14052186097f20ca285477
         titulo: titulo,
       });
 
       const retornoGet = await api.get("/TiposEvento");
       setTipoEventos(retornoGet.data);
-<<<<<<< HEAD
-      const promise = await api.get("/TiposEvento");
-      setTipoEventos(promise.data);
-=======
->>>>>>> 11b01d7611caeb1d1a14052186097f20ca285477
+
       editActionAbort();
     } catch (error) {
       setNotifyUser({
@@ -116,11 +104,9 @@ const TipoEventosPage = () => {
       const retorno = await api.get("/TiposEvento/" + idElemento);
       setTitulo(retorno.data.titulo);
       setIdEvento(idElemento);
-<<<<<<< HEAD
+
       const promise = await api.get("/TiposEvento");
       setTipoEventos(promise.data);
-=======
->>>>>>> 11b01d7611caeb1d1a14052186097f20ca285477
     } catch (error) {
       setNotifyUser({
         titleNote: "Erro",
@@ -167,11 +153,8 @@ const TipoEventosPage = () => {
 
   useEffect(() => {
     async function getTipoEventos() {
-<<<<<<< HEAD
       setShowSpinner(true);
-=======
-      setShowSpinner(true)
->>>>>>> 11b01d7611caeb1d1a14052186097f20ca285477
+
       try {
         const promise = await api.get("/TiposEvento");
         setTipoEventos(promise.data);
@@ -185,26 +168,15 @@ const TipoEventosPage = () => {
           showMessage: true,
         });
       }
-<<<<<<< HEAD
       setShowSpinner(false);
     }
     getTipoEventos();
   }, []);
-=======
-      setShowSpinner(false)
-    }
-    getTipoEventos();
-  }, tipoEventos);
->>>>>>> 11b01d7611caeb1d1a14052186097f20ca285477
 
   return (
     <MainContent>
       <Notification {...notifyUser} setNotifyUser={setNotifyUser} />
-<<<<<<< HEAD
       {showSpinner ? <Spinner /> : null}
-=======
-      { showSpinner ? <Spinner/> : null}
->>>>>>> 11b01d7611caeb1d1a14052186097f20ca285477
       <section className="cadastro-evento-section">
         <Container>
           <div className="cadastro-evento__box">
@@ -278,7 +250,7 @@ const TipoEventosPage = () => {
       <section className="lista-eventos-section">
         <Container>
           <Title titleText={"Lista Tipo de Eventos"} color="white" />
-          <TableTb 
+          <TableTb
             href="#ftipo-evento"
             dados={tipoEventos}
             fnUpdate={showUpdateForm}

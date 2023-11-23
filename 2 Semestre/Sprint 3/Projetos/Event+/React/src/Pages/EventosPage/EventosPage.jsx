@@ -10,12 +10,15 @@ import { Button, Input } from "../../Components/FormComponents/FormComponents";
 import TableEv from "../../Components/TableEv/TableEv";
 import api from "../../Services/Services";
 import { dateFormatDbToForm } from "../../Utils/stringFunctions";
+import { Select } from "../../Components/FormComponents/FormComponents";
 
 const EventosPage = () => {
   const [notifyUser, setNotifyUser] = useState({});
   const [showSpinner, setShowSpinner] = useState(false);
   const [nomeEvento, setNomeEvento] = useState("");
-  const [tipoEvento, setTipoEvento] = useState("");
+  const [idTipoEvento, setIdTipoEvento] = useState("");
+  const [tipoEvento, setTipoEvento] = useState([]);
+  const [Instituicoes, setInstituicoes] = useState([]);
   const [eventos, setEventos] = useState([]);
   const [idEvento, setIdEvento] = useState("");
   const [eventDate, setEventDate] = useState("");
@@ -38,7 +41,13 @@ const EventosPage = () => {
     }
 
     try {
-      await api.post("/Evento", { titulo: nomeEvento });
+      await api.post("/Evento", {
+        nomeEvento: nomeEvento,
+        descricao: description,
+        dataEvento: eventDate,
+        idTipoEvento: idTipoEvento,
+        idInstituicao: Instituicoes[0].idInstituicao
+      });
       setNotifyUser({
         titleNote: "Sucesso",
         textNote: `Cadastrado com sucesso!`,
@@ -79,8 +88,8 @@ const EventosPage = () => {
       await api.put(`/Evento/` + idEvento, {
         nomeEvento: nomeEvento,
         dataEvento: eventDate,
-        tiposEvento: tipoEvento,
-        descricao: description
+        idTipoEvento: idTipoEvento,
+        descricao: description,
       });
 
       const retornoGet = await api.get("/Evento");
@@ -104,10 +113,9 @@ const EventosPage = () => {
     setFrmEdit(true);
     try {
       const retorno = await api.get("/Evento/" + idElemento);
-      console.log(retorno.data)
+      console.log(retorno.data);
       setNomeEvento(retorno.data.nomeEvento);
       setDescription(retorno.data.descricao);
-      
       setEventDate(dateFormatDbToForm(retorno.data.dataEvento));
       setIdEvento(idElemento);
       const promise = await api.get("/Evento");
@@ -129,6 +137,7 @@ const EventosPage = () => {
     setNomeEvento("");
     setDescription("");
     setEventDate("");
+    setIdTipoEvento("");
     setIdEvento(null);
   }
 
@@ -164,6 +173,10 @@ const EventosPage = () => {
       try {
         const promise = await api.get("/Evento");
         setEventos(promise.data);
+        const promiseTe = await api.get("/TiposEvento");
+        setTipoEvento(promiseTe.data);
+        const promiseIt = await api.get("/Instituicao");
+        setInstituicoes(promiseIt.data);
       } catch (error) {
         setNotifyUser({
           titleNote: "Erro",
@@ -209,19 +222,6 @@ const EventosPage = () => {
                       setNomeEvento(e.target.value);
                     }}
                   />
-                  <select
-                    id={"select"}
-                    name={"tipoEvento"}
-                    placeholder={"Tipo Evento"}
-                    required={"required"}
-                    value={eventos}
-                    manipulationFunction={(e) => {
-                      setNomeEvento(e.target.value);
-                    }}
-                  >
-                    <option value=""></option>
-                  </select>
-
                   <Input
                     type={"text"}
                     id={"description"}
@@ -231,6 +231,14 @@ const EventosPage = () => {
                     value={description}
                     manipulationFunction={(e) => {
                       setDescription(e.target.value);
+                    }}
+                  />
+                  <Select
+                    defaultValue="Tipo Evento"
+                    dados={tipoEvento}
+                    required={"required"}
+                    manipulationFunction={(e) => {
+                      setIdTipoEvento(e.target.value);
                     }}
                   />
                   <Input
@@ -265,14 +273,12 @@ const EventosPage = () => {
                       setNomeEvento(e.target.value);
                     }}
                   />
-                  <select
-                    id={"select"}
-                    name={"tipoEvento"}
-                    placeholder={"Tipo Evento"}
+                  <Select
+                    defaultValue="Tipo Evento"
+                    dados={tipoEvento}
                     required={"required"}
-                    value={eventos}
                     manipulationFunction={(e) => {
-                      setNomeEvento(e.target.value);
+                      setIdTipoEvento(e.target.value);
                     }}
                   />
                   <Input

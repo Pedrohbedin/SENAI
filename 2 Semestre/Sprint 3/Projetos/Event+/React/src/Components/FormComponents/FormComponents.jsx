@@ -9,7 +9,7 @@ export const Input = ({
   name,
   placeholder,
   manipulationFunction,
-  value
+  value,
 }) => {
   return (
     <input
@@ -31,7 +31,7 @@ export const Button = ({
   name,
   type,
   aditionalClass,
-  manipulationFunction
+  manipulationFunction,
 }) => {
   return (
     <button
@@ -40,6 +40,24 @@ export const Button = ({
       name={name}
       className={`button-component ${aditionalClass}`}
       onClick={manipulationFunction}
-    >{texButton}</button>
+    >
+      {texButton}
+    </button>
+  );
+};
+
+export const Select = ({ value, name, required, id, aditionalClass = "", manipulationFunction, dados = [], defaultValue = "" }) => {
+  return (
+    <select name={name} required={required} id={id} className={`input-component ${aditionalClass}`} onChange={manipulationFunction}>
+      <option value="">{defaultValue}</option>
+      {dados.map((opt) => {
+        return(
+          <option
+            key={opt.idTipoEvento}
+            value={value}
+          >{opt.titulo}</option>
+        )
+      })}
+    </select>
   );
 };
