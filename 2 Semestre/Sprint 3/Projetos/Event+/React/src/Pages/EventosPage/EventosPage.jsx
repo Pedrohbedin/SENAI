@@ -18,7 +18,7 @@ const EventosPage = () => {
   const [nomeEvento, setNomeEvento] = useState("");
   const [idTipoEvento, setIdTipoEvento] = useState("");
   const [tipoEvento, setTipoEvento] = useState([]);
-  const [Instituicoes, setInstituicoes] = useState([]);
+  const [instituicoes, setInstituicoes] = useState([]);
   const [eventos, setEventos] = useState([]);
   const [idEvento, setIdEvento] = useState("");
   const [eventDate, setEventDate] = useState("");
@@ -41,12 +41,18 @@ const EventosPage = () => {
     }
 
     try {
+      
+      console.log(nomeEvento)
+      console.log(description)
+      console.log(eventDate)
+      console.log(idTipoEvento)
+      console.log(instituicoes[0].idInstituicao)
       await api.post("/Evento", {
         nomeEvento: nomeEvento,
         descricao: description,
         dataEvento: eventDate,
         idTipoEvento: idTipoEvento,
-        idInstituicao: Instituicoes[0].idInstituicao
+        idInstituicao: instituicoes[0].idInstituicao
       });
       setNotifyUser({
         titleNote: "Sucesso",
@@ -56,9 +62,8 @@ const EventosPage = () => {
           "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
         showMessage: true,
       });
-      const promise = await api.get("/evento");
+      const promise = await api.get("/Evento");
       setEventos(promise.data);
-      setNomeEvento("");
     } catch (error) {
       setNotifyUser({
         titleNote: "Erro",
@@ -68,6 +73,7 @@ const EventosPage = () => {
           "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
         showMessage: true,
       });
+      console.log(error)
     }
   }
 
@@ -90,6 +96,7 @@ const EventosPage = () => {
         dataEvento: eventDate,
         idTipoEvento: idTipoEvento,
         descricao: description,
+        idInstituicao: instituicoes[0].idInstituicao
       });
 
       const retornoGet = await api.get("/Evento");

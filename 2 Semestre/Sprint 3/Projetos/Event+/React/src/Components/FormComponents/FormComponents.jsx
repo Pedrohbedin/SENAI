@@ -54,8 +54,8 @@ export const Select = ({ value, name, required, id, aditionalClass = "", manipul
         return(
           <option
             key={opt.idTipoEvento}
-            value={value}
-          >{opt.titulo}</option>
+            value={opt.value} //idTipoEvento
+          >{opt.text}</option> // titulo
         )
       })}
     </select>
