@@ -24,7 +24,7 @@ const NextEvent = ({ title, description, eventDate, idEvento }) => {
         onClick={() => {
           conectar(idEvento);
         }}
-        href="#"
+        href={"*"}
         className="event-card__connect-link"
       >
         Conectar

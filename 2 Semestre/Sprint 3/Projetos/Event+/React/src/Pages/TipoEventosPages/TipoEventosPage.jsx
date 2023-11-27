@@ -21,8 +21,8 @@ const TipoEventosPage = () => {
   const [idEvento, setIdEvento] = useState("");
 
   const [tipoEventos, setTipoEventos] = useState([]);
-
-  const [showSpinner, setShowSpinner] = useState(false);
+  
+  const [showSpinner, setShowSpinner] = useState(false)
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -84,7 +84,8 @@ const TipoEventosPage = () => {
 
       const retornoGet = await api.get("/TiposEvento");
       setTipoEventos(retornoGet.data);
-
+      const promise = await api.get("/TiposEvento");
+      setTipoEventos(promise.data);
       editActionAbort();
     } catch (error) {
       setNotifyUser({
@@ -104,7 +105,6 @@ const TipoEventosPage = () => {
       const retorno = await api.get("/TiposEvento/" + idElemento);
       setTitulo(retorno.data.titulo);
       setIdEvento(idElemento);
-
       const promise = await api.get("/TiposEvento");
       setTipoEventos(promise.data);
     } catch (error) {
@@ -154,7 +154,7 @@ const TipoEventosPage = () => {
   useEffect(() => {
     async function getTipoEventos() {
       setShowSpinner(true);
-
+      setShowSpinner(true)
       try {
         const promise = await api.get("/TiposEvento");
         setTipoEventos(promise.data);
@@ -177,6 +177,7 @@ const TipoEventosPage = () => {
     <MainContent>
       <Notification {...notifyUser} setNotifyUser={setNotifyUser} />
       {showSpinner ? <Spinner /> : null}
+      { showSpinner ? <Spinner/> : null}
       <section className="cadastro-evento-section">
         <Container>
           <div className="cadastro-evento__box">
@@ -250,7 +251,7 @@ const TipoEventosPage = () => {
       <section className="lista-eventos-section">
         <Container>
           <Title titleText={"Lista Tipo de Eventos"} color="white" />
-          <TableTb
+          <TableTb 
             href="#ftipo-evento"
             dados={tipoEventos}
             fnUpdate={showUpdateForm}
