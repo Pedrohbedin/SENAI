@@ -7,7 +7,7 @@ const ImageIllustrator = ({ alterText, imageRender = ImageDefault, additionalCla
       <img
         src={imageRender}
         alt={alterText}
-        className="illustrator-box__image"
+        className={`illustrator-box__image ${additionalClass}`}
       />
     </figure>
   );

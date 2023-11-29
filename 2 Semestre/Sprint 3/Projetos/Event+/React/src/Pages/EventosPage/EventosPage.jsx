@@ -270,7 +270,7 @@ const EventosPage = () => {
                     type={"submit"}
                     id={"cadastrar"}
                     name={"cadastrar"}
-                    texButton={"Cadastrar"}
+                    textButton={"Cadastrar"}
                     className="btn-cadastrar"
                   />
                 </>
@@ -325,14 +325,14 @@ const EventosPage = () => {
                       type={"submit"}
                       id={"atualizar"}
                       name={"atualizar"}
-                      texButton={"Atualizar"}
+                      textButton={"Atualizar"}
                       aditionalClass="button-component--midle"
                     />
                     <Button
                       type={"button"}
                       id={"cancelar"}
                       name={"cancelar"}
-                      texButton={"Cancelar"}
+                      textButton={"Cancelar"}
                       manipulationFunction={editActionAbort}
                       aditionalClass="button-component--midle"
                     />

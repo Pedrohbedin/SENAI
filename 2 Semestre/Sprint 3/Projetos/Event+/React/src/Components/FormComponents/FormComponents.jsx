@@ -26,7 +26,7 @@ export const Input = ({
 };
 
 export const Button = ({
-  texButton,
+  textButton,
   id,
   name,
   type,
@@ -41,7 +41,7 @@ export const Button = ({
       className={`button-component ${aditionalClass}`}
       onClick={manipulationFunction}
     >
-      {texButton}
+      {textButton}
     </button>
   );
 };
