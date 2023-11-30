@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ImageIllustrator from "../../Components/ImageIllustrator/ImageIllustrator";
 import logo from "../../assets/images/logo-pink.svg";
 import { Input, Button } from "../../Components/FormComponents/FormComponents";
@@ -11,14 +11,17 @@ import "./LoginPage.css";
 import { UserContext, userDecodeToken } from "../../context/AuthContext";
 import { useContext } from "react";
 import MainContent from "../../Components/MainContent/MainContent";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-  const [user, SetUser] = useState({
-    email: "blablabla@gmail.com",
-    senha: "testeq",
-  });
+  const [user, SetUser] = useState({});
   const [notifyUser, setNotifyUser] = useState({});
   const { userData, setUserData } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (userData.nome) navigate("/");
+  }, [userData]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -32,6 +35,7 @@ const LoginPage = () => {
         setUserData(userFullToken);
 
         localStorage.setItem("toke", JSON.stringify(userFullToken));
+        navigate("/");
         setNotifyUser({
           titleNote: "Sucesso",
           textNote: `Logado com sucesso!`,
@@ -41,7 +45,14 @@ const LoginPage = () => {
           showMessage: true,
         });
       } catch (error) {
-        console.log("errado");
+        setNotifyUser({
+          titleNote: "Erro",
+          textNote: `Email ou senha incorretos!`,
+          imgIcon: "danger",
+          imgAlt:
+            "Imagem de ilustração de sucesso. Moça segurando um balão com símbolo de confirmação ok.",
+          showMessage: true,
+        });
       }
     } else {
       setNotifyUser({
@@ -98,7 +109,7 @@ const LoginPage = () => {
                 placeholder="****"
               />
 
-              <a href="" className="frm-login__link">
+              <a href="/esqueceu-a-senha" className="frm-login__link">
                 Esqueceu a senha?
               </a>
 
