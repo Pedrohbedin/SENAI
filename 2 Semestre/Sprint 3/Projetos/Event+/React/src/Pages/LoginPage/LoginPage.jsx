@@ -34,7 +34,7 @@ const LoginPage = () => {
         const userFullToken = userDecodeToken(promise.data.token);
         setUserData(userFullToken);
 
-        localStorage.setItem("toke", JSON.stringify(userFullToken));
+        localStorage.setItem("token", JSON.stringify(userFullToken));
         navigate("/");
         setNotifyUser({
           titleNote: "Sucesso",

@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
+
 import "./PerfilUsuario.css";
+
 import iconeLogout from "../../assets/images/icone-logout.svg";
 import { UserContext } from "../../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
