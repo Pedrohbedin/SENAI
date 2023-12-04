@@ -4,6 +4,7 @@ import EventosPage from "../Pages/EventosPage/EventosPage";
 import HomePage from "../Pages/HomePage/HomePage";
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import TipoEventosPage from "../Pages/TipoEventosPages/TipoEventosPage";
+import EventosAlunoPage from "../Pages/AlunosPage/AlunosPage";
 
 import Header from "../Components/Header/Header";
 import { PrivateRoute } from "./PrivateRoutes";
@@ -24,7 +25,7 @@ const Rotas = () => {
           }
           path="/tipo-eventos"
         />
-        <Route element={<EventosPage />} path="/eventos-alunos" />
+        <Route element={<EventosAlunoPage />} path="/eventos-alunos" />
         <Route
           element={
             <PrivateRoute redirectTo="/">

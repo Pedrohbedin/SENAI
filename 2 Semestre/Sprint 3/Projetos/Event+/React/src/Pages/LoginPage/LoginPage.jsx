@@ -21,7 +21,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (userData.nome) navigate("/");
-  }, [userData]);
+  }, [userData, navigate]);
 
   async function handleSubmit(e) {
     e.preventDefault();
