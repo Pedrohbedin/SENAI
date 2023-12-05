@@ -35,18 +35,38 @@ const EventosAlunoPage = () => {
         `/PresencasEvento/ListarMinhas/${userData.userId}`
       );
       promise.data.forEach((Element) => {
-        arrEventos.push(Element.evento)
+        arrEventos.push(Element.evento);
       });
-      setEventos(arrEventos)
+      setEventos(arrEventos);
     } else {
       const promise = await api.get("/Evento");
       setEventos(promise.data);
+      /////Corrigir auqi
+      const promiseEventos = await api.get(
+        `/PresencasEvento/ListarMinhas/${userData.userId}`
+      );
+
+      const dadosMarcados = verificaPresenca(promise.data, promiseEventos.data);
+      console.log("Dados marcados");
+      console.log(dadosMarcados);
+      //////////
     }
   }
 
   useEffect(() => {
     loadEventsType();
-  }, [tipoEvento]);
+  }, [tipoEvento, userData.userId]);
+
+  const verificaPresenca = (arrAllEvents, eventsUser) => {
+    for (let x = 0; x < arrAllEvents.length; x++) {
+      for (let i = 0; i < eventsUser.length; i++) {
+        if (arrAllEvents[x].idEvento === eventsUser[i].idEvento) {
+          arrAllEvents[x].situacao = true;
+          break;
+        }
+      }
+    }
+  };
 
   // toggle meus eventos ou todos os eventos
   function myEvents(tpEvent) {
@@ -82,7 +102,8 @@ const EventosAlunoPage = () => {
             required={true}
             dados={quaisEventos}
             manipulationFunction={(e) => myEvents(e.target.value)} // aqui só a variável state
-            defaultValue="Selecione"
+            defaultText="Selecione"
+            defaultValue="1"
             aditionalClass="select-tp-evento"
             titleKey="text"
             idKey="value"

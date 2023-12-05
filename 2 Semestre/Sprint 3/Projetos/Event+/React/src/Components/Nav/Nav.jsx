@@ -7,7 +7,6 @@ import { UserContext } from "../../context/AuthContext";
 
 const Nav = ({ setExibeNavbar, exibeNavbar }) => {
   const { userData, setUserData } = useContext(UserContext);
-  console.log("Role:" + userData.role)
   return (
     <nav className={`navbar ${exibeNavbar ? "exibeNavbar" : ""} `}>
       <span

@@ -3,7 +3,6 @@ import comentaryIcon from "../../../assets/images/comentary-icon.svg";
 import { dateFormatDbToView } from "../../../Utils/stringFunctions";
 import ToggleSwitch from "../../../Components/ToggleSwitch/Toggle";
 // importa a biblioteca de tootips ()
-import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
 import "./TableEvA.css";
@@ -45,7 +44,7 @@ const Table = ({ dados, fnConnect = null, fnShowModal = null }) => {
                   alt=""
                   onClick={fnShowModal}
                 />
-                <ToggleSwitch manipulationFunction={fnConnect} />
+                <ToggleSwitch manipulationFunction={fnConnect} toggleActive={e.situacao}/>
               </td>
             </tr>
           );

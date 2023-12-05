@@ -245,7 +245,7 @@ const EventosPage = () => {
                     }}
                   />
                   <Select
-                    defaultValue="Tipo Evento"
+                    defaultText="Tipo Evento"
                     dados={tipoEvento}
                     required={"required"}
                     manipulationFunction={(e) => {

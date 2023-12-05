@@ -57,8 +57,8 @@ export const Select = ({
   defaultValue = "",
   idKey = "",
   titleKey = "",
+  defaultText = "",
 }) => {
-
   return (
     <select
       name={name}
@@ -66,9 +66,9 @@ export const Select = ({
       id={id}
       className={`input-component ${aditionalClass}`}
       onChange={manipulationFunction}
-      value = {value}
+      value={value}
     >
-      <option value="">{defaultValue}</option>
+      <option value={defaultValue}>{defaultText}</option>
       {dados.map((opt) => {
         return (
           <option key={opt[idKey]} value={opt[idKey]}>
