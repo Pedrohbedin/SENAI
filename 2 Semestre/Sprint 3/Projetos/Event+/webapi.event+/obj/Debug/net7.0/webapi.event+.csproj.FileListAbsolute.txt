@@ -1561,3 +1561,4 @@ C:\Users\42470848873\Desktop\Event+\SENAI\2 Semestre\Sprint 3\Projetos\Event+\we
 C:\Users\42470848873\Desktop\Event+\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\obj\Debug\net7.0\webapi.event+.pdb
 C:\Users\42470848873\Desktop\Event+\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\obj\Debug\net7.0\webapi.event+.genruntimeconfig.cache
 C:\Users\42470848873\Desktop\Event+\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\obj\Debug\net7.0\ref\webapi.event+.dll
+C:\Users\User\Desktop\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\obj\Debug\net7.0\webapi.event+.sourcelink.json

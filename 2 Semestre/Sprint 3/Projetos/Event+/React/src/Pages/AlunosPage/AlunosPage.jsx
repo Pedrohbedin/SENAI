@@ -29,27 +29,30 @@ const EventosAlunoPage = () => {
   // recupera os dados globais do usuário
 
   async function loadEventsType() {
-    if (tipoEvento === "2") {
-      let arrEventos = [];
-      const promise = await api.get(
-        `/PresencasEvento/ListarMinhas/${userData.userId}`
-      );
-      promise.data.forEach((Element) => {
-        arrEventos.push(Element.evento);
-      });
-      setEventos(arrEventos);
-    } else {
-      const promise = await api.get("/Evento");
-      setEventos(promise.data);
-      /////Corrigir auqi
-      const promiseEventos = await api.get(
-        `/PresencasEvento/ListarMinhas/${userData.userId}`
-      );
-
-      const dadosMarcados = verificaPresenca(promise.data, promiseEventos.data);
-      console.log("Dados marcados");
-      console.log(dadosMarcados);
-      //////////
+    try {
+      if (tipoEvento === "2") {
+        let arrEventos = [];
+        const promise = await api.get(
+          `/PresencasEvento/ListarMinhas/${userData.userId}`
+        );
+        promise.data.forEach((Element) => {
+          arrEventos.push(Element.evento);
+        });
+        setEventos(arrEventos);
+      } else {
+        const promise = await api.get("/Evento");
+        setEventos(promise.data);
+        console.log(promise.data)
+        const promiseEventos = await api.get(
+          `/PresencasEvento/ListarMinhas/${userData.userId}`
+        );
+        console.log(promiseEventos.data)
+  
+        const dadosMarcados = verificaPresenca(promise.data, promiseEventos.data);
+        console.log("Dados marcados:"+ dadosMarcados);
+      }
+    } catch (error) {
+      console.log(error)
     }
   }
 
