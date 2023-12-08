@@ -3,6 +3,8 @@ import trashDelete from "../../assets/images/trash-delete-red.png";
 
 import { Button, Input } from "../FormComponents/FormComponents";
 import "./Modal.css";
+import { useContext } from "react";
+import { UserContext } from "../../context/AuthContext";
 
 const Modal = ({
   modalTitle = "Feedback",
@@ -10,6 +12,8 @@ const Modal = ({
   userId = null,
   showHideModal = false,
   fnDelete = null,
+  fnGet = null,
+  fnPost = null,
   fnNewCommentary = null,
 }) => {
   return (
@@ -44,7 +48,7 @@ const Modal = ({
         <Button
           textButton="Comentar"
           additionalClass="comentary__button"
-          manipulationFunction={fnNewCommentary}
+          manipulationFunction={fnPost}
         />
       </article>
     </div>

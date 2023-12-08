@@ -7,7 +7,12 @@ import { Tooltip } from "react-tooltip";
 
 import "./TableEvA.css";
 
-const Table = ({ dados, fnConnect = null, fnShowModal = null }) => {
+const Table = ({
+  dados,
+  fnConnect = null,
+  fnShowModal = null,
+  setarId = null,
+}) => {
   return (
     <table className="tbal-data">
       <thead className="tbal-data__head">
@@ -39,12 +44,17 @@ const Table = ({ dados, fnConnect = null, fnShowModal = null }) => {
               <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">
                 <img
                   className="tbal-data__icon"
-                  idevento={e.idEvento}
+                  id={e.idEvento}
                   src={comentaryIcon}
                   alt=""
                   onClick={fnShowModal}
                 />
-                <ToggleSwitch manipulationFunction={fnConnect} toggleActive={e.situacao}/>
+                <ToggleSwitch
+                  manipulationFunction={() => {
+                    fnConnect(e.idEvento, e.situacao, e.idPresencaEvento);
+                  }}
+                  toggleActive={e.situacao}
+                />
               </td>
             </tr>
           );

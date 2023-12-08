@@ -29,7 +29,10 @@ namespace webapi.event_.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer("Server=NOTE10-S14\\SQLEXPRESS; Database=EventPlus; User Id = sa; Pwd = Senai@134; TrustServerCertificate=true;");
-            optionsBuilder.UseSqlServer("Server=DESKTOP-EB0A5JD\\SQLEXPRESS; Database=EventPlus; Integrated Security=True; TrustServerCertificate=true;");
+            //optionsBuilder.UseSqlServer("Server=DESKTOP-EB0A5JD\\SQLEXPRESS; Database=EventPlus; Integrated Security=True; TrustServerCertificate=true;");
+
+            optionsBuilder.UseSqlServer("Server=tcp:eventpedro-server.database.windows.net,1433;Initial Catalog=eventPedroDatabase;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30; User id = eventpedro-server; Pwd=Senai@134;");
+
             base.OnConfiguring(optionsBuilder);
         }
     }

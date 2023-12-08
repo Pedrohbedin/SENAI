@@ -23,11 +23,42 @@ namespace webapi.event_.Controllers
         {
             try
             {
-                  return Ok(_presencasEventoRepository.Listar());
+                return Ok(_presencasEventoRepository.Listar());
             }
-            catch (Exception ex) 
-            { 
+            catch (Exception ex)
+            {
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+
+        public IActionResult Delete(Guid id)
+        {
+            try
+            {
+                _presencasEventoRepository.Deletar(id);
+
+                return NoContent();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [HttpGet("BuscarPorId/{id}")]
+        public IActionResult Get(Guid id)
+        {
+            try
+            {
+                return Ok(_presencasEventoRepository.BuscarPorId(id));
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
             }
         }
 
