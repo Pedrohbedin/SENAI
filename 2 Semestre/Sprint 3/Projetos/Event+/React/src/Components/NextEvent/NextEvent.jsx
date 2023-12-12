@@ -4,9 +4,8 @@ import { Tooltip } from "react-tooltip";
 
 const NextEvent = ({ title, description, eventDate, idEvento }) => {
   function conectar(idEvento) {
-    alert(`Conectando ao evento: ${idEvento}`);
+    console.log(`Conectando ao evento: ${idEvento}`);
   }
-
   return (
     <article className="event-card">
       <h2 className="event-card__title">{title}</h2>
@@ -24,7 +23,7 @@ const NextEvent = ({ title, description, eventDate, idEvento }) => {
         onClick={() => {
           conectar(idEvento);
         }}
-        href={"*"}
+        href={"/detalhes-evento"}
         className="event-card__connect-link"
       >
         Conectar

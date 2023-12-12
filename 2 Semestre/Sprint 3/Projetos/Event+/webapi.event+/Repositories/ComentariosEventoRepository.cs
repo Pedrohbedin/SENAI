@@ -117,6 +117,9 @@ namespace webapi.event_.Repositories
                     {
                         Descricao = c.Descricao,
                         Exibe = c.Exibe,
+                        IdUsuario = c.IdUsuario,
+                        IdComentarioEvento = c.IdComentarioEvento,
+                        IdEvento = c.IdEvento,
 
                         Usuario = new Usuario
                         {
@@ -129,6 +132,39 @@ namespace webapi.event_.Repositories
                         }
 
                     }).ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public List<ComentariosEvento> ListarExibe()
+        {
+
+            try
+            {
+                return _context.ComentariosEvento
+                    .Select(c => new ComentariosEvento
+                    {
+                        Descricao = c.Descricao,
+                        Exibe = c.Exibe,
+                        IdUsuario = c.IdUsuario,
+                        IdComentarioEvento = c.IdComentarioEvento,
+                        IdEvento = c.IdEvento,
+
+                        Usuario = new Usuario
+                        {
+                            Nome = c.Usuario!.Nome
+                        },
+
+                        Evento = new Evento
+                        {
+                            NomeEvento = c.Evento!.NomeEvento,
+                        }
+
+                    }).Where(c => c.Exibe == true).ToList();
             }
             catch (Exception)
             {

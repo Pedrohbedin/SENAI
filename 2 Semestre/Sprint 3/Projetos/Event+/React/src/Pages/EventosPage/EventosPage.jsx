@@ -6,11 +6,10 @@ import Spinner from "../../Components/Spinner/Spinner";
 import Container from "../../Components/Container/Container";
 import ImageIllustrator from "../../Components/ImageIllustrator/ImageIllustrator";
 import EventImage from "../../assets/images/evento.svg";
-import { Button, Input } from "../../Components/FormComponents/FormComponents";
+import { Button, Input, Select } from "../../Components/FormComponents/FormComponents";
 import TableEv from "../../Components/TableEv/TableEv";
 import api from "../../Services/Services";
 import { dateFormatDbToForm } from "../../Utils/stringFunctions";
-import { Select } from "../../Components/FormComponents/FormComponents";
 
 const EventosPage = () => {
   const [notifyUser, setNotifyUser] = useState({});

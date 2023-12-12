@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.CognitiveServices.ContentModerator;
+using System.Text;
 using webapi.event_.Domains;
 using webapi.event_.Repositories;
 
@@ -11,6 +13,51 @@ namespace webapi.event_.Controllers
     public class ComentariosEventoController : ControllerBase
     {
         ComentariosEventoRepository comentario = new ComentariosEventoRepository();
+
+        // armazena dados da API externa(IA - Azure)
+        private readonly ContentModeratorClient _contentModeratorClient;
+
+        public ComentariosEventoController(ContentModeratorClient contentModeratorClient)
+        {
+            _contentModeratorClient = contentModeratorClient;
+        }
+
+        [HttpPost("CadastroIA")]
+        public async Task<IActionResult> Post(ComentariosEvento comentariosEvento)
+        {
+            try
+            {
+                //Se a descrição do comentario n for passado no objeto
+                if (string.IsNullOrEmpty(comentariosEvento.Descricao))
+                {
+                    return BadRequest("O texto a ser analisado/moderado não pode ser vazio");
+                }
+
+                using var stream  = new MemoryStream(Encoding.UTF8.GetBytes(comentariosEvento.Descricao));
+
+                //realiza a moderação do conteúdo(descrição do comentário)
+                var moderationResult = await _contentModeratorClient.TextModeration.ScreenTextAsync("text/plain", stream, "por", false, false, null, true);
+
+                if (moderationResult.Terms != null)
+                {
+                    comentariosEvento.Exibe = false;
+
+                    comentario.Cadastrar(comentariosEvento);
+                }
+                else
+                {
+                    comentariosEvento.Exibe = true;
+
+                    comentario.Cadastrar(comentariosEvento);
+                }
+
+                return Ok(comentario);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
 
         [HttpGet]
 
@@ -25,6 +72,21 @@ namespace webapi.event_.Controllers
                 return BadRequest(e.Message);
             }
         }
+
+        [HttpGet("ListarExibe")]
+
+        public IActionResult GetIA()
+        {
+            try
+            {
+                return Ok(comentario.ListarExibe());
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
 
         [HttpGet("BuscarPorIdUsuario/{id}")]
 
@@ -42,7 +104,7 @@ namespace webapi.event_.Controllers
 
         [HttpPost]
 
-        public IActionResult Post(ComentariosEvento novoComentario)
+        public IActionResult PostComentario(ComentariosEvento novoComentario)
         {
             try
             {
