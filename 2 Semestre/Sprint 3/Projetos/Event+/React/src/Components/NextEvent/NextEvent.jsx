@@ -1,6 +1,7 @@
 import React from "react";
 import "./NextEvent.css";
 import { Tooltip } from "react-tooltip";
+import { Link } from "react-router-dom";
 
 const NextEvent = ({ title, description, eventDate, idEvento }) => {
   function conectar(idEvento) {
@@ -19,15 +20,21 @@ const NextEvent = ({ title, description, eventDate, idEvento }) => {
         {description}
       </p>
       <p className="event-card__data">{eventDate}</p>
-      <a
+      {/* <a
         onClick={() => {
           conectar(idEvento);
         }}
-        href={"/detalhes-evento"}
+        href={`/detalhes-evento/${idEvento}`}
         className="event-card__connect-link"
       >
         Conectar
-      </a>
+      </a> */}
+      <Link
+        to={`/detalhes-evento/${idEvento}`}
+        className="event-card__connect-link"
+      >
+        Conectar
+      </Link>
     </article>
   );
 };

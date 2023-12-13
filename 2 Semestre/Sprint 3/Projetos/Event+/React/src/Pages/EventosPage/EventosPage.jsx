@@ -188,7 +188,7 @@ const EventosPage = () => {
         const promiseIt = await api.get("/Instituicao");
         setInstituicoes(promiseIt.data);
       } catch (error) {
-        setNotifyUser({
+        setNotifyUser({   
           titleNote: "Erro",
           textNote: `Erro ao receber dados da api`,
           imgIcon: "danger",
