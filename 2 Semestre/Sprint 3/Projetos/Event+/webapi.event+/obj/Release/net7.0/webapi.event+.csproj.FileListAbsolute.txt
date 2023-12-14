@@ -259,3 +259,6 @@ C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.ev
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\obj\Release\net7.0\webapi.event+.pdb
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\obj\Release\net7.0\webapi.event+.genruntimeconfig.cache
 C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\obj\Release\net7.0\ref\webapi.event+.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\bin\Release\net7.0\Microsoft.Azure.CognitiveServices.ContentModerator.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\bin\Release\net7.0\Microsoft.Rest.ClientRuntime.dll
+C:\Users\42470848873\Desktop\SENAI\2 Semestre\Sprint 3\Projetos\Event+\webapi.event+\bin\Release\net7.0\Microsoft.Rest.ClientRuntime.Azure.dll

@@ -109,16 +109,20 @@ const EventosAlunoPage = () => {
     setShowModal(showModal ? false : true);
   };
 
-  async function loadMyComentary(idComentary) {
+  async function loadMyComentary() {
     try {
-      
+      const promise = await api.get(`/ComentariosEvento/BuscarPorIdUsuario/${userData.userId}/${idEvento}`)
+      console.log("Showing result")
+      console.log(promise.data)
+    
     } catch (error) {}
   }
 
   async function postMyCOmentary() {
     try {
-      alert("Postando!!!!")
-      
+      await api.post("/ComentariosEvento", {
+        descricao: descricao,
+      });
     } catch (error) {}
   }
 
@@ -188,7 +192,7 @@ const EventosAlunoPage = () => {
       });
     }
   }
-
+  
   return (
     <>
       <MainContent>
@@ -214,7 +218,7 @@ const EventosAlunoPage = () => {
             fnConnect={handleConnect}
             fnShowModal={(e) => {
               showHideModal(e.target);
-              setIdEvento(e.target.id);
+              console.log(e.target.id);
             }}
           />
         </Container>
@@ -230,6 +234,7 @@ const EventosAlunoPage = () => {
           fnGet={loadMyComentary}
           fnPost={postMyCOmentary}
           fnDelete={commentaryRemove}
+          value={descricao}
         />
       ) : null}
     </>

@@ -76,7 +76,7 @@ namespace webapi.event_.Repositories
             }
         }
 
-        public ComentariosEvento BuscarPorIdUsuario(Guid id, Guid idEvento)
+        public List<ComentariosEvento> BuscarPorIdUsuario(Guid id, Guid idEvento)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace webapi.event_.Repositories
                         {
                             NomeEvento = c.Evento!.NomeEvento,
                         }
-                    }).FirstOrDefault(c => c.IdUsuario == id && c.IdEvento == idEvento)!;
+                    }).Where(c => c.IdUsuario == id && c.IdEvento == idEvento)!.ToList();
             }
             catch (Exception)
             {

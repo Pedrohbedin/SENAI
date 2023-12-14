@@ -5,7 +5,6 @@ import React from "react";
 import "./TableDe.css";
 
 const Table = ({ dado, titulo, nF }) => {
-  console.log(dado);
   return (
     <table className="tbal-data">
       <thead className="tbal-data__head">

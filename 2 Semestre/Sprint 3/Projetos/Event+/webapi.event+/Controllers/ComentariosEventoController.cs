@@ -88,7 +88,7 @@ namespace webapi.event_.Controllers
         }
 
 
-        [HttpGet("BuscarPorIdUsuario/{id}")]
+        [HttpGet("BuscarPorIdUsuario/{id}/{idEvento}")]
 
         public IActionResult GetByIdUser(Guid id, Guid idEvento)
         {

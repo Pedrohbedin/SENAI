@@ -8,7 +8,7 @@ import { UserContext } from "../../context/AuthContext";
 
 const Modal = ({
   modalTitle = "Feedback",
-  comentaryText = "Não informado. Não informado. Não informado.",
+  comentaryText = null,
   userId = null,
   showHideModal = false,
   fnDelete = null,
@@ -34,8 +34,9 @@ const Modal = ({
             alt="Ícone de uma lixeira"
             onClick={fnDelete}
           />
-
-          <p className="comentary__text">{comentaryText}</p>
+          {/* {comentaryText.map((e) => {
+            return <p className="comentary__text">{e.descricao}</p>;
+          })} */}
 
           <hr className="comentary__separator" />
         </div>
