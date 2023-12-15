@@ -75,11 +75,11 @@ namespace webapi.event_.Controllers
 
         [HttpGet("ListarExibe")]
 
-        public IActionResult GetIA(Guid id)
+        public IActionResult GetIA()
         {
             try
             {
-                return Ok(comentario.ListarExibe(id));
+                return Ok(comentario.ListarExibe());
             }
             catch (Exception e)
             {

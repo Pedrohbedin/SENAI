@@ -140,7 +140,7 @@ namespace webapi.event_.Repositories
             }
         }
 
-        public List<ComentariosEvento> ListarExibe(Guid id)
+        public List<ComentariosEvento> ListarExibe()
         {
 
             try
@@ -164,7 +164,7 @@ namespace webapi.event_.Repositories
                             NomeEvento = c.Evento!.NomeEvento,
                         }
 
-                    }).Where(c => c.Exibe == true && c.IdEvento == id).ToList();
+                    }).Where(c => c.Exibe == true).ToList();
             }
             catch (Exception)
             {

@@ -11,6 +11,8 @@ import { UserContext } from "../../context/AuthContext";
 
 const DetalhesDoEventoPage = () => {
   let { id } = useParams();
+
+  const { userData, setUserData } = useContext(UserContext);
   const [evento, setEvento] = useState({});
   const [comentarios, setComentarios] = useState([]);
   const [titulo, setTitulo] = useState("");
@@ -33,9 +35,15 @@ const DetalhesDoEventoPage = () => {
 
     async function getComentarios() {
       try {
-        const promise = await api.get("/ComentariosEvento");
-        const found = promise.data.filter((Element) => Element.exibe === true);
-        setComentarios(found);
+        if (userData.role === "Comum") {
+          const promise = await api.get("/ComentariosEvento/ListarExibe");
+          const found = promise.data.filter((Element) => Element.idEvento === id)
+          setComentarios(found);
+        } else if (userData.role === "Administrador") {
+          const promise = await api.get("/ComentariosEvento/Listar");
+          const found = promise.data.filter((Element) => Element.idEvento === id)
+          setComentarios(found);
+        }
       } catch (error) {
         // console.log("error");
       }

@@ -29,7 +29,9 @@ const EventosAlunoPage = () => {
   const [descricao, setDescricao] = useState();
   const [exibe, setExibe] = useState();
   const [idUsuario, setIdUsuario] = useState();
-  const [idEvento, setIdEvento] = useState();
+  const [userComments, setUserComments] = useState([]);
+  const [idEvento, setIdEvento] = useState(null);
+  const [comentarios, setComentariosUsuario] = useState([]);
 
   const [tipoEvento, setTipoEvento] = useState("1"); //código do tipo do Evento escolhido
   const [showSpinner, setShowSpinner] = useState(false);
@@ -39,7 +41,6 @@ const EventosAlunoPage = () => {
 
   useEffect(() => {
     loadEventsType();
-    console.log(tipoEvento);
   }, [tipoEvento, userData.userId]);
 
   async function loadEventsType() {
@@ -55,7 +56,6 @@ const EventosAlunoPage = () => {
           retornoEventos.data,
           retorno.data
         );
-        console.log(dadosMarcados);
         setEventos(dadosMarcados);
       } else if (tipoEvento === "2") {
         const arrEventos = [];
@@ -109,22 +109,21 @@ const EventosAlunoPage = () => {
     setShowModal(showModal ? false : true);
   };
 
-  async function loadMyComentary() {
+  async function loadMyComentary(id) {
     try {
-      const promise = await api.get(`/ComentariosEvento/BuscarPorIdUsuario/${userData.userId}/${idEvento}`)
-      console.log("Showing result")
-      console.log(promise.data)
-    
-    } catch (error) {}
+      const promise = await api.get(
+        `/ComentariosEvento/BuscarPorIdUsuario/${userData.userId}/${id}`
+      );
+      setComentariosUsuario(promise.data);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  async function postMyCOmentary() {
-    try {
-      await api.post("/ComentariosEvento", {
-        descricao: descricao,
-      });
-    } catch (error) {}
-  }
+  const handlePostComment = async (newComment) => {
+    await setUserComments([...userComments, newComment]);
+    console.log('Comentários atualizados:', userComments);
+ };
 
   const commentaryRemove = async () => {
     alert("Remover o comentário");
@@ -192,7 +191,7 @@ const EventosAlunoPage = () => {
       });
     }
   }
-  
+
   return (
     <>
       <MainContent>
@@ -217,8 +216,8 @@ const EventosAlunoPage = () => {
             dados={eventos}
             fnConnect={handleConnect}
             fnShowModal={(e) => {
-              showHideModal(e.target);
-              console.log(e.target.id);
+              loadMyComentary(e.target.id);
+              showHideModal();
             }}
           />
         </Container>
@@ -230,11 +229,11 @@ const EventosAlunoPage = () => {
       {showModal ? (
         <Modal
           userId={userData.userId}
-          showHideModal={showHideModal}
-          fnGet={loadMyComentary}
-          fnPost={postMyCOmentary}
+          fnGet={comentarios}
+          fnPost={handlePostComment}
           fnDelete={commentaryRemove}
           value={descricao}
+          showHideModal={showHideModal}
         />
       ) : null}
     </>
