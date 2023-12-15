@@ -14,6 +14,8 @@ const Modal = ({
   fnGet = null,
   fnPost = null,
   fnNewCommentary = null,
+  manipulationFunction = null,
+  value="",
 }) => {
   return (
     <div className="modal">
@@ -24,25 +26,31 @@ const Modal = ({
             x
           </span>
         </h3>
-
         <div className="comentary">
-          <h4 className="comentary__title">Comentário</h4>
-          <img
-            src={trashDelete}
-            className="comentary__icon-delete"
-            alt="Ícone de uma lixeira"
-            onClick={fnDelete}
-          />
-          {fnGet.map((e) => {
-            return <p className="comentary__text">{e.descricao}</p>;
-          })}
-
-          <hr className="comentary__separator" />
+          {fnGet.lenght < 0 ? (
+            <p>Nenhum comentario...</p>
+          ) : (
+            fnGet.map((e) => {
+              return (
+                <div className="compo">
+                  <p className="comentary__text">{e.descricao}</p>
+                  <img
+                    id={e.idComentarioEvento}
+                    src={trashDelete}
+                    className="comentary__icon-delete"
+                    alt="Ícone de uma lixeira"
+                    onClick={fnDelete}
+                  />
+                </div>
+              );
+            })
+          )}
         </div>
-
         <Input
           placeholder="Escreva seu comentário..."
           additionalClass="comentary__entry"
+          manipulationFunction={manipulationFunction}
+          value={value}
         />
 
         <Button

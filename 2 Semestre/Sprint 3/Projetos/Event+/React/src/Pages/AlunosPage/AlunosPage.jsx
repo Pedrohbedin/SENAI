@@ -26,7 +26,7 @@ const EventosAlunoPage = () => {
   ]);
 
   //Comentarios
-  const [descricao, setDescricao] = useState();
+  const [descricao, setDescricao] = useState("");
   const [exibe, setExibe] = useState();
   const [idUsuario, setIdUsuario] = useState();
   const [userComments, setUserComments] = useState([]);
@@ -110,6 +110,7 @@ const EventosAlunoPage = () => {
   };
 
   async function loadMyComentary(id) {
+    setIdEvento(id);
     try {
       const promise = await api.get(
         `/ComentariosEvento/BuscarPorIdUsuario/${userData.userId}/${id}`
@@ -120,13 +121,28 @@ const EventosAlunoPage = () => {
     }
   }
 
-  const handlePostComment = async (newComment) => {
-    await setUserComments([...userComments, newComment]);
-    console.log('Comentários atualizados:', userComments);
- };
+  const handlePostComment = async () => {
+    await api.post(`/ComentariosEvento/CadastroIA`, {
+      descricao: descricao,
+      idUsuario: userData.userId,
+      idEvento: idEvento
+    })
+    setDescricao("")
+    AtualizarDados();
+  };
 
-  const commentaryRemove = async () => {
-    alert("Remover o comentário");
+  async function AtualizarDados() {
+    const promise = await api.get(
+      `/ComentariosEvento/BuscarPorIdUsuario/${userData.userId}/${idEvento}`
+    );
+    setComentariosUsuario(promise.data);
+  }
+
+  const commentaryRemove = async (id) => {
+    try {
+      await api.delete(`/ComentariosEvento/${id}`);
+      AtualizarDados();
+    } catch (error) {}
   };
 
   async function handleConnect(
@@ -231,9 +247,13 @@ const EventosAlunoPage = () => {
           userId={userData.userId}
           fnGet={comentarios}
           fnPost={handlePostComment}
-          fnDelete={commentaryRemove}
+          fnDelete={(e) => {
+            commentaryRemove(e.target.id);
+          }}
           value={descricao}
-          showHideModal={showHideModal}
+          manipulationFunction={(e) => {
+            setDescricao(e.target.value);
+          }}
         />
       ) : null}
     </>

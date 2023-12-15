@@ -13,6 +13,16 @@
   src: url(../../assets/fonts/Poppins/Poppins-Regular.ttf);
 }
 
+.compo {
+  display: flex;
+  /* border: 1px solid green; */
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+
+
 .modal {
   position: fixed;
   top: 0;
@@ -57,22 +67,14 @@
   color: var(--color-red);
   cursor: pointer;
 }
-.comentary {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  width: 100%;
-  /* margin-top: 70px; */
-}
 
 .comentary__title {
   font-size: 0.875rem;
   font-family: Poppins-Medium;
 }
 .comentary__icon-delete {
-  width: 15px;
-  height: 16px;
+  width: 15px !important;
+  height: 15px !important;
 }
 
 .comentary__text {

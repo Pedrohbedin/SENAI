@@ -35,12 +35,15 @@ const DetalhesDoEventoPage = () => {
 
     async function getComentarios() {
       try {
-        if (userData.role === "Comum") {
-          const promise = await api.get("/ComentariosEvento/ListarExibe");
-          const found = promise.data.filter((Element) => Element.idEvento === id)
+        if (userData.role === "Administrador") {
+          const promise = await api.get("/ComentariosEvento");
+          const found = promise.data.filter(
+            (Element) => Element.idEvento === id
+          );
           setComentarios(found);
-        } else if (userData.role === "Administrador") {
-          const promise = await api.get("/ComentariosEvento/Listar");
+        }
+        else {
+          const promise = await api.get("/ComentariosEvento/ListarExibe");
           const found = promise.data.filter((Element) => Element.idEvento === id)
           setComentarios(found);
         }
@@ -61,7 +64,7 @@ const DetalhesDoEventoPage = () => {
 
       <section className="lista-comentarios-section">
         <Container>
-          <Title titleText={"Comentários"} color="white" />
+          <Title titleText={"Feedback"} color="white" />
           <div className="lista-comentarios-container">
             <TableCe comentarios={comentarios} />
           </div>

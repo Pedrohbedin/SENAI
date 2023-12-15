@@ -117,7 +117,7 @@ namespace webapi.event_.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
 
         public IActionResult Delete(Guid id)
         {
