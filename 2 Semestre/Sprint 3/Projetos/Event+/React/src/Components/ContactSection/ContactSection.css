@@ -43,9 +43,12 @@
   
   @media screen and (min-width: 992px) {
     .contato__endereco-box {
-      flex-direction: row;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      gap: 50px;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
     }
   }
   

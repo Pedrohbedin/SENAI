@@ -30,6 +30,10 @@ const Table = ({
       </thead>
       <tbody>
         {dados.map((e) => {
+          const now = new Date();
+          const eventDate = new Date(e.dataEvento);
+          const toggleActive = eventDate <= now;
+          const toggleActiveSwitch = eventDate >= now
           return (
             <tr className="tbal-data__head-row" key={Math.random()}>
               <td className="tbal-data__data tbal-data__data--big">
@@ -42,19 +46,23 @@ const Table = ({
               </td>
 
               <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">
-                <img
-                  className="tbal-data__icon"
-                  id={e.idEvento}
-                  src={comentaryIcon}
-                  alt=""
-                  onClick={fnShowModal}
-                />
-                <ToggleSwitch
+                {toggleActive ? (
+                  <img
+                    className="tbal-data__icon"
+                    id={e.idEvento}
+                    src={comentaryIcon}
+                    alt=""
+                    onClick={fnShowModal}
+                  />
+                ) : null}
+                {toggleActiveSwitch ? (
+                  <ToggleSwitch
                   manipulationFunction={() => {
                     fnConnect(e.idEvento, e.situacao, e.idPresencaEvento);
                   }}
                   toggleActive={e.situacao}
                 />
+                ) : null}
               </td>
             </tr>
           );

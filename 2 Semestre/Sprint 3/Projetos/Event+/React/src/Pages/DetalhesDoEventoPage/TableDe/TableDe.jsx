@@ -1,6 +1,6 @@
 import React from "react";
 // importa a biblioteca de tootips ()
-// import { Tooltip } from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 import "./TableDe.css";
 
@@ -37,7 +37,15 @@ const Table = ({ dado, titulo, nF }) => {
           </td>
 
           <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">
-            {dado.descricao}
+            <p
+              data-tooltip-id={dado.idEvento}
+              data-tooltip-content={dado.description}
+              data-tooltip-place="top"
+              className="event-card__description"
+            >
+              <Tooltip className="tooltip" id={dado.idEvento} />
+              {dado.descricao}
+            </p>
           </td>
 
           <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">

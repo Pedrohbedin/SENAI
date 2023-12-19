@@ -79,7 +79,7 @@ const HomePage = () => {
                     return (
                       <NextEvent
                         key={e.idEvento}
-                        idEvent={e.idEvento}
+                        idEvento={e.idEvento}
                         title={e.nomeEvento}
                         description={e.descricao}
                         eventDate={dateFormatDbToView(e.dataEvento)}

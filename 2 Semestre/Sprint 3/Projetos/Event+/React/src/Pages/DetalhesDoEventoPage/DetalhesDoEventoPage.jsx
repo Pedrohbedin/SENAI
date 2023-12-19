@@ -8,11 +8,12 @@ import MainContent from "../../Components/MainContent/MainContent";
 import { Container } from "react-bootstrap";
 import TableCe from "./TableCe/TableCe";
 import { UserContext } from "../../context/AuthContext";
+import { now } from "moment/moment";
 
 const DetalhesDoEventoPage = () => {
   let { id } = useParams();
 
-  const { userData, setUserData } = useContext(UserContext);
+  const { userData } = useContext(UserContext);
   const [evento, setEvento] = useState({});
   const [comentarios, setComentarios] = useState([]);
   const [titulo, setTitulo] = useState("");
@@ -41,10 +42,11 @@ const DetalhesDoEventoPage = () => {
             (Element) => Element.idEvento === id
           );
           setComentarios(found);
-        }
-        else {
+        } else {
           const promise = await api.get("/ComentariosEvento/ListarExibe");
-          const found = promise.data.filter((Element) => Element.idEvento === id)
+          const found = promise.data.filter(
+            (Element) => Element.idEvento === id
+          );
           setComentarios(found);
         }
       } catch (error) {
@@ -55,21 +57,23 @@ const DetalhesDoEventoPage = () => {
     getEvento();
     getComentarios();
   }, [id, comentarios]);
+  ToggleEvent = new Date(evento.dataEvento) >= new Date();
   return (
     <MainContent>
       <Container>
         <Title titleText={"Detalhes do evento"} />
         <Table dado={evento} titulo={titulo} nF={nF} />
       </Container>
-
-      <section className="lista-comentarios-section">
-        <Container>
-          <Title titleText={"Feedback"} color="white" />
-          <div className="lista-comentarios-container">
-            <TableCe comentarios={comentarios} />
-          </div>
-        </Container>
-      </section>
+      {!ToggleEvent ? (
+        <section className="lista-comentarios-section">
+          <Container>
+            <Title titleText={"Feedback"} color="white" />
+            <div className="lista-comentarios-container">
+              <TableCe comentarios={comentarios} />
+            </div>
+          </Container>
+        </section>
+      ) : null}
     </MainContent>
   );
 };

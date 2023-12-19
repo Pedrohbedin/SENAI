@@ -15,21 +15,17 @@ import Notification from "../../Components/Notification/Notification.js";
 const EventosAlunoPage = () => {
   // state do menu mobile
   const [notifyUser, setNotifyUser] = useState({});
-  const { userData, setUserData } = useContext(UserContext);
-  const [exibeNavbar, setExibeNavbar] = useState(false);
+  const { userData } = useContext(UserContext);
   const [eventos, setEventos] = useState([]);
 
   // select mocado
-  const [quaisEventos, setQuaisEventos] = useState([
+  const [quaisEventos] = useState([
     { value: "1", text: "Todos os eventos" },
     { value: "2", text: "Meus eventos" },
   ]);
 
   //Comentarios
   const [descricao, setDescricao] = useState("");
-  const [exibe, setExibe] = useState();
-  const [idUsuario, setIdUsuario] = useState();
-  const [userComments, setUserComments] = useState([]);
   const [idEvento, setIdEvento] = useState(null);
   const [comentarios, setComentariosUsuario] = useState([]);
 
@@ -250,6 +246,7 @@ const EventosAlunoPage = () => {
           fnDelete={(e) => {
             commentaryRemove(e.target.id);
           }}
+          showHideModal={showHideModal}
           value={descricao}
           manipulationFunction={(e) => {
             setDescricao(e.target.value);

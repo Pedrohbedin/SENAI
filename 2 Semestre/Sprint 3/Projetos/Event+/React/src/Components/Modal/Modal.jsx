@@ -3,8 +3,6 @@ import trashDelete from "../../assets/images/trash-delete-red.png";
 
 import { Button, Input } from "../FormComponents/FormComponents";
 import "./Modal.css";
-import { useContext } from "react";
-import { UserContext } from "../../context/AuthContext";
 
 const Modal = ({
   modalTitle = "Feedback",
@@ -22,7 +20,7 @@ const Modal = ({
       <article className="modal__box">
         <h3 className="modal__title">
           {modalTitle}
-          <span className="modal__close" onClick={() => showHideModal(true)}>
+          <span className="modal__close" onClick={showHideModal}>
             x
           </span>
         </h3>
