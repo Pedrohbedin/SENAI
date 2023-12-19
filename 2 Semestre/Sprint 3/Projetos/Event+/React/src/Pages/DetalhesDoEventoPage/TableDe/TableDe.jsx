@@ -36,16 +36,14 @@ const Table = ({ dado, titulo, nF }) => {
             {new Date(dado.dataEvento).toLocaleDateString()}
           </td>
 
-          <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">
-            <p
-              data-tooltip-id={dado.idEvento}
-              data-tooltip-content={dado.description}
-              data-tooltip-place="top"
-              className="event-card__description"
-            >
-              <Tooltip className="tooltip" id={dado.idEvento} />
-              {dado.descricao}
-            </p>
+          <td
+            data-tooltip-id={dado.idEvento}
+            data-tooltip-content={dado.descricao}
+            data-tooltip-place="top"
+            className="event-card__description"
+          >
+            <Tooltip className="tooltip" id={dado.idEvento} />
+            {dado.descricao}
           </td>
 
           <td className="tbal-data__data tbal-data__data--big tbal-data__btn-actions">

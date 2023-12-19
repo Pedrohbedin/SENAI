@@ -56,7 +56,7 @@ const DetalhesDoEventoPage = () => {
 
     getEvento();
     getComentarios();
-  }, [id, comentarios]);
+  }, []);
   ToggleEvent = new Date(evento.dataEvento) >= new Date();
   return (
     <MainContent>
