@@ -1,6 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { useEffect, useState } from 'react';
-import { StyleSheet, Text, TextComponent, TouchableOpacity, View } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Container } from './src/components/container/container';
+import { ButtonI } from './src/components/button/button';
+import { ButtonD } from './src/components/button/button';
+import { Title } from './src/components/title/title';
+import { ButtonTitle } from './src/components/title/title';
+import { Image } from 'react-native';
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -10,46 +16,28 @@ export default function App() {
   // }, [count])
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.countText}>{count}</Text>
+    <Container>
+      <Image
+        style={{width: 100, height: 100}}
+        source={{
+          uri: 'https://cdn-icons-png.flaticon.com/512/151/151770.png',
+        }}
+      />
+      <Title>{count}</Title>
       <View style={styles.division}>
-        <TouchableOpacity style={styles.btnI} onPress={() => setCount(count + 1)}>
-          <Text style={styles.text}>+</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.btnD} onPress={() => count > 0 ? setCount(count - 1) : null}>
-          <Text style={styles.text}>-</Text>
-        </TouchableOpacity>
+        <ButtonD onPress={() => count > 0 ? setCount(count - 1) : alert("Deu ruim")}>
+          <ButtonTitle>-</ButtonTitle>
+        </ButtonD>
+        <ButtonI onPress={() => setCount(count + 1)}>
+          <ButtonTitle>+</ButtonTitle>
+        </ButtonI>
       </View>
       <StatusBar style="auto" />
-    </View>
+    </Container>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100%',
-    justifyContent: 'space-around'
-  },
-  btnI: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'green',
-    width: 100,
-    height: 100,
-    borderRadius: 10
-  },
-  btnD: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'red',
-    width: 100,
-    height: 100,
-    borderRadius: 10
-  },
   text: {
     color: 'white',
     fontSize: 50
