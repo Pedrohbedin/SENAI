@@ -6,10 +6,11 @@ height: 20%;
 align-items: center;
 border-radius: 0 0 15px 15px;
 elevation: 20;
+justify-content: center;
 `
 
 export const HeaderContent = styled.SafeAreaView`
-margin-top: 45px;
+margin-top: 30px;
 `
 
 export const TextHeader = styled.Text`

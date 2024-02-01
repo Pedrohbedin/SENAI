@@ -1,16 +1,22 @@
 import { StatusBar } from 'react-native';
 import { ContainerApp } from './style';
-import { Header } from './src/components/Header';
 import { useFonts, Roboto_500Medium, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { Header } from './src/components/Header';
+import { Home } from './src/screens/Home/Index';
 
 export default function App() {
-  let [fontsLoaded] = useFonts({
+  let [fonts] = useFonts({
     Roboto_500Medium, Roboto_700Bold
   });
+
+  if (!fonts) {
+    return null;
+  }
   return (
     <ContainerApp>
-      <StatusBar backgroundColor='#FECC2B' />
+      <StatusBar backgroundColor='transparent' translucent />
       <Header />
+      <Home />
     </ContainerApp>
   );
 }
