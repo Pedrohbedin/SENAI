@@ -7,22 +7,23 @@ export const BoxInput = ({
     editable = false,
     textLabel,
     placeholder,
-    fildValue = null,
+    fieldValue = null,
     onChangeText = null,
     keyType = 'default',
     maxLenght
 }) => {
     return (
-        <FieldContent>
-            <Label />
+        <FieldContent fieldWidth={fieldWidth}>
+            <Label 
+            textLabel={textLabel}/>
             <Input
                 editable={editable}
                 placeholder={placeholder}
-                fieldValue={fildValue}
-                fieldWidth={fieldWidth}
-                onChangeText={onChangeText}
                 keyType={keyType}
-                maxLenght={maxLenght} />
+                maxLenght={maxLenght}
+                fieldValue={fieldValue}
+                onChangeText={onChangeText}
+                 />
         </FieldContent>
     )
 }
