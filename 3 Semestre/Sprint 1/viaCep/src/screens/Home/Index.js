@@ -18,7 +18,7 @@ export const Home = () => {
         } else {
             try {
                 const promise = await axios.get(`https://brasilaberto.com/api/v1/zipcode/${cep}`);
-                setEndereco(promise.data.result)
+                setEndereco(promise.data.result);
             } catch {
                 setEndereco({})
             }
