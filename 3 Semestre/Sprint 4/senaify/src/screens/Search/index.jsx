@@ -77,10 +77,11 @@ const Search = ({ token, atual, audio, setAtual, setAudio }) => {
           </ContainerInput>
 
           <ContainerList
-            aria-label="music-item"
             data={lista}
             renderItem={({ item }) => (
               <Music
+                labelButton="icon-button-sch"
+                label="music-item-sch"
                 play={atual == item.preview_url}
                 onPress={() => playSound(item.preview_url, atual, setAtual, audio, setAudio)}
                 // onPress={() => playSound(item.preview_url) }
