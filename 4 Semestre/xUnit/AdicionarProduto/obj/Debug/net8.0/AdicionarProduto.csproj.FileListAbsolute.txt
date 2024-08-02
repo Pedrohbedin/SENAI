@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\bin\Debug\net8.0\AdicionarProduto.exe
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\bin\Debug\net8.0\AdicionarProduto.deps.json
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\bin\Debug\net8.0\AdicionarProduto.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\bin\Debug\net8.0\AdicionarProduto.dll
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\bin\Debug\net8.0\AdicionarProduto.pdb
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\AdicionarProduto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\AdicionarProduto.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\AdicionarProduto.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\AdicionarProduto.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\AdicionarProduto.sourcelink.json
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\AdicionarProduto.dll
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\refint\AdicionarProduto.dll
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\AdicionarProduto.pdb
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\AdicionarProduto.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\AdicionarProduto\obj\Debug\net8.0\ref\AdicionarProduto.dll

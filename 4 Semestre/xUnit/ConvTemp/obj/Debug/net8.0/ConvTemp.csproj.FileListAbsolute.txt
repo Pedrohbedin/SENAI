@@ -1,0 +1,15 @@
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\bin\Debug\net8.0\ConvTemp.exe
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\bin\Debug\net8.0\ConvTemp.deps.json
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\bin\Debug\net8.0\ConvTemp.runtimeconfig.json
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\bin\Debug\net8.0\ConvTemp.dll
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\bin\Debug\net8.0\ConvTemp.pdb
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\ConvTemp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\ConvTemp.AssemblyInfoInputs.cache
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\ConvTemp.AssemblyInfo.cs
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\ConvTemp.csproj.CoreCompileInputs.cache
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\ConvTemp.sourcelink.json
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\ConvTemp.dll
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\refint\ConvTemp.dll
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\ConvTemp.pdb
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\ConvTemp.genruntimeconfig.cache
+C:\Users\42470848873\Desktop\SENAI\4 Semestre\xUnit\ConvTemp\obj\Debug\net8.0\ref\ConvTemp.dll

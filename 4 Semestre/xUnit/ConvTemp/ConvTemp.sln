@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvTemp", "ConvTemp.csproj", "{705B3ECB-26BD-4C5D-B04E-C8C561E825A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvTempTest", "..\ConvTempTest\ConvTempTest.csproj", "{99C9093B-2A20-4A8E-B060-A8CFEA22C8CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{705B3ECB-26BD-4C5D-B04E-C8C561E825A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705B3ECB-26BD-4C5D-B04E-C8C561E825A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705B3ECB-26BD-4C5D-B04E-C8C561E825A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705B3ECB-26BD-4C5D-B04E-C8C561E825A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C9093B-2A20-4A8E-B060-A8CFEA22C8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C9093B-2A20-4A8E-B060-A8CFEA22C8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C9093B-2A20-4A8E-B060-A8CFEA22C8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C9093B-2A20-4A8E-B060-A8CFEA22C8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45EB94E8-ED3F-4673-829A-3A562C7A1D46}
+	EndGlobalSection
+EndGlobal
