@@ -26,8 +26,17 @@ namespace ProductsAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Deletar(Guid id) 
         {
-            _productsRepository.Deletar(id);
-            return Ok();
+            try
+            {
+                _productsRepository.Deletar(id);
+                return Ok("Produto deletado com sucesso");
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(e.Message);
+            }
+
         }
         [HttpGet("Listar")]
         public IActionResult Listar() 

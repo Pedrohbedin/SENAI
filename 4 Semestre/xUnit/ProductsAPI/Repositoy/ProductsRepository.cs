@@ -1,4 +1,5 @@
-﻿using ProductsAPI.Context;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using ProductsAPI.Context;
 using ProductsAPI.Domains;
 using ProductsAPI.Interfaces;
 
@@ -36,6 +37,7 @@ namespace ProductsAPI.Repository
             try
             {
                 ctx.Products.Remove(ctx.Products.FirstOrDefault(x => x.IdProduct == id)!);
+                ctx.SaveChanges();
             }
             catch (Exception)
             {
