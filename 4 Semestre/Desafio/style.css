@@ -1,0 +1,6 @@
+.db-bg-section {
+    background: rgb(30,82,180);
+background: linear-gradient(90deg, rgba(30,82,180,1) 35%, rgba(0,39,119,1) 100%);
+width: 100%;
+height: 200px;
+}
