@@ -1,43 +1,51 @@
+/* Reseta padding e margin de todos os elementos */
 * {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
+/* Flashcard (a ser personalizado conforme o uso) */
 .flashcard {
-    background-color: blue;
+    background-color: blue; /* Personalize conforme necessário */
 }
 
+/* Seção de fundo com gradiente */
 .db-bg-section {
     background: linear-gradient(90deg, rgba(30, 82, 180, 1) 35%, rgba(0, 39, 119, 1) 100%);
     width: 100%;
     height: auto;
     z-index: 0;
+    padding: 20px 0; /* Adiciona padding para espaçamento */
+}
+
+/* Navbar estilização */
+.navbar {
+    width: 90%;
+    margin: 0 auto; /* Centraliza a navbar */
 }
 
 .navbar-nav {
-    gap: 0px 30px;
+    gap: 0 30px;
 }
 
-.navbar {
-    width: 90%;
-}
-
+/* Header estilização */
 .header {
     display: flex;
     justify-content: center;
 }
 
+/* Middle Nav Collapse estilização */
 .middle-nav-collapse {
     display: flex;
-    width: 100%;
     justify-content: center;
+    padding: 10px; /* Adiciona padding */
 }
 
 .middle-nav {
     display: flex;
-    width: auto;
-    padding: 0px;
+    gap: 10px; /* Adiciona espaçamento entre itens */
+    padding: 0;
     position: relative;
     bottom: 50px;
     z-index: 2;
@@ -46,79 +54,144 @@
 
 .middle-nav-item {
     list-style: none;
-    border: dashed black;
-    border-width: 0px 2px 0px 0px;
-    padding: 15px 60px;
+    border-right: 2px dashed black;
+    padding: 15px 30px; /* Ajusta padding */
 }
 
 .middle-nav-item:last-child {
-    border: 0px;
-}
-
-.btn:hover {
-    background-color: rgb(223, 223, 223);
+    border-right: 0;
 }
 
 .middle-nav-button {
-    border: 0px;
+    border: none;
     background-color: white;
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px;
     border-radius: 7px;
-    transition: 0.30s;
+    transition: background-color 0.3s, color 0.3s; /* Adiciona transições */
 }
 
-.middle-nav-icons {
-}
-
+/* Seção de contatos estilização */
 .contacts-section {
+    
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background: linear-gradient(90deg, #009C3B 0%, #009538 100%);
+    /* background-image: url('./assets/bubbles-bg.png'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
     color: white;
-    height: auto;    
-    padding: 33px 0px;
+    padding: 40px 0; /* Ajusta padding */
 }
 
+/* Seção de rodapé estilização */
 .footer-logo-section {
     background-color: #FFDF00;
-    padding: 7px 0px;
+    padding: 15px 0; /* Ajusta padding */
     display: flex;
     justify-content: center;
-
 }
 
+/* Seção de anúncio estilização */
 .ad-section {
     display: flex;
-    padding: 80px 80px;
-    gap: 230px;
+    padding: 80px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .ad-section-text {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px; /* Ajusta gap */
 }
 
+.ad-section-img {
+    width: 430px;
+    height: auto;
+}
 
+/* Cartões estilização */
+.card {
+    width: 270px;
+    padding: 10px;
+    border: none;
+}
+
+.card-img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.card-division {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-desc {
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+}
+
+.card-place {
+    color: #FFDF00;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cards-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cartões se ajustem na linha */
+    gap: 20px; /* Adiciona espaçamento entre cartões */
+    justify-content: center;
+}
+
+.cards-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.text-col {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.cards-row-col {
+    display: flex;
+    transition: 0.5s;
+}
+
+/* Media Queries */
 @media screen and (max-width: 990px) {
     .img-map {
-        display: flex;
+        display: block; /* Garante que a imagem seja exibida */
+        width: 100%; /* Ajusta a largura da imagem */
+    }
+
+    .cards-col {
+        align-items: center;
+    }
+
+    .cards-row {
+        flex-direction: column;
+        gap: 20px; /* Ajusta o espaçamento em telas menores */
     }
 
     .middle-nav {
         flex-direction: column;
-        width: 70%;
-        border-right: 0px;
+        width: 90%;
     }
 
     .middle-nav-item {
-        border-width: 0px;
+        border-right: none; /* Remove a borda em telas menores */
     }
 
     .db-bg-section {
@@ -128,5 +201,13 @@
     .text-col {
         width: 100%;
     }
-    
+}
+
+@media screen and (max-width: 500px) {
+    *{
+        text-align: center;
+    }
+    .cards-row-col {
+        flex-direction: column;
+    }
 }

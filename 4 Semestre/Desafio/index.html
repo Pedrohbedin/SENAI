@@ -14,97 +14,189 @@
 </head>
 
 <body>
-    <section class="db-bg-section">
-        <header class="header">
-            <nav class="navbar navbar-expand-lg bg-transparent" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <img src="./assets/logo-branca.png" class="navbar-brand" alt="...">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Hotéis</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Entrar</a>
-                            </li>
-                            <li class="nav-item">
-                                <button type="button" class="btn border-white">Cadastrar-se</button>
-                            </li>
-                        </ul>
-                    </div>
+    <header class="db-bg-section">
+        <nav class="navbar navbar-expand-lg bg-transparent" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="./assets/logo-branca.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Hotéis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn border-white">Cadastrar-se</button>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
         <div class="container text-center">
             <div class="row align-items-center flex-lg-row flex-column">
                 <div class="col-lg-6 text-col">
                     <h2 class="text-white">As melhores hospedagens do Brasil</h2>
-                    <p class="text-white">mais de 500 mil reservas esperando por você! Basta procurar pelo local ideal,
-                        e realizar a viagem dos seus sonhos</p>
+                    <p class="text-white">Mais de 500 mil reservas esperando por você! Basta procurar pelo local ideal e
+                        realizar a viagem dos seus sonhos.</p>
                 </div>
                 <div class="col-lg-6 img-map">
                     <img src="./assets/mapa-brasil.png" class="img-fluid" alt="Imagem do mapa do Brasil">
                 </div>
             </div>
         </div>
-    </section>
-    <div class="middle-nav-collapse">
+    </header>
+
+    <section class="middle-nav-collapse">
         <ul class="middle-nav shadow-lg rounded">
             <li class="middle-nav-item">
                 <button class="middle-nav-button">
-                    <img src="./assets/icons/local-icon.svg" class="middle-nav-icons" alt="...">
-                    Qual o local desejado?</button>
+                    <img src="./assets/icons/local-icon.svg" class="middle-nav-icons" alt="Ícone de Local">
+                    Qual o local desejado?
+                </button>
             </li>
             <li class="middle-nav-item">
                 <button class="middle-nav-button">
-                    <img src="./assets/icons/checkin-icon.svg" class="middle-nav-icons" alt="...">
-                    Data check-in</button>
+                    <img src="./assets/icons/checkin-icon.svg" class="middle-nav-icons" alt="Ícone de Check-in">
+                    Data check-in
+                </button>
             </li>
             <li class="middle-nav-item">
                 <button class="middle-nav-button">
-                    <img src="./assets/icons/checkout-icon.svg" class="middle-nav-icons" alt="...">
-                    Data check-out</button>
+                    <img src="./assets/icons/checkout-icon.svg" class="middle-nav-icons" alt="Ícone de Check-out">
+                    Data check-out
+                </button>
             </li>
             <li class="middle-nav-item">
                 <button class="middle-nav-button">Procurar hotel</button>
             </li>
         </ul>
-    </div>
-    <section class="ad-section">
-        <div class="ad-section-text">
-            <h1>Venha conferir os melhores hoteis com as melhores <span style="color: #019438;">promoções</span> do país</h1>
-            <p><span style="color: #019438;">Não perca tempo</span> e venha conferir o que há de <span style="color: #FFDF00;">melhor</span> na hotelagem brasileira</p>
-        </div>
-        <div class="">
-            <img src="./assets/travel.png" class="img-fluid" alt="Imagem do mapa do Brasil">
-        </div>
     </section>
-    <section class="">
-    </section>
-    <footer>
-        <div class="contacts-section">
-            <h1>Fale com um de nossos acessores</h1>
-            <div style="display: flex; align-items: center; flex-direction: column;">
-                <p>hospedagens@contato.com.br</p>
-                <p>(11) 0800-707-0707</p>
+
+    <section class="cards-col">
+        <div class="cards-row">
+            <div class="cards-row-col">
+                <article class="card">
+                    <img src="./assets/travel.png" alt="Imagem de destino" class="card-img">
+                    <div class="card-division">
+                        <h6 class="card-title">Angra dos Reis</h6>
+                        <h6 class="card-place">RJ</h6>
+                    </div>
+                    <p class="card-desc">Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com
+                        vista para o mar.</p>
+                </article>
+                <article class="card">
+                    <img src="./assets/travel.png" alt="Imagem de destino" class="card-img">
+                    <div class="card-division">
+                        <h6 class="card-title">Angra dos Reis</h6>
+                        <h6 class="card-place">RJ</h6>
+                    </div>
+                    <p class="card-desc">Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com
+                        vista para o mar.</p>
+                </article>
+            </div>
+            <div class="cards-row-col">
+                <article class="card">
+                    <img src="./assets/travel.png" alt="Imagem de destino" class="card-img">
+                    <div class="card-division">
+                        <h6 class="card-title">Angra dos Reis</h6>
+                        <h6 class="card-place">RJ</h6>
+                    </div>
+                    <p class="card-desc">Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com
+                        vista para o mar.</p>
+                </article>
+                <article class="card">
+                    <img src="./assets/travel.png" alt="Imagem de destino" class="card-img">
+                    <div class="card-division">
+                        <h6 class="card-title">Angra dos Reis</h6>
+                        <h6 class="card-place">RJ</h6>
+                    </div>
+                    <p class="card-desc">Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com
+                        vista para o mar.</p>
+                </article>
             </div>
         </div>
+        <div class="cards-row">
+            <div class="cards-row-col">
+                <article class="card">
+                    <img src="./assets/travel.png" alt="Imagem de destino" class="card-img">
+                    <div class="card-division">
+                        <h6 class="card-title">Angra dos Reis</h6>
+                        <h6 class="card-place">RJ</h6>
+                    </div>
+                    <p class="card-desc">Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com
+                        vista para o mar.</p>
+                </article>
+                <article class="card">
+                    <img src="./assets/travel.png" alt="Imagem de destino" class="card-img">
+                    <div class="card-division">
+                        <h6 class="card-title">Angra dos Reis</h6>
+                        <h6 class="card-place">RJ</h6>
+                    </div>
+                    <p class="card-desc">Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com
+                        vista para o mar.</p>
+                </article>
+            </div>
+            <div class="cards-row-col">
+                <article class="card">
+                    <img src="./assets/travel.png" alt="Imagem de destino" class="card-img">
+                    <div class="card-division">
+                        <h6 class="card-title">Angra dos Reis</h6>
+                        <h6 class="card-place">RJ</h6>
+                    </div>
+                    <p class="card-desc">Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com
+                        vista para o mar.</p>
+                </article>
+                <article class="card">
+                    <img src="./assets/travel.png" alt="Imagem de destino" class="card-img">
+                    <div class="card-division">
+                        <h6 class="card-title">Angra dos Reis</h6>
+                        <h6 class="card-place">RJ</h6>
+                    </div>
+                    <p class="card-desc">Desfrute de um paraíso tropical em nossa pousada! Relaxe em nossas piscinas com
+                        vista para o mar.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="ad-section align-items-center flex-lg-row flex-column">
+        <div class="ad-section-text col-lg-6">
+            <h1>Venha conferir os melhores hotéis com as melhores <span style="color: #019438;">promoções</span> do país
+            </h1>
+            <p><span style="color: #019438;">Não perca tempo</span> e venha conferir o que há de <span
+                    style="color: #FFDF00;">melhor</span> na hotelagem brasileira.</p>
+        </div>
+        <img src="./assets/travel.png" class="col-lg-6 ad-section-img img-fluid" alt="Imagem de bagagens">
+    </section>
+
+    <footer>
+        <section class="contacts-section">
+            <h1>Fale com um de nossos assessores</h1>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <p><a href="mailto:hospedagens@contato.com.br" class="text-white">hospedagens@contato.com.br</a></p>
+                <p><a href="tel:+1108007070707" class="text-white">(11) 0800-707-0707</a></p>
+            </div>
+        </section>
         <div class="footer-logo-section">
-            <img src="./assets/logo-preta.png" class="navbar-brand" alt="...">
+            <a href="#">
+                <img src="./assets/logo-preta.png" alt="Logo">
+            </a>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const buttons = document.querySelectorAll('.middle-nav-button');
-            const icons = document.querySelectorAll('.middle-nav-icons');
 
             buttons.forEach(button => {
                 button.addEventListener('click', function () {
@@ -113,7 +205,6 @@
 
                     this.style.backgroundColor = '#009C3B';
                     this.style.color = 'white';
-
                 });
             });
         });
