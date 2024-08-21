@@ -1,0 +1,16 @@
+.titleContainer {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #FCFCFC;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+span {
+    color: #8758FF;
+    font-size: 30px;
+    font-weight: bold;
+}

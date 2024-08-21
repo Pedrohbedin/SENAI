@@ -1,0 +1,8 @@
+.tarefaList {
+    display: flex;
+    width: 90%;
+    margin: 71px 0px 71px 0px;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
